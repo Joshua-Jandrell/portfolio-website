@@ -1,4 +1,4 @@
-/* Nav bar styling =============================================================== */
+/* top bar styling =============================================================== */
 nav.navbar {
   position: sticky top;
   display: block;
@@ -44,6 +44,7 @@ nav.navbar a.current {
 /* body styling ================================================================== */
 body.blueprint {
   margin: 0;
-  background-color: rgb(94, 94, 255);
+  background-color: rgb(35, 35, 243);
   height: 100vh;
+  color: bisque;
 }
