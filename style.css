@@ -1,12 +1,14 @@
 /* top bar styling =============================================================== */
 nav.navbar {
-  position: sticky top;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: block;
   border: solid white 5px;
-  margin: 0;
   padding: 10px 5px;
   height: 30px;
   color: antiquewhite;
+  background-color: blue;
 }
 nav.navbar h1 {
   display: block;

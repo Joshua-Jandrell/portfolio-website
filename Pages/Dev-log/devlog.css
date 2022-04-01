@@ -1,0 +1,49 @@
+main.devlog {
+  margin-top: 90px;
+  width: 100%;
+  height: max-content;
+  width: 100%;
+  background-color: aqua;
+  display: block;
+}
+/* Side nav bar */
+nav.sidenav {
+  display: block;
+  float: left;
+  top: 100px;
+  width: 22%;
+  margin: 0;
+  border-right: dotted cyan;
+  height: 100vh;
+}
+article.sidenav {
+  border: solid white;
+  text-align: center;
+  margin: 10px 20px;
+  display: block;
+  position: sticky;
+  top: 100px;
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: inherit;
+}
+/* articles ==================================== */
+#articles {
+  display: block;
+  float: right;
+  padding: 20px;
+  width: 72%;
+  margin: 0;
+}
+#articles article {
+  background-color: aliceblue;
+  color: blue;
+  border-radius: 5px;
+  border: solid rgb(0, 116, 116) 2px;
+  box-shadow: 0 0 2px 2px aqua;
+
+  padding: 20px 10px;
+  margin: 20px 0;
+}
