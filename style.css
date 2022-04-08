@@ -50,3 +50,47 @@ body.blueprint {
   height: 100vh;
   color: bisque;
 }
+
+/* Pop up summery styling ========================================================= */
+details.popout
+{
+  display: inline;
+  transition: ease-in;
+  transition: 0.5s;
+}
+details.popout summary
+{
+  text-decoration: underline;
+  display: inline;
+}
+details.popout summary:hover 
+{
+  transition: 1s;
+  text-shadow: 0 0 4px cyan;
+  cursor: pointer;
+}
+
+/* replace  =================================================================== */
+.replace .hide{
+  color: pink;
+  text-decoration: underline;
+  display: inline;
+}
+.replace:hover .hide{
+  display: none;
+}
+.replace .hidden {
+  display: none;
+}
+.replace:hover .hidden
+{
+  display: inline;
+  color:  red;
+}
+/* Question for me ==================================================================== */
+details.popout summary.question
+{
+  text-decoration: bold;
+  color: orange;
+  text-align: right;
+}
