@@ -1,0 +1,42 @@
+/* A sytle sheet for index-specfic styling */
+
+/* ================================================================= */
+/* ------------------------- Hello world into ---------------------- */
+/* ================================================================= */
+
+#hwt {
+  color: white;
+  font-family: monospace;
+}
+
+.introTxt {
+  text-align: center;
+  vertical-align: middle;
+
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.introGrad {
+  margin: 0;
+  padding: 0;
+
+  height: 190vh;
+
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgb(255, 255, 255) 0%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  display: block;
+}
+.index-content{
+  height: 5000px;
+}

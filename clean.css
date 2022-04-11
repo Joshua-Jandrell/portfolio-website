@@ -1,0 +1,93 @@
+/* A new stylesheet for a clean and clear asthetic */
+
+/* ================================================================= */
+/* ------------------------- bacground fromats --------------------- */
+/* ================================================================= */
+body.max{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+/* ================================================================= */
+/* ------------------------- general formats - --------------------- */
+/* ================================================================= */
+.vertCenter{
+    padding-top: 50%;
+    padding-bottom: 50%;
+    text-decoration: dotted;
+}
+
+.stickBlock
+{
+    position: sticky;
+    top: 40vh;
+}
+
+/* ================================================================= */
+/* ------------------------- Nav-bar ------------------------------- */
+/* ================================================================= */
+.topBar{
+    position: sticky;
+    display: block;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 50px 20px;
+    border-bottom: solid black 3px;
+}
+.nav-bar ul{
+    display: block;
+    float: right;
+    height: 100%;
+}
+.nav-bar li{
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    width: 100px;
+    border-left: 1px solid black;
+}
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    border: solid white 5px;
+    padding: 10px 5px;
+    height: 30px;
+    color: antiquewhite;
+    background-color: blue;
+  }
+  nav.navbar h1 {
+    display: block;
+    float: left;
+    margin: 0 5px;
+  }
+  nav.navbar ul {
+    display: block;
+    float: right;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  nav.navbar ul li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  nav.navbar ul a {
+    text-decoration: none;
+    color: inherit;
+    padding: 2px;
+  }
+  nav.navbar ul a:hover {
+    text-decoration: none;
+    color: inherit;
+    padding: 2px;
+    outline: solid whitesmoke;
+  }
+  
+  nav.navbar a.current {
+    background-color: white;
+    color: rgb(94, 94, 255);
+  }
