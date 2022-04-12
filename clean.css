@@ -8,7 +8,6 @@ body.max {
   margin: 0;
   background-color: rgb(255, 255, 255);
 }
-
 /* ================================================================= */
 /* ------------------------- general formats - --------------------- */
 /* ================================================================= */
@@ -65,20 +64,40 @@ nav.nav-bar {
 .nav-bar li {
   display: inline-block;
   text-align: center;
-  height: 50px;
   width: 100%;
-  background-color: whitesmoke;
-  border: 1px solid black;
   margin: 0;
   grid-row: 1;
 }
-
 .nav-bar li a{
-  height: 100%;
-  margin: 10px 0;
   text-decoration: none;
   font-family: inherit;
   color: inherit;
 
-  vertical-align: bottom;
+  height: 50px;
+  margin: 0;
+  display: block;
+  background-color: whitesmoke;
+  border: 1px solid black;
 }
+.nav-bar a .link-block
+{
+  margin-top: 15px;
+}
+/* Lables */
+.nav-lable{
+  display:inline-block;
+  margin: 0;
+  padding-left: 10vw;
+  height: 100%;
+  width: 20%;
+
+  line-height: 100%;
+}
+
+.nav-lable a.title-link{
+  vertical-align: middle;
+
+  text-decoration: none;
+  color: inherit;
+}
+
