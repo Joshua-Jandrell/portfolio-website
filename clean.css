@@ -3,91 +3,82 @@
 /* ================================================================= */
 /* ------------------------- bacground fromats --------------------- */
 /* ================================================================= */
-body.max{
-    padding: 0;
-    margin: 0;
-    background-color: rgb(255, 255, 255);
+body.max {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
 }
 
 /* ================================================================= */
 /* ------------------------- general formats - --------------------- */
 /* ================================================================= */
-.vertCenter{
-    padding-top: 50%;
-    padding-bottom: 50%;
-    text-decoration: dotted;
+.vertCenter {
+  padding-top: 50%;
+  padding-bottom: 50%;
+  text-decoration: dotted;
 }
 
-.stickBlock
-{
-    position: sticky;
-    top: 40vh;
+.stickBlock {
+  position: sticky;
+  top: 40vh;
 }
 
+/* ================================================================= */
+/* ------------------------- Font formats -------------------------- */
+/* ================================================================= */
+.basic{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hand{
+  font-family: cursive;
+}
 /* ================================================================= */
 /* ------------------------- Nav-bar ------------------------------- */
 /* ================================================================= */
-.topBar{
-    position: sticky;
-    display: block;
-    top: 0;
-    width: 100%;
-    margin: 0;
-    padding: 50px 20px;
-    border-bottom: solid black 3px;
+.topBar {
+  position: sticky;
+  display: block;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  border: solid black 1px;
+}
+nav.nav-bar {
+  padding: 0;
+  margin: 0;
 }
 .nav-bar ul{
-    display: block;
-    float: right;
-    height: 100%;
+  float: right;
+  vertical-align: middle;
+  height: 100%;
+  width: 60%;
+  display: grid;
+  row-gap: 0;
+  column-gap: 0;
+  padding: 0;
+  margin: 0;
+
+  color: black;
 }
-.nav-bar li{
-    display: inline-block;
-    text-align: center;
-    height: 100%;
-    width: 100px;
-    border-left: 1px solid black;
+.nav-bar li {
+  display: inline-block;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  margin: 0;
+  grid-row: 1;
 }
-nav.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: block;
-    border: solid white 5px;
-    padding: 10px 5px;
-    height: 30px;
-    color: antiquewhite;
-    background-color: blue;
-  }
-  nav.navbar h1 {
-    display: block;
-    float: left;
-    margin: 0 5px;
-  }
-  nav.navbar ul {
-    display: block;
-    float: right;
-    margin-right: 10px;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  nav.navbar ul li {
-    display: inline-block;
-    margin: 0 5px;
-  }
-  nav.navbar ul a {
-    text-decoration: none;
-    color: inherit;
-    padding: 2px;
-  }
-  nav.navbar ul a:hover {
-    text-decoration: none;
-    color: inherit;
-    padding: 2px;
-    outline: solid whitesmoke;
-  }
-  
-  nav.navbar a.current {
-    background-color: white;
-    color: rgb(94, 94, 255);
-  }
+
+.nav-bar li a{
+  height: 100%;
+  margin: 10px 0;
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+
+  vertical-align: bottom;
+}
