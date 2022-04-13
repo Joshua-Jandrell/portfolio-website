@@ -1,5 +1,10 @@
 /* A new stylesheet for a clean and clear asthetic */
-
+/* ================================================================= */
+/* ------------------------- colors  ------------------------------- */
+/* ================================================================= */
+.blue {
+  color: rgb(0, 136, 255);
+}
 /* ================================================================= */
 /* ------------------------- bacground fromats --------------------- */
 /* ================================================================= */
@@ -9,21 +14,20 @@ body.max {
   background-color: rgb(255, 255, 255);
 }
 
-.main-body{
+.main-body {
   margin: 10px 50px;
 }
 /* ================================================================= */
 /* ------------------------- z indexes------------------------------ */
 /* ================================================================= */
-.z-1{
-z-index: -1;
-transition: all;
-transition-timing-function: linear 2s;
+.z-1 {
+  z-index: -1;
+  transition: all;
+  transition-timing-function: linear 2s;
 }
-.z1{
+.z1 {
   z-index: 1;
 }
-
 
 /* ================================================================= */
 /* ------------------------- general formats - --------------------- */
@@ -31,7 +35,6 @@ transition-timing-function: linear 2s;
 .vertCenter {
   padding-top: 50%;
   padding-bottom: 50%;
-  text-decoration: dotted;
 }
 
 .stickBlock {
@@ -39,24 +42,59 @@ transition-timing-function: linear 2s;
   top: 40vh;
 }
 
-.inline{
+.inline {
   display: inline;
-  font-weight:lighter;
+  font-weight: lighter;
 }
 
-.noDisplay{
+.noDisplay {
   display: none important;
+}
+
+.section-divider {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: aqua;
+}
+/* hyperlinks */
+a.hyperlink
+{
+  font-weight: bolder;
+}
+a.hyperlink:hover{
+  text-shadow: 0 0 1px;
+}
+.about-section a{
+  color: orange;
 }
 
 /* ================================================================= */
 /* ------------------------- Font formats -------------------------- */
 /* ================================================================= */
-.basic{
+.basic {
   font-family: Arial, Helvetica, sans-serif;
 }
-.hand{
+.hand {
   font-family: cursive;
 }
+/* ================================================================= */
+/* ------------------------- inline detials and popups ------------- */
+/* ================================================================= */
+details.inline-deets {
+  display: inline;
+  line-break: loose;
+}
+.inline-deets summary {
+  display: inline;
+  white-space: nowrap;
+}
+.inline-deets:hover summary {
+  cursor: pointer;
+  color: lighter;
+  text-shadow: 0 0 1px;
+}
+
 /* ================================================================= */
 /* ------------------------- Nav-bar ------------------------------- */
 /* ================================================================= */
@@ -74,11 +112,11 @@ nav.nav-bar {
   padding: 0;
   margin: 0;
 }
-.nav-bar ul{
+.nav-bar ul {
   float: right;
   vertical-align: middle;
   height: 100%;
-  width: 75%;
+  width: 80%;
   display: grid;
   row-gap: 0;
   column-gap: 0;
@@ -94,7 +132,7 @@ nav.nav-bar {
   margin: 0;
   grid-row: 1;
 }
-.nav-bar li a{
+.nav-bar li a {
   text-decoration: none;
   font-family: inherit;
   color: inherit;
@@ -105,13 +143,12 @@ nav.nav-bar {
   background-color: whitesmoke;
   border: 1px solid black;
 }
-.nav-bar a .link-block
-{
+.nav-bar a .link-block {
   margin-top: 15px;
 }
 /* Lables */
-.nav-lable{
-  display:inline-block;
+.nav-lable {
+  display: inline-block;
   margin: 0;
   padding-left: 20px;
   height: 100%;
@@ -120,28 +157,27 @@ nav.nav-bar {
   line-height: 100%;
 }
 
-.nav-lable a.title-link{
+.nav-lable a.title-link {
   vertical-align: middle;
 
   text-decoration: none;
   color: inherit;
 }
 
-.nav-lable a.title-link h1
-{
-    font-size: 20px;
-    font-weight: lighter;
+.nav-lable a.title-link h1 {
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 /* ================================================================= */
 /* ------------------------- Headdings ----------------------------- */
 /* ================================================================= */
-.blk{
+.blk {
   color: black;
   font-family: monospace;
   font-weight: lighter;
 }
-h1.main-h{
+h1.main-h {
   display: block;
   text-align: center;
 
@@ -152,63 +188,76 @@ h1.main-h{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
-h1.main-h .blk{
+h1.main-h .blk {
   padding: 0 10px;
   font-size: 40px;
 }
+h2.main-h {
+  font-size: 20px;
+}
 
-h2.main-h .blk{
+summary h2.main-h {
+  display: inline-block;
+}
+
+h2.main-h .blk {
   color: black;
-  font-weight: lighter;
-  padding: 0 10px;
+  font-weight: bolder;
+  padding: 0;
 }
 
 /* ================================================================= */
 /* ------------------------- about --------------------------------- */
 /* ================================================================= */
+.about-color1 {
+  color: orange;
+}
+.about-color2 {
+  color: rgb(151, 98, 0);
+}
 /* headding styles */
-.about-section h1.main-h{
-  /*border-left: solid 10px orange;*/
+.about-section h1.main-h {
   color: orange;
-
 }
-.about-section h2.main-h{
+.about-content h2.main-h{
   color: orange;
-  font-weight: bold;
 }
-.about-content h2.main-h .blk{
-  color: black;
-  font-weight: lighter;
-}
-.about-section .hand{
-  color: 
-  orange;
+/* details styles */
+.about-section .inline-deets summary {
+  color: orange;
 }
 
-.about-content{
+details.about-section {
+  border-bottom: solid orange 1px;
+}
+
+.about-content {
   display: block;
+  text-align: justify;
   margin: 20px auto;
-  float: center;
-  width: 75%;
+  width: 80%;
 }
 
-
-.profile-pic-wrapper{
+.profile-pic-wrapper {
   display: block;
   width: 200px;
   float: left;
-  padding: 20px;
+  padding: 0;
+  margin: 0 20px;
+  border-right: 5px solid orange;
 }
-img.profil-picture
-{
-  width: 80%;
+img.profil-picture {
+  width: 75%;
   border: 10px solid orange;
   border-radius: 10px;
 }
 
-.about-text
-{
-  display: block;
-  float: right;
-  width: 70%;
+.about-content .details-list {
+  float: left;
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+ul.details-list li {
+  padding: 5px 0;
 }
