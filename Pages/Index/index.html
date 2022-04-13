@@ -6,50 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Pages/Index/index.css" />
     <link rel="stylesheet" href="/clean.css" />
-    <!-- <script src="/Pages/Index/textChange.js"></script> -->
+    <script src="/Pages/Index/index.js"></script>
     <title>Joshua Jandrell</title>
   </head>
   <body class="max">
-    <!-- <nav class="navbar">
-      <h1>Joshua Jandrell</h1>
-      <ul>
-        <li><a href="/Pages/Index/index.html" class="current">Home</a></li>
-        <li><a href="/Pages/About/about.html">About</a></li>
-        <li><a href="/Pages/Blog/blog.html">Blogs</a></li>
-        <li><a href="/Pages/Portfolio/portfolio.html">Portfolio</a></li>
-        <li><a href="/Pages/Dev-log/devlog.html">Dev-log</a></li>
-      </ul>
-    </nav>*/ -->
     <article class="introGrad" rol="introduction">
       <section class="stickBlock" id="fib">
         <div class="introTxt" id="hwt">Hello World.</div>
-        <div class="introTxt" id="imJJTxt">I'm Joshau Jandrell</div>
+        <div class="introTxt" id="imJJTxt z-2">I'm Joshau Jandrell</div>
       </section>
     </article>
-    <article class="intoNorm" id="secondIntro">
+    <article class="intoNorm z-2" id="secondIntro">
       <div class="introTxt" class="basic" id="welcomeTxt">
         Welcome to my website.
       </div>
-      </article>
-    <!-- <div class="introTxt" id="settleTxt">Relax</div>
-      <div class="introTxt" id="settleTxt">Make yourself at home</div>
-      <div class="introTxt" id="settleTxt">Have some fun :)</div>
-      <div class="introTxt" id="settleTxt">Explore.</div>
-    </article>--> 
-    <header class="topBar basic" id = "topDiv">
+    </article>
+    <!--Note: intro section is before nav bar in html: this give screen reader users the same experance of the website reveal-->
+    <header class="topBar basic z-1" id="topDiv">
       <nav class="nav-bar">
-        <label for="#main-bar" class = "nav-lable"><a href="/Pages/Index/index.html" rel="nofollow" class = "title-link"><h1>Joshau Jandrell</h1></a></label>
+        <label for="#main-bar" class="nav-lable"
+          ><a href="/Pages/Index/index.html" rel="nofollow" class="title-link"
+            ><h1>Joshau Jandrell</h1></a
+          ></label
+        >
         <ul class="nav-bar" id="main-bar">
-          <li><a href="#home" rel="tag" class="homeLink"><div class ="link-block">Home</div></a></li>
-          <li><a href="#about" rel="tag" class="aboutLink"><div class ="link-block">About</div></a></li>
-          <li><a href="#blogs" rel="tag" class="blogLink"><div class ="link-block">Blogs</div></a></li>
-          <li><a href="#games" rel="tag" claas="gamesLink"><div class ="link-block">Games</div></a></li>
-          <li><a href="#Devlog" rel="tag" claas="devlogLink"><div class ="link-block">Dev-log</div></a></li>
+          <li>
+            <a href="#home" rel="tag" class="homeLink"
+              ><div class="link-block">Home</div></a
+            >
+          </li>
+          <li>
+            <a href="#about" rel="tag" class="aboutLink"
+              ><div class="link-block">About</div></a
+            >
+          </li>
+          <li>
+            <a href="#blogs" rel="tag" class="blogLink"
+              ><div class="link-block">Blogs</div></a
+            >
+          </li>
+          <li>
+            <a href="#games" rel="tag" claas="gamesLink"
+              ><div class="link-block">Games</div></a
+            >
+          </li>
+          <li>
+            <a href="#Devlog" rel="tag" claas="devlogLink"
+              ><div class="link-block">Dev-log</div></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
-    <main class="e-content">
-      <article class = "home" id ="home"></article>
+    <main class="e-content main-body z-2">
+      <article id="home-contenet">
+        <h1 class="main-h" id="home">Explore.</h1>
+      </article>
+      <article class="about-content e-content">
+        <h1 class="main-h" id="about">
+          About me
+          <aside class="hand inline" aria-roledescription="side note">
+            (Joshua Jandrell)
+          </aside>
+        </h1>
+        <img src="/Pages/About/aboutImg/placeHolderImg.png" alt="Photogragh of Joshua Jandrell" class = "profil-picture">
+        <article class="about-text p-content">
+          Joshua Jandrell is a third year bachelor of engineering science (in
+          digital art) student (who is currently referring to himself in the
+          third person) at the university of the Witwatersrand. He enjoys
+          writing code, designing systems and constructing games. Education JJ
+          is currently in his final year of Beng sce (Digital arts). Upon
+          completion he intents to study further and attain an information
+          engineering degree in 2024. (In case you were wondering JJ completed
+          high school, is grade 6 ABRSM clarinet and a level 1 first aider. But
+          he doesn't feel these achievements are particaulrly impressive or
+          applicable here.) Work and experience He’s working on it…. Skills
+          Technical creativity Systems thinking Ramblings and analysis Can
+          whistle backwards
+        </article>
+        <article class ="contact-section">
+          <address>
+            <ul class = "contact-icons">
+              <li><a href=""><img src="/Pages/About/aboutImg/placeHolderImg.png" alt="email"></a></li>
+            </ul>
+          </address>
+        </article>
+      </article>
+      <article class="blog-contenet">
+        <h1 class="main-h" id="blog">Blog</h1>
+      </article>
+      <article class="games-contenet">
+        <h1 class="main-h" id="games">Games I've Made</h1>
+      </article>
     </main>
   </body>
 </html>
