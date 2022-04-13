@@ -13,11 +13,9 @@ window.onscroll = function () {
   if (scrollFromTop > showPt) {
     if(mb.classList.contains(toggleClass)){
       mb.classList.remove(toggleClass);
-      console.log("gone" + mb.style.zIndex);
     }
   }
   else if(!mb.classList.contains(toggleClass)){
     mb.classList.add(toggleClass);
-    console.log("back");
   }
 };
