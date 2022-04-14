@@ -323,12 +323,14 @@ ul.details-list li {
   width: 100%;
   height: 100%;
   display: block;
-  
+  position: relative;
 }
 
 .label-wrapper{
   display: block;
-  position: relative;
+  position: absolute;
+  top:0px;
+  left: 0px;
 
   width: 100%;
   height: 100%;
@@ -364,7 +366,100 @@ ul.details-list li {
 /* ================================================================= */
 /* ------------------------- Blog ---------------------------------- */
 /* ================================================================= */
-.blog-color1{
-  color: yellow;
+.blog-grid
+{
+  display: grid;
+  max-width: 800px;
+  grid-template-columns: 3fr 1.5fr;
+
+  gap: 20px;
+  margin: 0 auto;
+}
+.recent-posts{
+  display: block;
+  width: 100%;
+  outline: 1px solid black;
+}
+.brecent-posts ul{
+  display: block;
+  list-style: none;
+}
+.recent-posts ul li{
+  display: block;
+  position: relative;
+  overflow-y: hidden;
+  outline: 1px solid black;
+  border-radius: 10px;
+  height: 150px;
+
+  margin: 10px 0;
+}
+.blog-image{
+  height: 100%;
+  float: left;
+  margin-right: 20px;
+  z-index: 1;
+
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+a.blog-sample{
+  text-decoration: none;
+  color: black;
 }
 
+.blog-summary{
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  overflow-y: hidden;
+}
+.read-more-wrapper{
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+
+  color: orange;
+  padding-top: 30px;
+  padding-bottom: 0px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255,0) 0%,
+    rgba(80, 80, 80, 0.711) 50%,
+    rgb(72, 72, 72) 100%
+  );
+  
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.read-more-txt{
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 10px;
+}
+
+/* Blog history section */
+.blog-history{
+  outline: 1px solid black;
+  width: 100%;
+}
+
+.blog-history ul{
+  display: block;
+  list-style: square;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;;
+}
+
+.blog-history ul li{
+  display: block;
+  margin-left: 0;
+}
