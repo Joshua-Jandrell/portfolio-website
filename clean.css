@@ -53,6 +53,7 @@ body.max {
 
 .section-divider {
   display: block;
+  float: left;
   width: 100%;
   height: 10px;
   background-color: aqua;
@@ -67,6 +68,10 @@ a.hyperlink:hover{
 }
 .about-section a{
   color: orange;
+}
+ul.bullet-list li{
+  margin-left: 20px;
+  color: blue;
 }
 
 /* ================================================================= */
@@ -83,7 +88,6 @@ a.hyperlink:hover{
 /* ================================================================= */
 details.inline-deets {
   display: inline;
-  line-break: loose;
 }
 .inline-deets summary {
   display: inline;
@@ -168,6 +172,22 @@ nav.nav-bar {
   font-size: 20px;
   font-weight: lighter;
 }
+/* ================================================================= */
+/* ------------------------- Grid formats -------------------------- */
+/* ================================================================= */
+.grid{
+  display: grid;
+}
+.grid_1-1
+{
+  grid-row: 1;
+  grid-column: 1;
+}
+.grid_1-2
+{
+  grid-row: 1;
+  grid-column: 2;
+}
 
 /* ================================================================= */
 /* ------------------------- Headdings ----------------------------- */
@@ -215,6 +235,9 @@ h2.main-h .blk {
 .about-color2 {
   color: rgb(151, 98, 0);
 }
+.about-section{
+  height: max-content;
+}
 /* headding styles */
 .about-section h1.main-h {
   color: orange;
@@ -233,9 +256,10 @@ details.about-section {
 
 .about-content {
   display: block;
-  text-align: justify;
+  text-align: left;
   margin: 20px auto;
   width: 80%;
+  height: max-content;
 }
 
 .profile-pic-wrapper {
@@ -261,3 +285,47 @@ img.profil-picture {
 ul.details-list li {
   padding: 5px 0;
 }
+/* ================================================================= */
+/* ------------------------- Games ----------------------------------*/
+/* ================================================================= */
+.games-color1{
+  color: rgb(238, 255, 6);
+}
+.games-color2{
+  color: yellowgreen;
+}
+
+/* grid display setup */
+.games-section ul.grid-list{
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
+  text-align: center;
+  margin: 0 auto;
+
+  overflow-y: scroll;
+  overflow-x: scroll;
+
+  padding: 2%;
+
+  max-width: 750px;
+  min-width: 500px;
+  list-style-type:none;
+
+  outline: 1px solid black;
+  box-shadow: inset 0 0 5px black;
+}
+.game-image{
+  width: 100%;
+}
+
+
+
+/* ================================================================= */
+/* ------------------------- Blog ---------------------------------- */
+/* ================================================================= */
+.blog-color1{
+  color: yellow;
+}
+
