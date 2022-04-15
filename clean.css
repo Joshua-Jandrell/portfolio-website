@@ -59,17 +59,16 @@ body.max {
   background-color: aqua;
 }
 /* hyperlinks */
-a.hyperlink
-{
+a.hyperlink {
   font-weight: bolder;
 }
-a.hyperlink:hover{
+a.hyperlink:hover {
   text-shadow: 0 0 1px;
 }
-.about-section a{
+.about-section a {
   color: orange;
 }
-ul.bullet-list{
+ul.bullet-list {
   margin-left: 20px;
   display: inline-block;
 }
@@ -175,16 +174,14 @@ nav.nav-bar {
 /* ================================================================= */
 /* ------------------------- Grid formats -------------------------- */
 /* ================================================================= */
-.grid{
+.grid {
   display: grid;
 }
-.grid_1-1
-{
+.grid_1-1 {
   grid-row: 1;
   grid-column: 1;
 }
-.grid_1-2
-{
+.grid_1-2 {
   grid-row: 1;
   grid-column: 2;
 }
@@ -235,14 +232,14 @@ h2.main-h .blk {
 .about-color2 {
   color: rgb(151, 98, 0);
 }
-.about-section{
+.about-section {
   height: max-content;
 }
 /* headding styles */
 .about-section h1.main-h {
   color: orange;
 }
-.about-content h2.main-h{
+.about-content h2.main-h {
   color: orange;
 }
 /* details styles */
@@ -288,15 +285,15 @@ ul.details-list li {
 /* ================================================================= */
 /* ------------------------- Games ----------------------------------*/
 /* ================================================================= */
-.games-color1{
+.games-color1 {
   color: rgb(238, 255, 6);
 }
-.games-color2{
+.games-color2 {
   color: yellowgreen;
 }
 
 /* grid display setup */
-.games-section ul.grid-list{
+.games-section ul.grid-list {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(4, 1fr);
@@ -307,29 +304,29 @@ ul.details-list li {
   padding: 2%;
 
   max-width: 750px;
-  list-style-type:none;
+  list-style-type: none;
 
   outline: 1px solid black;
   box-shadow: inset 0 0 5px black;
   border-radius: 5px;
 }
-.game-image{
+.game-image {
   width: 100%;
   border-radius: 5px;
   z-index: inherit;
 }
 
-.games-section ul.grid-list li a{
+.games-section ul.grid-list li a {
   width: 100%;
   height: 100%;
   display: block;
   position: relative;
 }
 
-.label-wrapper{
+.label-wrapper {
   display: block;
   position: absolute;
-  top:0px;
+  top: 0px;
   left: 0px;
 
   width: 100%;
@@ -337,7 +334,7 @@ ul.details-list li {
   border: 5px;
   z-index: inherit;
 }
-.game-label{
+.game-label {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -348,7 +345,7 @@ ul.details-list li {
 
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255,0) 0%,
+    rgba(255, 255, 255, 0) 0%,
     rgba(0, 0, 0, 0.711) 50%,
     rgba(0, 0, 0, 0.841) 100%
   );
@@ -357,16 +354,13 @@ ul.details-list li {
 
   color: white;
   z-index: 1;
-  }
-
-
-
+}
 
 /* ================================================================= */
-/* ------------------------- Blog ---------------------------------- */
+/* ------------------------- Blog and dev-log ---------------------- */
 /* ================================================================= */
-.blog-grid
-{
+/* blog specific */
+.blog-grid {
   display: grid;
   max-width: 850px;
   grid-template-columns: 3fr 1.5fr;
@@ -374,15 +368,16 @@ ul.details-list li {
   gap: 40px;
   margin: 0 auto;
 }
-.recent-posts{
+.recent-posts {
   display: block;
   width: 100%;
 }
-.brecent-posts ul{
+.recent-posts ul {
   display: block;
   list-style: none;
+  padding: 10px auto;
 }
-.recent-posts ul li{
+.recent-posts ul li {
   display: block;
   position: relative;
   overflow-y: hidden;
@@ -392,7 +387,7 @@ ul.details-list li {
 
   margin: 10px 0;
 }
-.blog-image{
+.blog-image {
   height: 100%;
   float: left;
   margin-right: 20px;
@@ -400,18 +395,18 @@ ul.details-list li {
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 }
-a.blog-sample{
+a.blog-sample {
   text-decoration: none;
   color: black;
 }
 
-.blog-summary{
+.blog-summary {
   display: block;
   margin-left: 0;
   margin-right: 0;
   overflow-y: hidden;
 }
-.read-more-wrapper{
+.read-more-wrapper {
   display: block;
   width: 100%;
   height: 50px;
@@ -426,15 +421,15 @@ a.blog-sample{
 
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255,0) 0%,
+    rgba(255, 255, 255, 0) 0%,
     rgba(80, 80, 80, 0.711) 50%,
     rgb(72, 72, 72) 100%
   );
-  
+
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.read-more-txt{
+.read-more-txt {
   position: absolute;
   width: 100%;
   right: 0;
@@ -442,30 +437,13 @@ a.blog-sample{
 }
 
 /* Blog history section */
-.blog-history{
+.blog-history {
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 }
 
-.blog-history ul{
-  display: block;
-  list-style: square;
-  list-style: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;;
-}
-
-.blog-history ul li{
-  display: block;
-  margin-left: 0;
-  border: 1px solid black;
-  border-left: 5px solid black;
-  padding: 5px 10px;
-  margin: 0;
-}
-
-.blog-history h2{
+.blog-history h2 {
   display: block;
   background-color: aquamarine;
   padding-top: 20px;
@@ -474,12 +452,94 @@ a.blog-sample{
   text-align: center;
 }
 
-.blog-h{
+.blog-h {
   font-weight: normal;
   font-size: 15px;
 }
 
-.blog-nav{
+.blog-nav {
   color: inherit;
   text-decoration: none;
+}
+
+/* Shared list formats */
+ul.history-list {
+  display: block;
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 0;
+}
+ul.history-list li {
+  display: block;
+  border-bottom: 1px solid black;
+  border-left: 5px solid black;
+  padding: 5px 10px;
+  margin: 0;
+}
+/* devlog only formats */
+.devlog-grid {
+  display: grid;
+  position: relative;
+  max-width: 850px;
+  grid-template-columns: 1.5fr 3fr;
+
+  gap: 40px;
+  margin: 0 auto;
+  height: 400px;
+}
+.devlog-history {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 400px;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.recent-devlog {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+/* timline list and scroll area */
+.scroll-wrapper{
+  position: relative;
+  overflow-y:scroll;
+  width: max-content;
+  height: 335px;
+
+  scroll-snap-type: mandatory;
+  scroll-padding-inline-end: 20px;
+}
+ul.timeline {
+  position: relative;
+  display: block;
+  border-left: 2px dotted black;
+  padding-left: 0;
+  margin-left: 30px;
+
+  scroll-snap-align: middle;
+}
+ul.timeline li{
+  position: relative;
+  margin-left: 30px;
+  border-left: none;
+  border-right: 5px solid black;
+
+  scroll-snap-align: start;
+}
+
+ul.timeline li::before{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  outline: 5px solid orange;
+  float: right;
+  position: absolute;
+  left: -40px;
+  bottom: 40%;
+}
+
+ul.timeline li:last-child{
+  border-bottom: none;
 }
