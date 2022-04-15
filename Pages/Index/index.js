@@ -1,6 +1,7 @@
 
 const className = "topDiv";
 const toggleClass = "z-1";
+const addClass = "z10";
 window.onscroll = function () {
   let scrollFromTop =
     window.pageYOffset !== undefined
@@ -13,9 +14,11 @@ window.onscroll = function () {
   if (scrollFromTop > showPt) {
     if(mb.classList.contains(toggleClass)){
       mb.classList.remove(toggleClass);
+      mb.classList.add(addClass);
     }
   }
   else if(!mb.classList.contains(toggleClass)){
     mb.classList.add(toggleClass);
+    mb.classList.remove(addClass);
   }
 };
