@@ -1,0 +1,36 @@
+/* Theis stylesheet contains styles that will only need to be applied to the blog pages */
+/* ================================================================= */
+/* ------------------------- Layout strucutre ---------------------- */
+/* ================================================================= */
+.blogpost-wrapper {
+  margin-top: 50px;
+  width: 100%;
+
+  display: grid;
+  display: -moz-grid;
+  grid-auto-columns: 20% auto 20%;
+  grid-auto-flow: column;
+}
+.blogpage-index {
+  display: block;
+  position: sticky;
+  height: 100%;
+  z-index: -1;
+  margin-top: 60px;
+}
+
+
+.blogpage-index.left li{
+    border-left: none;
+    border-right: 5px solid rgb(99, 140, 126);
+    text-align: left;
+    padding-left: 20px;
+}
+
+.blog-main{
+    margin-left: 40px;
+    margin-right: 40px;
+
+    padding: 0 20px;
+    outline: 1px solid black;
+}

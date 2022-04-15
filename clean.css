@@ -72,6 +72,10 @@ ul.bullet-list {
   margin-left: 20px;
   display: inline-block;
 }
+a.nav-link{
+  color: inherit;
+  text-decoration: inherit;
+}
 
 /* ================================================================= */
 /* ------------------------- Font formats -------------------------- */

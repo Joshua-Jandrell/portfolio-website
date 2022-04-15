@@ -12,14 +12,14 @@
     <header class="topBar basic" id="topDiv">
       <nav class="nav-bar">
         <label for="#main-bar" class="nav-lable"
-          ><a href="/Pages/Index/index.html" rel="nofollow" class="title-link"
+          ><a href="/Pages/Index/index.html" rel="home" class="title-link"
             ><h1>Joshau Jandrell</h1></a
           ></label
         >
         <ul class="nav-bar" id="main-bar">
           <li>
             <a
-              href="/Pages/Index/index.html/#home"
+              href="/Pages/Index/index.html#home"
               rel="home"
               class="homeLink home"
               ><div class="link-block">
@@ -28,21 +28,27 @@
             >
           </li>
           <li>
-            <a href="/Pages/Index/index.html/#about" rel="nav" class="aboutLink"
+            <a
+              href="/Pages/Index/index.html#about"
+              rel="navigation"
+              class="aboutLink"
               ><div class="link-block">
                 [<span class="nav-txt">About</span>]
               </div></a
             >
           </li>
           <li>
-            <a href="/Pages/Index/index.html/#games" rel="tag" claas="gamesLink"
+            <a href="/Pages/Index/index.html#games" rel="tag" claas="gamesLink"
               ><div class="link-block">
                 [<span class="nav-txt">Games</span>]
               </div></a
             >
           </li>
           <li>
-            <a href="/Pages/Index/index.html/#blogs" rel="tag" class="blogLink select"
+            <a
+              href="/Pages/Index/index.html#blog"
+              rel="tag"
+              class="blogLink select"
               ><div class="link-block">
                 [<span class="nav-txt">Blogs</span>]
               </div></a
@@ -50,7 +56,7 @@
           </li>
           <li>
             <a
-              href="/Pages/Index/index.html/#Devlog"
+              href="/Pages/Index/index.html#devlog"
               rel="tag"
               claas="devlogLink"
               ><div class="link-block">
@@ -70,6 +76,94 @@
           </li>
         </ul>
       </nav>
+      <nav class="blog-index"></nav>
     </header>
+    <!-- Article section ===================================================================================================== -->
+    <article class="blogpost-wrapper">
+      <!-- Nav index =================================================== -->
+      <nav class="blogpage-index left">
+        <h2 class="main-h">[<span class="blk">Blog index</span>]</h2>
+        <ul
+          class="index-list history-list"
+          aria-roledescription="Index for [blog name]"
+        >
+          <li>
+            <a href="http://" class="u-nav blog-nav"
+              ><h4 class="blog-h">[<span class="blk">Blog title</span>]</h4></a
+            >
+          </li>
+          <li>
+            <a href="http://" rel="tag" class="nav-link blog-nav"
+              >Pretty nifty</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- Main artcle =================================================== -->
+      <main class="blog-main">
+        <article class="h-entry blogpage-article">
+          <article class="hedding-area">
+            <h1 class="main-h">
+              [<span class="blk p-name">blog templete</span>]
+            </h1>
+            <h2 class="sub-h comment">
+              //
+              <time datetime="2022-04-15" class="">15 April 2022</time>
+              <span class="p-author">Joshua Jandrell</span>
+            </h2>
+            <nav>
+              <a
+                href="/Pages/Index/index.html/#blogs"
+                rel="home"
+                class="u-home back-button"
+                ><span class="blk">Back</span></a
+              >
+              <ul class="share-links"></ul>
+            </nav>
+          </article>
+          <section class="blogpage-summary p-summary">
+            This is the templeate I will use for formating all of my blogs. I
+            can simply copy and paste the blog contenet in here :)
+          </section>
+          <article class="e-content blogpage-content">
+            <section>
+              <h2 class="main-h">
+                [<span class="blk">Headding for section</span>]
+              </h2>
+              And now we can have test and stuff till the next section. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
+              officiis, molestiae consectetur possimus neque illum dolorem
+              debitis, accusantium itaque nobis necessitatibus quia soluta nulla
+              velit sint hic placeat quaerat et?
+            </section>
+            <section>
+              <h2 class="main-h">
+                [<span class="blk">Isn't this cool!</span>]
+              </h2>
+              It sure is :) Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Accusantium eius impedit unde, dolorum exercitationem eaque
+              repudiandae maxime aspernatur deserunt aut asperiores alias
+              reprehenderit fuga! Corporis aut adipisci quaerat debitis
+              consequuntur!
+            </section>
+          </article>
+        </article>
+      </main>
+      <!-- Related articels =================================================== -->
+      <nav class="blogpage-index">
+        <h2 class="main-h">[<span class="blk">Blog index</span>]</h2>
+        <ul class="index-list history-list">
+          <li>
+            <a href="" class="u-nav blog-nav"
+              ><h4 class="blog-h">
+                [<span class="blk">Blog title</span>(
+                <time datetime="" class="blk">Date here</time>)
+              </h4></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </article>
+    <footer class="blogpage-footer"></footer>
   </body>
 </html>
