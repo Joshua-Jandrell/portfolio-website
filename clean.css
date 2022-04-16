@@ -9,7 +9,7 @@
 /* ------------------------- bacground fromats --------------------- */
 /* ================================================================= */
 body.max {
-  padding: 0;
+  padding: 50px 0;
   margin: 0;
   background-color: rgb(255, 255, 255);
 }
@@ -508,7 +508,7 @@ ul.history-list li {
 }
 /* devlog only formats */
 .devlog-grid {
-  display: inline-grid;
+  display: grid;
   position: relative;
   max-width: 850px;
   grid-template-columns: 1.5fr 3fr;
