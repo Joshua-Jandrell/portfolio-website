@@ -71,7 +71,7 @@
 .blogpage-footer .bottom-nav {
   display: grid;
   gap: 1%;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 4fr 2fr;
   position: relative;
   margin: 0 auto;
   margin-bottom: 30px;

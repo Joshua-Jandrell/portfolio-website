@@ -55,7 +55,7 @@ body.max {
   display: block;
   float: left;
   width: 100%;
-  height: 10px;
+  height: 50px;
   background-color: aqua;
 }
 /* hyperlinks */
@@ -227,8 +227,7 @@ h1.main-h {
   display: block;
   text-align: center;
 
-  margin-left: 5vw;
-  padding-left: 25px;
+  padding: 0 25px;
 
   font-size: 60px;
   font-family: Arial, Helvetica, sans-serif;
@@ -586,9 +585,59 @@ ul.timeline li:last-child {
   color: inherit;
 }
 /* ================================================================= */
+/* ------------------------- Contack styling ----------------------- */
+/* ================================================================= */
+.contact-grid {
+  display: block;
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  /* grid-auto-flow: row;
+  grid-template-columns: 2fr 3fr;
+  gap: 10px;*/
+}
+
+.contact-grid .comment {
+  padding: 0;
+  margin: 0;
+  font-size: 25px;
+
+  text-align: center;
+}
+
+.contact-card {
+  display: block;
+  padding: 30px 20px;
+  max-width: 200px;
+  outline: 1px solid black;
+  background-color: whitesmoke;
+  border-left: solid 5px orange;
+
+  box-shadow: 1px 1px 2px;
+}
+.contact-card .p-name {
+  text-align: center;
+  font-weight: bold;
+  color: orange;
+  margin: 5px 0;
+
+  font-size: inherit;
+}
+.contact-card .p-name article {
+  display: inline;
+}
+
+.contact-icons {
+  width: fit-content;
+  margin: 0 auto;
+
+  height: fit-content;
+}
+/* ================================================================= */
 /* ------------------------- Share icons --------------------------- */
 /* ================================================================= */
-.share-wrapper{
+.share-wrapper {
   height: 100px;
 }
 ul.share-links {
@@ -607,20 +656,47 @@ ul.share-links li {
   width: fit-content;
   display: block;
 }
+ul.share-links::before {
+  content: "[";
+  display: block;
+  float: left;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0;
+}
+ul.share-links::after {
+  content: "]";
+  display: block;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0;
+}
 ul.share-links li img {
   height: 50px;
   margin: 0;
   padding: 0;
 }
-.share-h{
+.share-h {
   display: block;
   float: left;
+  text-align: right;
   height: 50px;
   width: 50px;
   line-height: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 40px;
+  margin-left: 0;
   margin-right: 20px;
   padding-top: 40px;
+}
+/* ================================================================= */
+/* ------------------------- footer formting ----------------------- */
+/* ================================================================= */
+.foot{
+  width: 100%;
+  height: 50px;
+  margin-top: 100px;
+  border-top: 1px solid black;
+  background-color: aliceblue;
 }
