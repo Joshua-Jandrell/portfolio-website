@@ -14,23 +14,98 @@
 .blogpage-index {
   display: block;
   position: sticky;
-  height: 100%;
+  top: 100px;
+  height: fit-content;
   z-index: -1;
   margin-top: 60px;
 }
 
-
-.blogpage-index.left li{
-    border-left: none;
-    border-right: 5px solid rgb(99, 140, 126);
-    text-align: left;
-    padding-left: 20px;
+.blogpage-index.left li {
+  border-left: none;
+  border-right: 5px solid rgb(99, 140, 126);
+  text-align: left;
+  padding-left: 20px;
 }
 
-.blog-main{
-    margin-left: 40px;
-    margin-right: 40px;
+.blog-main {
+  margin-left: 40px;
+  margin-right: 40px;
 
-    padding: 0 20px;
-    outline: 1px solid black;
+  padding: 0 20px;
+  position: relative;
+}
+
+.blogpage-index.left .main-h {
+  text-align: center;
+}
+
+.article-nav ul {
+  display: block;
+  width: 100%;
+  padding: 0 auto;
+  list-style: none;
+}
+/* Back button styling ========================================================= */
+.back-button {
+  display: block;
+  width: 75px;
+  padding: 10px 20px;
+  margin: 10px auto;
+
+  border: solid black 1px;
+
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+/* Blog grid styling ============================================================ */
+.blog-grid-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2%;
+  text-align: center;
+  max-width: 800px;
+
+  margin: 0 auto;
+}
+
+.blog-grid-wrapper li {
+  display: block;
+  position: relative;
+  overflow-y: hidden;
+  outline: 1px solid black;
+  border-radius: 10px;
+  height: 150px;
+
+  margin: 10px 0;
+}
+/* footer layout ============================================================ */
+.blogpage-footer .bottom-nav {
+  display: grid;
+  gap: 1%;
+  grid-template-columns: 3fr 2fr;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 30px 50px;
+  max-width: 900px;
+}
+.back-grid-wrapper {
+  grid-row: 1/1;
+  grid-column: 2/2;
+  float: right;
+  width: fit-content;
+}
+.back-grid-wrapper .back-button
+{
+    float: right;
+    margin-top: 30px;
+}
+.blog-share-wrapper {
+  grid-column-start: 1;
+}
+.blog-read-more {
+  grid-column-start: 1;
+  grid-column: span 2;
 }

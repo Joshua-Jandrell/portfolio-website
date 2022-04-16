@@ -72,7 +72,7 @@ ul.bullet-list {
   margin-left: 20px;
   display: inline-block;
 }
-a.nav-link{
+a.nav-link {
   color: inherit;
   text-decoration: inherit;
 }
@@ -144,7 +144,7 @@ nav.nav-bar {
   grid-row: 1;
   border-left: 1px solid black;
 }
-.nav-bar li:first{
+.nav-bar li:first {
   border-left: none;
 }
 .nav-bar li a {
@@ -158,10 +158,10 @@ nav.nav-bar {
   text-align: center;
   height: 100%;
 }
-.nav-bar a:hover{
+.nav-bar a:hover {
   box-shadow: inset 0 0 1px;
 }
-.nav-bar a.select{
+.nav-bar a.select {
   border-bottom: 5px solid orange;
 }
 .nav-bar a .link-block {
@@ -170,10 +170,10 @@ nav.nav-bar {
   color: rgba(0, 0, 0, 0);
   font-weight: bold;
 }
-.nav-bar a:hover .link-block{
+.nav-bar a:hover .link-block {
   color: orange;
 }
-a .link-block .nav-txt{
+a .link-block .nav-txt {
   color: black;
   font-weight: normal;
   margin: 0 5px;
@@ -508,7 +508,7 @@ ul.history-list li {
 }
 /* devlog only formats */
 .devlog-grid {
-  display: grid;
+  display: inline-grid;
   position: relative;
   max-width: 850px;
   grid-template-columns: 1.5fr 3fr;
@@ -530,9 +530,9 @@ ul.history-list li {
   grid-row-start: 1;
 }
 /* timline list and scroll area */
-.scroll-wrapper{
+.scroll-wrapper {
   position: relative;
-  overflow-y:scroll;
+  overflow-y: scroll;
   width: max-content;
   height: 335px;
 
@@ -548,7 +548,7 @@ ul.timeline {
 
   scroll-snap-align: middle;
 }
-ul.timeline li{
+ul.timeline li {
   position: relative;
   margin-left: 30px;
   border-left: none;
@@ -557,7 +557,7 @@ ul.timeline li{
   scroll-snap-align: start;
 }
 
-ul.timeline li::before{
+ul.timeline li::before {
   content: "";
   display: block;
   width: 20px;
@@ -569,6 +569,45 @@ ul.timeline li::before{
   bottom: 40%;
 }
 
-ul.timeline li:last-child{
+ul.timeline li:last-child {
   border-bottom: none;
+}
+/* ================================================================= */
+/* ------------------------- Share icons --------------------------- */
+/* ================================================================= */
+.share-wrapper{
+  height: 100px;
+}
+ul.share-links {
+  display: grid;
+  float: left;
+  list-style: none;
+  width: fit-content;
+  gap: 40px;
+  grid-auto-flow: column;
+
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+}
+ul.share-links li {
+  width: fit-content;
+  display: block;
+}
+ul.share-links li img {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+.share-h{
+  display: block;
+  float: left;
+  height: 50px;
+  width: 50px;
+  line-height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 40px;
+  margin-right: 20px;
+  padding-top: 40px;
 }
