@@ -48,7 +48,7 @@ body.max {
 }
 
 .noDisplay {
-  display: none important;
+  display: none;
 }
 
 .section-divider {
@@ -571,6 +571,19 @@ ul.timeline li::before {
 
 ul.timeline li:last-child {
   border-bottom: none;
+}
+/* Back button styling ========================================================= */
+.back-button {
+  display: block;
+  width: 75px;
+  padding: 10px 20px;
+  margin: 10px auto;
+
+  border: solid black 1px;
+
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
 }
 /* ================================================================= */
 /* ------------------------- Share icons --------------------------- */

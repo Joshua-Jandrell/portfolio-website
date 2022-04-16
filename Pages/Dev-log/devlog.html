@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/clean.css" />
-    <link rel="stylesheet" href="/Pages/Blog/blog.css" />
+    <link rel="stylesheet" href="/Pages/Dev-log/devlog.css" />
     <title>Joshua Jandrell / devlog</title>
   </head>
   <body class="max basic">
@@ -78,5 +78,58 @@
       </nav>
       <nav class="blog-index"></nav>
     </header>
+    <!-- Articel section ==============================================================================-->
+    <article class="devlog-super-wrapper">
+      <header class="feed-headder">
+        <nav class="blogpage-index left" aria-hidden="ture">
+          <!--Hide entries list from screen reader users - they can use main feel list for this-->
+          <h2 class="main-h">[<span class="blk">Dev-History</span>]</h2>
+          <ul class="index-list history-list">
+            <li>
+              <a href="http://" class="u-nav blog-nav"
+                ><h4 class="blog-h">
+                  [<span class="blk">Blog title</span>]
+                </h4></a
+              >
+            </li>
+          </ul>
+          <article class="back-wrapper">
+            <a
+              href="/Pages/Index/index.html/#blogs"
+              rel="home"
+              class="u-home back-button"
+              ><span class="blk">Back</span></a
+            >
+          </article>
+        </nav>
+      </header>
+      <!-- Feed ==============================================================================-->
+      <main class="devlog-feed h-feed e-content">
+        <div class="time-line" aria-hidden="true"></div>
+        <h1 class="main-h">[<span class="blk p-name">Devlog</span>]</h1>
+        <span class="p-author noDisplay">Joshau Jandrell</span>
+        <!--Give authot for microformat but no need to display this on the site-->
+        <ul class="devlog-feed-content" aria-roledescription="devlog entries">
+          <!-- Devlog article start ---------------------------------->
+          <li class="devlog-entry h-entry">
+            <time datetime="2022-16-04">Date goes here</time>
+            <details class="devlog-feed-deets">
+              <summary>
+                <h2 class="main-h dev-h">
+                  [<span class="blk p-name">Title here</span>]
+                </h2>
+              </summary>
+              <!-- Delog article content --------------------------------------->
+              <article class="entry-content e-content">
+                Blog content Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Qui sunt blanditiis id repudiandae a minus rerum modi
+                autem voluptate necessitatibus, dolor soluta eius, error dicta
+                quisquam nam vitae dolorum voluptatibus.
+              </article>
+            </details>
+          </li>
+        </ul>
+      </main>
+    </article>
   </body>
 </html>

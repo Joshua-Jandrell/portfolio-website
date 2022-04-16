@@ -45,19 +45,6 @@
   padding: 0 auto;
   list-style: none;
 }
-/* Back button styling ========================================================= */
-.back-button {
-  display: block;
-  width: 75px;
-  padding: 10px 20px;
-  margin: 10px auto;
-
-  border: solid black 1px;
-
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-}
 /* Blog grid styling ============================================================ */
 .blog-grid-wrapper {
   display: grid;

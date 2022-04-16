@@ -1,51 +1,74 @@
-main.devlog {
-  margin-top: 90px;
-  width: 100%;
-  height: max-content;
-  width: 100%;
-  background-color: aqua;
-  display: block;
+/* ================================================================= */
+/* ------------ Basic structure and wrapping ----------------------- */
+/* ================================================================= */
+.devlog-super-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-flow: row;
+  gap: 50px;
 }
-/* Side nav bar */
-nav.sidenav {
+
+.devlog-feed {
   display: block;
   float: left;
-  top: 100px;
-  width: 22%;
-  margin: 0;
-  border-right: dotted cyan;
+  height: 100%;
+  max-width: 800px;
+
+  border-left: 5px dashed black;
+}
+.time-line {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
 }
-article.sidenav {
-  border: solid white;
-  text-align: center;
-  margin: 10px 20px;
-  display: block;
-  position: sticky;
-  top: 100px;
-}
 
-.sidenav a {
-  text-decoration: none;
-  color: inherit;
-}
-/* articles ==================================== */
-#articles {
-  display: block;
-  float: right;
-  padding: 20px;
-  width: 72%;
+ul.devlog-feed-content {
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
-#articles article {
-  background-color: aliceblue;
-  color: blue;
-  border-radius: 5px;
-  border: solid rgb(0, 116, 116) 2px;
-  box-shadow: 0 0 2px 2px aqua;
-
-  padding: 20px 10px;
-  margin: 20px 0;
+ul.devlog-feed-content li.devlog-entry {
+  margin-left: 50px;
+  padding: 20px;
+  position: relative;
+  border: 1px solid black;
 }
-/* Headers ================================================ */
+ul.devlog-feed-content li.devlog-entry::before {
+  content: "";
+  display: block;
+  background-color: black;
+  height: 25px;
+  width: 25px;
 
+  position: absolute;
+  left: -65px;
+  top: 10px;
+}
+/* ================================================================= */
+/* ------------ Details formatting --------- ----------------------- */
+/* ================================================================= */
+details.devlog-feed-deets summary {
+  display: inline-block;
+}
+details.devlog-feed-deets summary h2.dev-h {
+  transition: all 0.5s;
+}
+details.devlog-feed-deets summary h2.dev-h .blk {
+  transition: all 0.5s;
+}
+
+details.devlog-feed-deets summary:hover h2.dev-h {
+  color: orange;
+  text-shadow: 0 0 2px;
+  font-weight: bolder;
+  font-size: 25px;
+  transition: all 1s;
+}
+details.devlog-feed-deets summary:hover h2.dev-h .blk {
+  text-shadow: none;
+  font-size: 20px;
+  padding: 0 30px;
+  transition: all 1s;
+}
