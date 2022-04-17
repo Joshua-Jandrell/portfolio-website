@@ -697,7 +697,7 @@ ul.share-links li a:hover img {
 /* ================================================================= */
 /* ------------------------- footer formting ----------------------- */
 /* ================================================================= */
-.foot{
+.foot {
   display: block;
   margin-left: 0;
   margin-right: 0;
@@ -710,13 +710,28 @@ ul.share-links li a:hover img {
   font-size: 10px;
   color: rgb(91, 91, 91);
 }
-.foot .contact-grid{
+.foot .contact-grid {
   width: 100%;
   float: none;
 }
 
-.foot .credits.wide{
+.foot .credits.wide {
   margin-top: 50px;
   width: 100%;
   text-align: left;
+}
+/* ================================================================= */
+/* ---------- sare link organising --------------------------------- */
+/* ================================================================= */
+.footer-icons {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.footer-icons .contact-grid {
+  margin: 0;
+  max-width: 80%;
+  margin: 0 auto;
 }
