@@ -218,23 +218,37 @@ a .link-block .nav-txt {
 /* ------------------------- Headdings ----------------------------- */
 /* ================================================================= */
 .blk {
+  color: red;
+  font-family: monospace;
+}
+.main-h {
   color: black;
   font-family: monospace;
-  font-weight: lighter;
 }
-h1.main-h {
-  display: block;
-  text-align: center;
-
-  padding: 0 25px;
-
-  font-size: 60px;
+.main-h::before {
+  content: "[";
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  margin-right: 10px;
 }
-h1.main-h .blk {
-  padding: 0 10px;
+.main-h::after {
+  content: "]";
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 10px;
+}
+h1.main-h {
   font-size: 40px;
+  padding: 0 25px;
+  margin: 0 10px;
+}
+h1.main-h::before {
+  font-size: 60px;
+  color: blue;
+}
+h1.main-h::after {
+  font-size: 60px;
+  color: blue;
 }
 h2.main-h {
   font-size: 20px;
@@ -245,7 +259,7 @@ summary h2.main-h {
 }
 
 h2.main-h .blk {
-  color: black;
+  color: pink;
   font-weight: bolder;
   padding: 0;
 }
@@ -721,7 +735,7 @@ ul.share-links li a:hover img {
   text-align: left;
 }
 /* ================================================================= */
-/* ---------- sare link organising --------------------------------- */
+/* ---------- share link organising --------------------------------- */
 /* ================================================================= */
 .footer-icons {
   display: grid;

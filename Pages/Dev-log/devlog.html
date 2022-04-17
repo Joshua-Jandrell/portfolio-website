@@ -13,7 +13,7 @@
       <nav class="nav-bar">
         <label for="#main-bar" class="nav-lable"
           ><a href="/Pages/Index/index.html" rel="home" class="title-link"
-            ><h1>]oshau ]andrell [Dev-log]</h1></a
+            ><h1>Joshau Jandrell]</h1></a
           ></label
         >
         <ul class="nav-bar" id="main-bar">
@@ -83,7 +83,7 @@
       <header class="feed-headder">
         <nav class="devlogpage-index left" aria-hidden="ture">
           <!--Hide entries list from screen reader users - they can use main feel list for this-->
-          <h2 class="main-h">[<span class="blk">Dev-History</span>]</h2>
+          <h2 class="main-h">Dev-History</h2>
           <ul class="index-list history-list">
             <li>
               <a href="http://" class="u-nav blog-nav"
@@ -104,14 +104,17 @@
         </nav>
       </header>
       <!-- Feed ==============================================================================-->
-      <main class="devlog-feed h-feed e-content">
+      <main class="devlog-feed h-feed">
         <div class="time-line" aria-hidden="true"></div>
-        <h1 class="main-h">[<span class="blk p-name">Devlog</span>]</h1>
+        <h1 class="main-h">Devlog</h1>
         <span class="p-author noDisplay">Joshau Jandrell</span>
         <!--Give authot for microformat but no need to display this on the site-->
-        <ul class="devlog-feed-content" aria-roledescription="devlog entries">
-          <!-- Devlog article start ---------------------------------->
-          <li class="devlog-entry h-entry">
+        <!-- Devlog articles start ---------------------------------->
+        <ul
+          class="devlog-feed-content e-content"
+          aria-roledescription="devlog entries"
+        >
+          <li class="devlog-entry h-entry noDisplay" id="template_0">
             <time datetime="2022-16-04" class="dt-published entry-date"
               >Date goes here</time
             >
@@ -130,60 +133,197 @@
               </article>
             </details>
           </li>
-          <li class="devlog-entry h-entry">
+          <!-- Imporving acessability with psudo elements ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+          <li class="devlog-entry h-entry" id="pseudo-square-bracket_0">
             <time datetime="2022-16-04" class="dt-published entry-date"
-              >Date goes here</time
+              >17 April 2022</time
             >
             <details class="devlog-feed-deets">
               <summary>
                 <h2 class="main-h dev-h">
-                  [<span class="blk p-name">Title here</span>]
+                  Pseudo square brackets: what, how, why?
                 </h2>
+                <br />
+                <section class="p-summmary">
+                  Square brackets have been a recurring motif on my sight
+                  because they invoke ideas of theology and programming.
+                  <div class="inline-comment">(They also look cool!)</div>
+                  . But using inline text elements to represent them is tedious
+                  and creates clutter for screen reader users: there must be a
+                  better way.
+                </section>
               </summary>
               <!-- Delog article content --------------------------------------->
               <article class="entry-content e-content">
-                Blog content Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Qui sunt blanditiis id repudiandae a minus rerum modi
-                autem voluptate necessitatibus, dolor soluta eius, error dicta
-                quisquam nam vitae dolorum voluptatibus.
-              </article>
-            </details>
-          </li>
-          <li class="devlog-entry h-entry">
-            <time datetime="2022-16-04" class="dt-published entry-date"
-              >Date goes here</time
-            >
-            <details class="devlog-feed-deets">
-              <summary>
-                <h2 class="main-h dev-h">
-                  [<span class="blk p-name">Title here</span>]
-                </h2>
-              </summary>
-              <!-- Delog article content --------------------------------------->
-              <article class="entry-content e-content">
-                Blog content Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Qui sunt blanditiis id repudiandae a minus rerum modi
-                autem voluptate necessitatibus, dolor soluta eius, error dicta
-                quisquam nam vitae dolorum voluptatibus.
-              </article>
-            </details>
-          </li>
-          <li class="devlog-entry h-entry">
-            <time datetime="2022-16-04" class="dt-published entry-date"
-              >Date goes here</time
-            >
-            <details class="devlog-feed-deets">
-              <summary>
-                <h2 class="main-h dev-h">
-                  [<span class="blk p-name">Title here</span>]
-                </h2>
-              </summary>
-              <!-- Delog article content --------------------------------------->
-              <article class="entry-content e-content">
-                Blog content Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Qui sunt blanditiis id repudiandae a minus rerum modi
-                autem voluptate necessitatibus, dolor soluta eius, error dicta
-                quisquam nam vitae dolorum voluptatibus.
+                <section>
+                  <h3 class="dev-h">
+                    Why do you want these square brackets anyway?
+                  </h3>
+                  <p>
+                    Decoration. This site isn't exactly putting on a sceptical
+                    with pretty images and fancy graphics. Of course, this is by
+                    design - but having no decoration at all is boring. The
+                    brackets add a bit of intrigue and variety while acting as a
+                    motif. They give the site a distinct aesthetic style with
+                    should make it more memorable to visitors. Furthermore, it
+                    ensures that all pages on the site (I know, this sounds like
+                    a horribly mixed metaphor…) are look like parts of a common
+                    whole; even when their layout and content is varied.
+                  </p>
+                  <p class="retoric" aria-roledescription="retoric">
+                    Okay, cool. But why use square brackets for this?
+                  </p>
+                  <p>
+                    Decoration. This site isn't exactly putting on a sceptical
+                    with pretty images and fancy graphics. Of course, this is by
+                    design - but having no decoration at all is boring. The
+                    brackets add a bit of intrigue and variety while acting as a
+                    motif. They give the site a distinct aesthetic style with
+                    should make it more memorable to visitors. Furthermore, it
+                    ensures that all pages on the site (I know, this sounds like
+                    a horribly mixed metaphor…) are look like parts of a common
+                    whole; even when their layout and content is varied.
+                  </p>
+                  <p class="retoric" aria-roledescription="retoric">
+                    So? Why not are semi colons, ampersands, or OTHER BRACKETS -
+                    these are used in code too!
+                  </p>
+                  <p>
+                    Well, yes. But square ones are the best! (In my case
+                    anyway).
+                  </p>
+                  <p>
+                    Firstly, square brackets are often used for indexing in
+                    programming languages. And this is how I am using brackets
+                    on my site. They indicate tilts and section: items that
+                    would appear in and index. If my site were some sort of
+                    dictionary class, this is exactly how a under might expect
+                    to retrieve the section associated with a title. Tying a
+                    functional meaning to the elements is important because it
+                    reinforces the connection to programming (and shows that I
+                    know what I'm doing).
+                  </p>
+                  <p>
+                    Other coding syntax elements lack his meaning. Semi-colons
+                    are just line endings and curly brackets often just contain
+                    sections of code. (As for good old round brackets, their
+                    meaning is already well defined as an element of English
+                    punctuation. Not not just meaningless, they're but confusing
+                    too!)
+                  </p>
+                  <p>
+                    I also like square brackets because they appear strong and
+                    confident. Most containers on this site have crisp, sharp
+                    boarders with unrounded edges - square braces fit
+                    comfortably into this astatic. (Although I must confess
+                    square braces may have also informed this athletic)
+                  </p>
+                </section>
+                <section>
+                  <h3 class="dev-h">So what's wrong with them?</h3>
+                  Look at these two random containers:
+                  <article class="demo-square-bracket-divs">
+                    <div class="square-bracket-bad">
+                      [<span class="inner">Something in brackets</span>]
+                    </div>
+                    <div class="square-bracket-good">Something in brackets</div>
+                  </article>
+                  <p class="retoric" aria-roledescription="retoric">
+                    Is this a trick or something?Ones one is on top the other is
+                    on the bottom?
+                  </p>
+                  <p>
+                    If you are viewing this site on a monitor, they probably
+                    look the same. But if you view them with a screen reader one
+                    is haven then the other is hell. (And not becuase of that
+                    top and bottom thing.)
+                  </p>
+                  <p class="retoric" aria-roledescription="retoric">
+                    Is this a trick or something?Ones one is on top the other is
+                    on the bottom?
+                  </p>
+                  <p>
+                    Open square bracket imagine close square bracket if I spoke
+                    like open square brace this close square brace.
+                  </p>
+
+                  <p class="retoric" aria-roledescription="retoric">
+                    I can't even understand what you are saying.
+                  </p>
+                  <p>
+                    Exactly! That's what happens if <em>decorative</em> square
+                    brackets are added as inline characters. Like I did with the
+                    first div (and most of the early headers on this site).
+                  </p>
+                  <p>
+                    Take a look at the code for the first one to see what I
+                    mean:
+                  </p>
+                  <pre>
+                    <code class="code-sinp">
+  &ltstyle&gt
+    .square-bracket-bad {
+      font-weight: bold;
+      color: rgb(47, 177, 203);
+    }
+    .square-bracket-bad .inner {
+      font-weight: normal;
+      color: black;
+      margin: 0 10px;
+    }
+  &lt/style&gt
+
+  &ltdiv class="square-bracket-bad"&gt
+    [&ltspan class="inner"&gtSomething in brackets&lt/span&gt]
+  &lt/div&gt
+                    </code>
+                  </pre>
+
+                  <p class="retoric" aria-roledescription="retoric">
+                    Oh dear. That's a bummer... I'm guessing the second div is
+                    different...
+                  </p>
+                </section>
+                <section>
+                  <h3 class="sub-h">How do you fix this></h3>
+                  <p>
+                    Magic.
+                    <span class="inline-comment"
+                      >(Actually CSS, which is basically the same thing.)</span
+                    >
+                  </p>
+                  <p>
+                    I made used of the ::before and ::after CSS pseudo elements.
+                    These elements render (you'll never guess this) before and
+                    after their parent element. Think of them like the bullet
+                    points on a list. They are pretty neat and simple to use.
+                  </p>
+                  <p>Just look at the code for the lower div:</p>
+                  <pre>
+                    <code class="code-sinp">
+  &ltstyle&gt
+   .square-bracket-good {
+      font-weight: normal;
+      color: black;
+    }
+    .square-bracket-good::before {
+      content: "[";
+      font-weight: bold;
+      color: rgb(47, 177, 203);
+      margin-right: 10px;
+    }
+    .square-bracket-good::after {
+     content: "]";
+     font-weight: bold;
+     color: rgb(47, 177, 203);
+     margin-left: 10px;
+  }
+  &lt/style&gt
+
+  &ltdiv class="square-bracket-good"&gtSomething in brackets&lt/div&gt
+                    </code>
+                  </pre>
+                </section>
               </article>
             </details>
           </li>
