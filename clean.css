@@ -128,7 +128,7 @@ nav.nav-bar {
   height: 100%;
   width: 80%;
   display: grid;
-  row-gap: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   column-gap: 0;
   padding: 0;
   margin: 0;
@@ -166,11 +166,35 @@ nav.nav-bar {
 .nav-bar a .link-block {
   padding-top: 15px;
   display: inline-block;
+  transition: all 0.5s;
+}
+.nav-bar a .link-block::before {
+  content: "[";
   color: rgba(0, 0, 0, 0);
-  font-weight: bold;
+  transition: all 0.5s;
+}
+.nav-bar a .link-block::after {
+  content: "]";
+  color: rgba(0, 0, 0, 0);
+  transition: all 0.5s;
 }
 .nav-bar a:hover .link-block {
   color: orange;
+  font-weight: bold;
+  text-shadow: 0 0 1px inset black;
+  transition: all 0.5s;
+}
+.nav-bar a:hover .link-block::before {
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: all 1s;
+}
+.nav-bar a:hover .link-block::after {
+  color: black;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: all 1s;
 }
 a .link-block .nav-txt {
   color: black;
