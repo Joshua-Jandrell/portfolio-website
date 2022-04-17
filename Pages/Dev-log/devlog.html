@@ -108,9 +108,7 @@
             >
             <details class="devlog-feed-deets">
               <summary>
-                <h2 class="main-h dev-h">
-                  [<span class="blk p-name">Title here</span>]
-                </h2>
+                <h2 class="main-h dev-h p-name">Entry title here</h2>
               </summary>
               <!-- Delog article content --------------------------------------->
               <article class="entry-content e-content">
@@ -121,6 +119,95 @@
               </article>
             </details>
           </li>
+          <!-- A quick deliberation on the return button ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <li class="devlog-entry h-entry" id="back_button_0">
+            <time datetime="2022-18-04" class="dt-published entry-date"
+              >18 April 2022</time
+            >
+            <details class="devlog-feed-deets">
+              <summary>
+                <h2 class="main-h dev-h p-name">
+                  Going back to the 'back' button.
+                </h2>
+                <section class="p-summary">
+                  The back button was never well placed on my wireframes and has
+                  always felt like an award appendage cluttering up the site.
+                  I'm still not 100% sure where to put it, but at least I've
+                  thought things through.
+                </section>
+              </summary>
+              <!-- Delog article content --------------------------------------->
+              <article class="entry-content e-content">
+                <section>
+                  <h3 class="dev-h">What doess the back button do?</h3>
+                  The back button allows the user to go back to where they game
+                  from. I'm renaming it the return button because the fits the
+                  “programming” theme better. (Return is the command given to
+                  leave a function).
+                </section>
+                <section>
+                  <h3 class="dev-h">What's the issue with it?</h3>
+                  <p>
+                    The back buttons on the blog and dev-log pages are a bit of
+                    a mess. They float around haphazardly feeling like clutter
+                    wherever they go.
+                  </p>
+                  <p>
+                    I've moved most navigation and index features to the right,
+                    which is great, but it means that there is even less space
+                    for the button to naturally rest.
+                  </p>
+                  <p>
+                    I was considering putting it on the nav bar - but I want the
+                    nave bar to have the same fields throughout the site to give
+                    a sense of consistency. The nav-bar is also quite cluttered
+                    as it is.
+                  </p>
+                  <p class="retoric" aria-roledescription="retoric">
+                    Can't the user just navigate with the nav bar? Why is return
+                    so important?
+                  </p>
+                  <p>
+                    Currently it's not doing that much. But once I start adding
+                    some JS the return button will send the user back to their
+                    previous page, wherever that was. This makes navigating the
+                    site easier (which is never a bad thing). So, no. No, I do
+                    not want to do away with the return button.
+                  </p>
+                  <p>
+                    To be honest I'm not sure where it should go. I could throw
+                    it onto the right-hand side, but it would look weird and
+                    lonely there. Besides, the website is in English which sets
+                    a natural left-to right convention. Returning or going back
+                    can be seen as leftwards movement, so putting a return
+                    button on the right may seem unintuitive.
+                  </p>
+                  <p>
+                    I’m going to be reformatting it to look like a piece of code
+                    and throw it under the title. I'll pop it again at the
+                    bottom of the article. Logically these are the two points
+                    where a reader is most likely to decide they want to go
+                    back. Either they haven't started and decide they'd rather
+                    look at something else, or they finished reading and want to
+                    go back.
+                  </p>
+
+                  <p>
+                    With this in mind I'll probably be floating a return button
+                    below each title and again at the bottom of the article. Is
+                    this overkill? Perhaps a back at the end is goo enough. Is
+                    there a point in asking someone to leave when they just
+                    arrived?
+                  </p>
+                </section>
+
+                <p>
+                  Possibly. I'll have to wait and see. I think I'll throw it in
+                  at the top (at least for now). I can always remove it later…
+                </p>
+              </article>
+            </details>
+          </li>
           <!-- Imporving acessability with psudo elements ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
           <li class="devlog-entry h-entry" id="pseudo-square-bracket_0">
             <time datetime="2022-16-04" class="dt-published entry-date"
@@ -128,7 +215,7 @@
             >
             <details class="devlog-feed-deets">
               <summary>
-                <h2 class="main-h dev-h">
+                <h2 class="main-h dev-h p-name">
                   Pseudo square brackets: what, how, why?
                 </h2>
                 <br />
@@ -311,6 +398,35 @@
   &ltdiv class="square-bracket-good"&gtSomething in brackets&lt/div&gt
                     </code>
                   </pre>
+                  <p>
+                    Did you notice the lack of braces? Well screen reader users
+                    noticed that too! So did web crawlers and anything else that
+                    is interfacing directly with the code on my site. Removing
+                    square brackets and other decretive clutter makes the code
+                    more sematic and machine readable.
+                  </p>
+                  <p>
+                    Pseudo elements aren't real. They can't hurt you. (Pseudo
+                    literally means fake!) These elements are defined entirely
+                    with scc styling which means that, like all good children in
+                    the Middle Ages, they can be seen but not heard.
+                  </p>
+                  <p>
+                    Another great thing about the pseudo element approach is the
+                    flexibility it gives me. Let's say I get hooked on C++ and
+                    decide that titles aren't really indexes _ there're
+                    pointers. So, I want to change all of the []'s into '’s. If
+                    I need to change the characters next to every single
+                    heading, I'd probably give up or pass out from boredom.
+                    Fortunately, with pseudo elements this is as simple as
+                    changing two lines of CSS . If the style s applied to a
+                    class, this can allow innumerable html elements to be
+                    reformatted.
+                  </p>
+                  <p>
+                    Done! Now I must go get rid of all those legacy brackets on
+                    my site. (Or write a program to do it for me). Wish me luck!
+                  </p>
                 </section>
               </article>
             </details>
