@@ -69,40 +69,49 @@
     <!-- Article section ===================================================================================================== -->
     <article class="blogpost-wrapper">
       <!-- Nav index =================================================== -->
-      <nav class="blogpage-index left">
-        <h2 class="main-h">[<span class="blk">Blog index</span>]</h2>
-        <ul
-          class="index-list history-list"
-          aria-roledescription="Index for [blog name]"
-        >
-          <li>
-            <a href="http://" class="u-nav blog-nav"
-              ><h4 class="blog-h">[<span class="blk">Blog title</span>]</h4></a
-            >
-          </li>
-          <li>
-            <a href="http://" rel="tag" class="nav-link blog-nav"
-              >Pretty nifty</a
-            >
-          </li>
-        </ul>
-        <article class="back-wrapper">
-          <a
-            href="/Pages/Index/index.html/#blogs"
-            rel="home"
-            class="u-home back-button"
-            ><span class="blk">Back</span></a
+      <nav class="sticky-nav">
+        <article class="blogpage-index left" id="page_index">
+          <h2 class="sub-h center">Blog index</h2>
+          <ul
+            class="index-list history-list"
+            aria-roledescription="Index for [blog name]"
           >
+            <li>
+              <a href="http://" class="u-nav blog-nav"
+                ><h4 class="blog-h main-h">blog title</h4></a
+              >
+            </li>
+          </ul>
+          <article class="back-wrapper">
+            <a
+              href="/Pages/Index/index.html/#blogs"
+              rel="home"
+              class="u-home back-button"
+              >return</a
+            >
+          </article>
+        </article>
+        <!-- Related articels =================================================== hidden from area becuase it only makes sens  -->
+        <article class="blogpage-index" id="related_index" aria-hidden="true">
+          <h2 class="sub-h center">Realted articles</h2>
+          <ul class="index-list history-list">
+            <li>
+              <a href="" class="u-nav blog-nav"
+                ><h4 class="blog-h">
+                  [<span class="blk">Blog title</span>(
+                  <time datetime="" class="blk">Date here</time>)
+                </h4></a
+              >
+            </li>
+          </ul>
         </article>
       </nav>
       <!-- Main artcle =================================================== -->
       <main class="blog-main">
-        <article class="h-entry blogpage-article">
+        <article class="h-entry blogpage-article" id="blog_post">
           <article class="hedding-area">
             <nav class="article-nav"></nav>
-            <h1 class="main-h">
-              [<span class="blk p-name">blog templete</span>]
-            </h1>
+            <h1 class="main-h p-name">Blog template</h1>
             <h2 class="sub-h comment">
               //
               <time datetime="2022-04-15" class="">15 April 2022</time>
@@ -115,9 +124,7 @@
           </section>
           <article class="e-content blogpage-content">
             <section>
-              <h2 class="main-h">
-                [<span class="blk">Headding for section</span>]
-              </h2>
+              <h2 class="main-h">Headding for a section</h2>
               And now we can have test and stuff till the next section. Lorem
               ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
               officiis, molestiae consectetur possimus neque illum dolorem
@@ -125,9 +132,7 @@
               velit sint hic placeat quaerat et?
             </section>
             <section>
-              <h2 class="main-h">
-                [<span class="blk">Isn't this cool!</span>]
-              </h2>
+              <h2 class="main-h">Isn't this cool!</h2>
               It sure is :) Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Accusantium eius impedit unde, dolorum exercitationem eaque
               repudiandae maxime aspernatur deserunt aut asperiores alias
@@ -156,21 +161,8 @@
           </article>
         </article>
       </main>
-      <!-- Related articels =================================================== -->
-      <nav class="blogpage-index">
-        <h2 class="main-h">[<span class="blk">Blog index</span>]</h2>
-        <ul class="index-list history-list">
-          <li>
-            <a href="" class="u-nav blog-nav"
-              ><h4 class="blog-h">
-                [<span class="blk">Blog title</span>(
-                <time datetime="" class="blk">Date here</time>)
-              </h4></a
-            >
-          </li>
-        </ul>
-      </nav>
     </article>
+    <!-- Footer =================================================================-->
     <footer class="blogpage-footer">
       <nav class="bottom-nav">
         <!-- Back button ===================================================================-->
@@ -180,7 +172,7 @@
               href="/Pages/Index/index.html/#blogs"
               rel="home"
               class="u-home back-button"
-              ><span class="blk">Back</span></a
+              >Return</a
             >
           </article>
         </article>
@@ -220,7 +212,7 @@
         </article>
         <!-- Samples of other blogs =========================================================-->
         <article class="blog-read-more">
-          <h2 class="main-h">[<span class="blk">Read more Bloags</span>]</h2>
+          <h2 class="sub-h center">Check out some more blogs</h2>
           <ul class="blog-grid-wrapper">
             <li>
               <a

@@ -8,16 +8,19 @@
 
   display: grid;
   display: -moz-grid;
-  grid-auto-columns: 20% auto 20%;
+  grid-auto-columns: 1fr 4fr;
   grid-auto-flow: column;
+  position: relative;
 }
 .blogpage-index {
   display: block;
+  height: fit-content;
+  z-index: -1;
+}
+.sticky-nav {
   position: sticky;
   top: 100px;
   height: fit-content;
-  z-index: -1;
-  margin-top: 60px;
 }
 
 .blogpage-index.left li {
@@ -28,10 +31,11 @@
 }
 
 .blog-main {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 0 auto;
 
-  padding: 0 20px;
+  max-width: 800px;
+
+  padding: 0 40px;
   position: relative;
 }
 
@@ -84,10 +88,9 @@
   float: right;
   width: fit-content;
 }
-.back-grid-wrapper .back-button
-{
-    float: right;
-    margin-top: 30px;
+.back-grid-wrapper .back-button {
+  float: right;
+  margin-top: 30px;
 }
 .blog-share-wrapper {
   grid-column-start: 1;
