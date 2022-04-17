@@ -3,7 +3,7 @@
 /* ------------------------- colors  ------------------------------- */
 /* ================================================================= */
 .blue {
-  color: rgb(0, 136, 255);
+  color: rgb(47, 177, 203);
 }
 /* ================================================================= */
 /* ------------------------- bacground fromats --------------------- */
@@ -35,6 +35,9 @@ body.max {
 .vertCenter {
   padding-top: 50%;
   padding-bottom: 50%;
+}
+.center {
+  text-align: center;
 }
 
 .stickBlock {
@@ -239,7 +242,7 @@ a .link-block .nav-txt {
 }
 
 /* ================================================================= */
-/* ------------------------- Headdings ----------------------------- */
+/* ------------------------- [Headdings]---------------------------- */
 /* ================================================================= */
 .blk {
   color: red;
@@ -254,6 +257,9 @@ a .link-block .nav-txt {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-right: 10px;
+
+  text-align: center;
+  width: 100%;
 }
 .main-h::after {
   content: "]";
@@ -264,7 +270,7 @@ a .link-block .nav-txt {
 h1.main-h {
   font-size: 40px;
   padding: 0 25px;
-  margin: 0 10px;
+  margin: 20px 10px 30px;
 }
 h1.main-h::before {
   font-size: 60px;
@@ -286,6 +292,27 @@ h2.main-h .blk {
   color: pink;
   font-weight: bolder;
   padding: 0;
+}
+
+/* ================================================================= */
+/* ------------------------- //Sub-heddings ------------------------ */
+/* ================================================================= */
+.sub-h {
+  color: cornflowerblue;
+  font-weight: bold;
+  font-family: monospace;
+}
+.sub-h::before {
+  content: "//";
+  color: black;
+  font-weight: bold;
+  font-family: monospace;
+}
+h2.sub-h::before {
+  font-size: 28px;
+}
+h2.sub-h {
+  font-size: 25px;
 }
 
 /* ================================================================= */

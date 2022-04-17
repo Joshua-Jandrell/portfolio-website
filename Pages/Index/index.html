@@ -10,6 +10,7 @@
     <title>Joshua Jandrell</title>
   </head>
   <body class="max">
+    <!-- Itro section is shown before nav so that screan reader useres are appropratley greeted before we show them around (just like montior users)-->
     <article class="introGrad" rol="introduction">
       <section class="stickBlock" id="fib">
         <div class="introTxt" id="hwt">Hello World.</div>
@@ -67,13 +68,15 @@
       </nav>
     </header>
     <main class="e-content main-body basic">
-      <article id="home-contenet">
-        <h1 class="main-h" id="home">Explore.</h1>
-      </article>
+      <section>
+        <article id="home-contenet">
+          <h1 class="main-h center" id="home">Explore.</h1>
+        </article>
+      </section>
       <!-- About =======================================================================================-->
       <div class="section-divider" id="about" aria-hidden="true"></div>
       <section class="index-section about-section">
-        <h1 class="main-h">[<span class="blk">About</span>]</h1>
+        <h1 class="main-h center">About</h1>
         <article class="about-content e-content">
           <section class="profile-pic-wrapper h-card">
             <img
@@ -325,7 +328,7 @@
       <!-- Games section =====================================================================================-->
       <div class="section-divider" id="games" aria-hidden="true"></div>
       <section class="index-section games-section">
-        <h1 class="main-h">[<span class="blk">Games.</span>]</h1>
+        <h1 class="main-h center">Games.</h1>
         <article class="games-contenet">
           <nav class="games-grid e-nav">
             <ul class="grid-list grid">
@@ -426,11 +429,11 @@
       <!-- Blog section =====================================================================================-->
       <div class="section-divider" id="blog" aria-hidden="true"></div>
       <section class="index-section blog-section">
-        <h1 class="main-h blog-color1">[<span class="blk">Blog.</span>]</h1>
+        <h1 class="main-h center">Blog.</h1>
         <article class="blog-contenet">
           <nav class="blog-grid e-nav">
             <article class="recent-posts">
-              <h2 class="main-h">[<span class="blk">Reacent Posts</span>]</h2>
+              <h2 class="sub-h">Recent Posts</h2>
               <ul>
                 <li>
                   <a
@@ -450,9 +453,7 @@
                       class="blog-summary"
                       aria-roledescription="short preview extract from blog"
                     >
-                      <h3 class="main-h">
-                        [<span class="blk">Blog title</span>]
-                      </h3>
+                      <h3 class="main-h">Blog title</h3>
                       Details to blog introduction go here :) Lorem ipsum dolor
                       sit amet consectetur adipisicing elit. Reprehenderit
                       cupiditate officia tempora praesentium officiis? Facilis
@@ -464,32 +465,10 @@
                     </section>
                   </a>
                 </li>
-                <li>
-                  <a href="" role="navigation" class="blog-sample">
-                    <img
-                      img
-                      src="/Pages/About/aboutImg/placeHolderImg.png"
-                      alt="icon for game"
-                      class="blog-image"
-                      id="bi_0"
-                    />
-                    <section class="blog-summary">
-                      <h3 class="main-h">
-                        [<span class="blk">Blog title</span>]
-                      </h3>
-                      <section class="blog-intto">
-                        Details to blog introduction go here :)
-                      </section>
-                      <section class="read-more" aria-hidden="true">
-                        Click to read more
-                      </section>
-                    </section>
-                  </a>
-                </li>
               </ul>
             </article>
             <article class="blog-history">
-              <h2 clss="main-h">[<span class="blk">Blog history</span>]</h2>
+              <h2 clss="sub-h">Blog history</h2>
               <ul class="history-list">
                 <li>
                   <a href="http://" class="u-nav blog-nav"
@@ -531,14 +510,12 @@
       <!-- Devlog section =====================================================================================-->
       <div class="section-divider" id="devlog" aria-hidden="true"></div>
       <section class="index-section devlog-section">
-        <h1 class="main-h">[<span class="blk">Dev-log</span>]</h1>
-        <span call="comment"
-          >//<span class="comment-inner">Making this website</span></span
-        >
+        <h1 class="main-h center">Dev-log</h1>
+        <article class="comment sub-h center">Making this website</article>
         <article class="devlog-content">
           <nav class="devlog-grid e-nav">
             <article class="recent-posts recent-devlog">
-              <h2 class="main-h">[<span class="blk">Reacent Posts</span>]</h2>
+              <h2 class="sub-h center">Recent Posts</h2>
               <ul>
                 <li>
                   <a
@@ -558,9 +535,7 @@
                       class="blog-summary"
                       aria-roledescription="short preview extract from blog"
                     >
-                      <h3 class="main-h">
-                        [<span class="blk">Blog title</span>]
-                      </h3>
+                      <h3 class="main-h">Blog titl</h3>
                       Details to blog introduction go here :) Lorem ipsum dolor
                       sit amet consectetur adipisicing elit. Reprehenderit
                       cupiditate officia tempora praesentium officiis? Facilis
@@ -607,7 +582,7 @@
               </ul>
             </article>
             <article class="devlog-history">
-              <h2 clss="main-h">[<span class="blk">Dev history</span>]</h2>
+              <h2 class="sub-h center">Dev-History</h2>
               <article class="scroll-wrapper">
                 <ul class="history-list timeline">
                   <li>
@@ -667,9 +642,9 @@
       <!-- Contantact section =====================================================================================-->
       <div class="section-divider" id="contact" aria-hidden="true"></div>
       <section class="index-section contact-section">
-        <h1 class="main-h">[<span class="blk">Contact</span>]</h1>
+        <h1 class="main-h center">Contact</h1>
         <article class="contact-grid">
-          <h2 class="comment">//<span class="comment-inner">Find me:</span></h2>
+          <h2 class="sub-h center">Fine me:</h2>
           <article class="share-wrapper contact-icons">
             <ul class="share-links">
               <li>
