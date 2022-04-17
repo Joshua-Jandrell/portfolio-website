@@ -710,3 +710,13 @@ ul.share-links li a:hover img {
   font-size: 10px;
   color: rgb(91, 91, 91);
 }
+.foot .contact-grid{
+  width: 100%;
+  float: none;
+}
+
+.foot .credits.wide{
+  margin-top: 50px;
+  width: 100%;
+  text-align: left;
+}

@@ -1,0 +1,33 @@
+/* ================================================================= */
+/* ------------------------- Basic strucutureal fromatting --------- */
+/* ================================================================= */
+
+.gamepage-wrapper{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3%;
+
+
+    background-color: aqua;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gamepage-wrapper .game-info-wrapper
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    grid-column: 1 / 1;
+    grid-row: 1/ 1;
+}
+
+.gamepage-wrapper .download-wrapper{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    grid-column: 1/1;
+    grid-row: 2/2;
+}

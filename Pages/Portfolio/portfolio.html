@@ -1,27 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Pages/Portfolio/portfolio.css">
-    <link rel="stylesheet" href="/style.css">
-    <title>Joshua Jandrell > Portfolio</title>
-</head>
-<body class="blueprint">
-    <header>
-        <nav class = "navbar">
-            <ul>
-                <li><a href="/Pages/Index/index.html">Home</a></li>
-                <li><a href="/Pages/About/about.html">About</a></li>
-                <li><a href="/Pages/Blog/blog.html">Blogs</a></li>
-                <li><a href="/Pages/Portfolio/portfolio.html" class = "current">Portfolio</a></li>
-                <li><a href="/Pages/Dev-log/devlog.html">Dev-log</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Pages/Portfolio/portfolio.css" />
+    <link rel="stylesheet" href="/clean.css" />
+    <title>Joshua Jandrell / Game template</title>
+  </head>
+  <body class="basic max">
+    <header class="topBar basic z10" id="topDiv">
+      <nav class="nav-bar">
+        <label for="#main-bar" class="nav-lable"
+          ><a href="/Pages/Index/index.html" rel="home" class="title-link"
+            ><h1>Joshau Jandrell</h1></a
+          ></label
+        >
+        <ul class="nav-bar" id="main-bar">
+          <li>
+            <a href="#home" rel="home" class="homeLink home"
+              ><div class="link-block">
+                [<span class="nav-txt">Home</span>]
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#about" rel="nav" class="aboutLink"
+              ><div class="link-block">
+                [<span class="nav-txt">About</span>]
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#games" rel="tag" claas="gamesLink"
+              ><div class="link-block">
+                [<span class="nav-txt">Games</span>]
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#blog" rel="tag" class="blogLink"
+              ><div class="link-block">
+                [<span class="nav-txt">Blog</span>]
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#devlog" rel="tag" class="devlogLink"
+              ><div class="link-block">
+                [<span class="nav-txt">Dev-log</span>]
+              </div></a
+            >
+          </li>
+          <li>
+            <a
+              href="/Pages/Index/index.html#contact"
+              rel="tag"
+              class="devlogLink"
+              ><div class="link-block">
+                [<span class="nav-txt">Contact</span>]
+              </div></a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main></main>
-    <footer></footer>
-    
-</body>
+    <!-- Main artilce ========================================================================-->
+    <main call="gamepage-main">
+      <h1 class="main-h">
+        [<span class="blk">Game name, could be an Image</span>]
+      </h1>
+      <h2 class="sub-h">
+        //<span class="blk">A short descritpion of the game</span>
+      </h2>
+      <article class="gamepage-wrapper e-content">
+        <article class="game-info-wrapper">
+          Information about the game goes here
+          <!-- Game info grid ===================================-->
+          <article class="credits-grid">
+            <article class="row">
+              <div class="field">Progress</div>
+              <div class="answer">Temepelte</div>
+            </article>
+            <article class="row">
+              <div class="field">Release date</div>
+              <time datetime="2022-20-10" class="dt-published">Temepelte</time>
+            </article>
+            <article class="row">
+              <div class="field">Desinger</div>
+              <div class="answer p-author">
+                <span class="p-author">J. Jandrell</span>
+              </div>
+            </article>
+            <article class="row">
+              <div class="field">Approporate field</div>
+              <div class="answer">
+                <span class="p-author">Correct credit</span>
+              </div>
+            </article>
+          </article>
+          <!-- Othe information about the game: prefrably short and sweet-->
+          <article class="game-writeup">
+            More text about the game will go here Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. In natus quo nisi officiis, quam
+            maxime sed maiores voluptates debitis impedit excepturi delectus
+            soluta nesciunt vel. Molestiae, corporis voluptatem. Mollitia,
+            ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Quod dolorem odit totam reiciendis, accusamus atque reprehenderit!
+            Sunt minima nisi itaque, enim eum dignissimos veritatis qui commodi
+            voluptatibus impedit nulla officia!
+          </article>
+        </article>
+        <!-- downloads=============================================================================-->
+        <article class="game-download-wrapper">
+          <h2 class="sub-h">//<span class="blk">Download</span></h2>
+          <ul class="downloads">
+            <li>Download linkes here</li>
+          </ul>
+        </article>
+        <article class="game-images-wrapper">
+          <img
+            src="/Pages/About/aboutImg/placeHolderImg.png"
+            alt="Image of gamepley"
+          />
+        </article>
+      </article>
+    </main>
+    <footer class="foot">
+      <!-- Cntact section ===================================================================-->
+      <section class="index-section contact-section">
+        <article class="contact-grid">
+          <h2 class="comment">
+            //<span class="comment-inner">Having fun?</span>
+          </h2>
+          <h2 class="comment">
+            //<span class="comment-inner">Totally hate it?</span>
+          </h2>
+          <h2 class="comment">
+            //<span class="comment-inner"
+              >Share this game with a fried!</span
+            >
+          </h2>
+          <article class="share-wrapper contact-icons">
+            <ul class="share-links">
+              <li>
+                <a
+                  a
+                  href="mailto:2333213@students.wits.ac.za"
+                  class="u-email"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/Generic_emial_byJJ_round.png"
+                    alt="Send me and e-mail"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=+270738348251"
+                  rel="nofollow"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/WhatsApp_Logo_1_bg_removed_cropped.png"
+                    alt="Message me on WhatsApp"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://t.me/+380509144504"
+                  rel="nofollow"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/telegram_logo_cocompressed.png"
+                    alt="Message me on Telegram"
+                /></a>
+              </li>
+            </ul>
+          </article>
+        </article>
+      </section>
+      <section class="index-section contact-section">
+        <article class="contact-grid">
+          <h2 class="comment">
+            //<span class="comment-inner">Having fun?</span>
+          </h2>
+          <h2 class="comment">
+            //<span class="comment-inner">Totally hate it?</span>
+          </h2>
+          <h2 class="comment">
+            //<span class="comment-inner"
+              >Let me know!</span
+            >
+          </h2>
+          <article class="share-wrapper contact-icons">
+            <ul class="share-links">
+              <li>
+                <a
+                  a
+                  href="mailto:2333213@students.wits.ac.za"
+                  class="u-email"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/Generic_emial_byJJ_round.png"
+                    alt="Send me and e-mail"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=+270738348251"
+                  rel="nofollow"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/WhatsApp_Logo_1_bg_removed_cropped.png"
+                    alt="Message me on WhatsApp"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://t.me/+380509144504"
+                  rel="nofollow"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/telegram_logo_cocompressed.png"
+                    alt="Message me on Telegram"
+                /></a>
+              </li>
+            </ul>
+          </article>
+        </article>
+      </section>
+      <article class="credits wide">
+        This website was designed and programmed by
+        <span class="p-author">Joshua Jandrell</span>.
+      </article>
+      <article class="acknoledge">
+        All company logos used are the property of the companies they represent.
+      </article>
+    </footer>
+  </body>
 </html>
