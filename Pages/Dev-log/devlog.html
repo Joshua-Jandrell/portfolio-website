@@ -9,6 +9,7 @@
     <title>Joshua Jandrell / devlog</title>
   </head>
   <body class="max basic">
+    <!-- #region nav bar-->
     <header class="topBar basic z10" id="topDiv">
       <nav class="nav-bar">
         <label for="#main-bar" class="nav-lable"
@@ -66,18 +67,35 @@
       </nav>
       <nav class="blog-index"></nav>
     </header>
+    <!-- #endregion -->
     <!-- Articel section ==============================================================================-->
     <article class="devlog-super-wrapper">
+      <!-- #region -->
       <header class="feed-headder">
         <nav class="devlogpage-index left" aria-hidden="ture">
           <!--Hide entries list from screen reader users - they can use main feel list for this-->
           <h2 class="main-h">Dev-History</h2>
           <ul class="index-list history-list">
             <li>
+              <a href="#what_is_this_0" class="u-nav blog-nav"
+                ><h4 class="blog-h">What is this</h4></a
+              >
+            </li>
+            <li>
               <a href="#pseudo-square-bracket_0" class="u-nav blog-nav"
                 ><h4 class="blog-h">
-                  Psudo square brackets - what how whay.
+                  Psudo square brackets - what, how, why?
                 </h4></a
+              >
+            </li>
+            <li>
+              <a href="#back_button_0" class="u-nav blog-nav"
+                ><h4 class="blog-h">Going back to the 'back' button.</h4></a
+              >
+            </li>
+            <li>
+              <a href="#re_re_reboot_0" class="u-nav blog-nav"
+                ><h4 class="blog-h">Re re reboot</h4></a
               >
             </li>
           </ul>
@@ -86,11 +104,12 @@
               href="/Pages/Index/index.html/#blogs"
               rel="home"
               class="u-home back-button"
-              ><span class="blk">Back</span></a
+              >return</a
             >
           </article>
         </nav>
       </header>
+      <!-- #endregion -->
       <!-- Feed ==============================================================================-->
       <main class="devlog-feed h-feed">
         <div class="time-line" aria-hidden="true"></div>
@@ -109,6 +128,7 @@
             <details class="devlog-feed-deets">
               <summary>
                 <h2 class="main-h dev-h p-name">Entry title here</h2>
+                <section class="p-summmary"></section>
               </summary>
               <!-- Delog article content --------------------------------------->
               <article class="entry-content e-content">
@@ -120,6 +140,7 @@
             </details>
           </li>
           <!-- Re re re boot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <!-- #region re re reboot-->
           <li class="devlog-entry h-entry" id="re_re_reboot_0">
             <time datetime="2022-18-04" class="dt-published entry-date"
               >18 March 2022</time
@@ -365,7 +386,9 @@
               </article>
             </details>
           </li>
+          <!-- #endregion -->
           <!-- A quick deliberation on the return button ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <!-- #region back to back-->
           <li class="devlog-entry h-entry" id="back_button_0">
             <time datetime="2022-18-04" class="dt-published entry-date"
               >18 April 2022</time
@@ -459,7 +482,9 @@
               </article>
             </details>
           </li>
+          <!-- #endregion -->
           <!-- Imporving acessability with psudo elements ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+          <!-- #region pseudo square-->
           <li class="devlog-entry h-entry" id="pseudo-square-bracket_0">
             <time datetime="2022-16-04" class="dt-published entry-date"
               >17 April 2022</time
@@ -682,6 +707,269 @@
               </article>
             </details>
           </li>
+          <!-- #endregion -->
+          <li class="devlog-entry h-entry" id="land_on_homepage_0">
+            <time datetime="2022-04-11" class="dt-published entry-date"
+              >11 April 2022</time
+            >
+            <details class="devlog-feed-deets">
+              <summary>
+                <h2 class="main-h dev-h p-name">
+                  What happens when you land on the homepage
+                </h2>
+                <section class="p-summmary">
+                  Taking a look at how a visitor may navigate though the site
+                  and finding ways to enhance that experience.
+                </section>
+              </summary>
+              <!-- Delog article content --------------------------------------->
+              <article class="entry-content e-content">
+                <section id="land_on_homepage_1">
+                  <h3 class="dev-h">What is important about the homepage?</h3>
+                  <p>
+                    The homepage has to make a good impression. It is likely the
+                    first (and possibly only) thing with visitors to my site
+                    will see.
+                  </p>
+                  <p>
+                    It needs to amaze them, interest them and make them want to
+                    see more! I may not have long to get a visitators attention.
+                    Visors must be enthralled but they should be able to
+                    immediately know what I do when they glace at my webpage.
+                  </p>
+                  <p class="retoric" aria-roledescription="retoric">
+                    How will you do this?
+                  </p>
+                  <p>I have a couple tricks up my sleeve&hellip;</p>
+                </section>
+              </article>
+              <section id="land_on_homepage_2">
+                <h3 class="dev-h">'Hello World.'</h3>
+                <p>
+                  That will be the first message visitors see when they land on
+                  my site. I know it's quite cliched, however it says a lot.
+                  When learning to program in a new language, printing 'hello
+                  world' is one of the first programs one writes. Opening with
+                  'hello world' immediately tells the visitor - 'Hey I'm a
+                  programmer. I made this.
+                </p>
+                <p>
+                  "Hellow World" is also a greeting to the world. I'm
+                  acknowledging that I have just gone live on the internet for
+                  the first time. And that's pretty cool! This grounds also
+                  grounds me: it acknowledges that I have just begun my journey
+                  as a developer and still need to lean and grow while alos
+                  commemerating that fact that I am live on the wrold wide web.
+                </p>
+                <p>
+                  The visitor is just greeted by a back screen with 'Hello
+                  world' on it. It should feel like the command consol. Empty
+                  and blank. A monospace font is used to enhance this effect.
+                </p>
+                <img
+                  class="log-img"
+                  id="land_on_homepage_0-img0"
+                  src="/Pages/Dev-log/Land_on_site-images/Hello-world-only.png"
+                  alt="A black screen with 'hello world' printed in the center"
+                /><br />
+                <label for="#land_on_homepage_0-img0" class="log-label">
+                  What visitors see when arrving.
+                </label>
+                <p class="retoric" aria-roledescription="retoric">
+                  And then what?
+                </p>
+                <img
+                  class="log-img"
+                  id="land_on_homepage_0-img1"
+                  src="/Pages/Dev-log/Land_on_site-images/Hello-world-only.png"
+                  alt="More text appears as the user keeps scrolling"
+                /><br />
+                <label for="land_on_homepage_0-img1" class="log-label">
+                  Text emerges from the darkness.
+                </label>
+                <p>
+                  They then scroll down and the site is revealed. The emergence
+                  of a bright and polished sight should have a significant
+                  impact. Everything will look brighter and slicker in contrast
+                  to the first back screen. This is to make and impactful first
+                  impression and convey the idea of personal growth.
+                </p>
+                <p>
+                  A rounded san-serif font will be used to enhance this
+                  contrast.
+                </p>
+              </section>
+              <section id="land_on_homepage_3">
+                <h3 class="deh-h">Just Keep Scrowling</h3>
+                <p>
+                  As the visitor scrolls they unveil the site. In due course
+                  JavaScript will help me make this experience feel exciting and
+                  polished. This will transform the mundane act of scrolling
+                  down a webpage into an adventure. As the viewer scrolls down
+                  the site they become curios to see how things will change and
+                  what will come next. While scrolling, I introduce myself and I
+                  invite the visitor to look around the site. I don't
+                  necessarily expect them to follow my prompts. I just want them
+                  to keep scrolling.
+                </p>
+                <p>
+                  Once hey have started so they'll probably continue. I don't
+                  expect victors to explore my whole site (even if I would like
+                  them to) they'll probably just look at the homepage. Following
+                  hyperlinks implies distance and travel. The visitor has so
+                  many option to chose from an chose nothing as a result.
+                </p>
+                <p>
+                  But what is the whole site is a homepage? If the about, blogs,
+                  game and so on are all on my home page already then the
+                  visitor will feel there is more to explore. They won't have
+                  got to the bottom and this incompleteness if powerful. When I
+                  add JS to the site I will turn the top navigation bar into a
+                  progress bar to sell the effect even more.
+                </p>
+                <p>
+                  By the time a visitor scrolls to the bottom they will have
+                  seen the overview I wanted to give them.
+                </p>
+              </section>
+            </details>
+          </li>
+          <!-- What is this website ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <!-- #region what is this websit-->
+          <li class="devlog-entry h-entry" id="what_is_this_0">
+            <time datetime="2022-04-10" class="dt-published entry-date"
+              >10 April 2022</time
+            >
+            <details class="devlog-feed-deets">
+              <summary>
+                <h2 class="main-h dev-h p-name">What is this site?</h2>
+                <section class="p-summmary">
+                  Considering who I am and what I want my website to achieve.
+                  What impression do I want to make and what message should the
+                  site deliver?
+                </section>
+              </summary>
+              <!-- Delog article content --------------------------------------->
+              <article class="entry-content e-content">
+                <section id="what_is_this_1">
+                  <h3 class="dev-h">Oh gosh - I hate self promotion</h3>
+                  <p>
+                    A quick note before we begin. I am a firm believer of the
+                    age old writing rule: “show don't tell” (Kinda ironic that
+                    I'm telling you this).
+                  </p>
+                  <p>
+                    I find that claiming to be good at something is about as
+                    meaningful as measuring the weigh of a box by looking at it.
+                    Terms like 'good'; 'great'; 'excellent' and 'horrible' are
+                    all relative. Everyone has their own personal standard and
+                    then we get the Dunning-Kruger effect. Sure you can have
+                    something measurable like experience of qualification - but
+                    that alone doesn't necessarily imply meticulous craft,
+                    personal growth and artistic flare.
+                  </p>
+                  <p>
+                    The best way to convince someone I have the skills they want
+                    is to show them what I can do. Fortunately a portfolio is
+                    designed to do just that - yay!
+                  </p>
+                  <p>
+                    Unfortunate, when designing the portfolio I have to try and
+                    emphasise what I am good at and trick people into thinking
+                    it. In some cases I might need to claim that I am 'good' at
+                    things - without proving anything. I know it can be cringy
+                    worthy and I'll be cringing with you. But self-promotion is
+                    the aim of this game (actually it's a website) and I'd show
+                    myself to be a pretty poor designer if my system didn't do
+                    that.
+                  </p>
+                </section>
+                <section id="what_is_this_2">
+                  <h3 class="dev-h">What am I doing with this website?</h3>
+                  <p>
+                    It is a portfolio website. So its primary purpose is to sell
+                    a product and that product is me.
+                  </p>
+                  <p>
+                    This website will hold my portfolio as a game designer - but
+                    also as a critical and systems thinker. As a designer I tend
+                    to focus more on technical implementation and system design
+                    than art and animation. The website needs to highlight these
+                    strengths and convince the visitor that they need my
+                    services.
+                  </p>
+                  <p>
+                    I am fortunate because the skills I wish to convey are
+                    deeply linked to web-development. If this website delivers a
+                    smooth system and a good user experience, then the site
+                    itself becomes the portfolio.
+                  </p>
+                </section>
+                <section id="what_is_this_3">
+                  <h3 class="dev-h">Who is me and why do you want him?</h3>
+                  <p>
+                    Anyone visiting a portfolio website is aware that the
+                    purpose of the site is to impress them. The expect to see me
+                    standing in a suit and tie to show them my best-polished
+                    brass.
+                  </p>
+                  <p>
+                    Trying to impress people is not very impressive. I could be
+                    a clean cut cooperate coder, but I might also come of as a
+                    sleazy snake-oil salesman. One is dubious, and frankly the
+                    other is quite boring.
+                  </p>
+                  <p>
+                    I don't want my website to feel pretentiously professional,
+                    nor do I want it to feel like a self-pitch. I want to give
+                    it a casual vibe. I want visitors to see that I am
+                    passionate about what I am doing and feel that I am sharing
+                    that passion with them. I want them to think of this website
+                    as a dialog rather than a business pitch, a sharing ideas
+                    rather than an exhibition. Hopefully this will feel more
+                    genuine and make me seem like a creative and interesting
+                    human, rather than just another cut-out candidate.
+                  </p>
+                  <p>
+                    As an engineer-to be (if all goes according to my current
+                    plans) I have a creative edge over most technical graduates.
+                    I would have competed several humanities focused courses and
+                    engaged more deeply with the artistic and philosophical
+                    aspects of technology. Making games provides great incites
+                    into UX, UI and human centerer systems. These are useful and
+                    transferable skills when it comes to systems design an
+                    implantation.
+                  </p>
+                  <p>
+                    As an artist and designer the convers is true. I would have
+                    a professional technical degree.
+                  </p>
+                  <p class="imp">
+                    Technical creatively is my unique selling point.
+                  </p>
+                  <p>
+                    But what sets me apart form other people who have the same
+                    qualification as me? My meness. I like to think that I am
+                    driven and strive for excellence yet remain playful and love
+                    my work. (I do tend to overthinking, I'm a victim to over
+                    scoping, perfection paralysis, rambling and going off on
+                    tangents from my tangents - but that's me too.) I want the
+                    site to reflect that duality. Professional, yet playful.
+                    Clear yet creative. (Prone to random tangents and probably
+                    quite extra; yet well oiled and reliable when it matters).
+                  </p>
+                  <p class="retoric" aria-roledescription="retoric">
+                    So you've waffled about yourself but what about your site?
+                  </p>
+                  <p>
+                    Simple. The site just needs to reflect everything I just
+                    said. And now the question is how.
+                  </p>
+                </section>
+              </article>
+            </details>
+          </li>
+          <!-- #endregion -->
         </ul>
       </main>
     </article>
