@@ -636,18 +636,48 @@ ul.timeline li:last-child {
   border-bottom: none;
 }
 /* Back button styling ========================================================= */
-.back-button {
+a.back-button {
   display: block;
   width: 75px;
-  padding: 10px 20px;
-  margin: 10px auto;
+  padding: 12px 20px;
+  margin: 10px 10px;
 
-  border: solid black 1px;
+  width: fit-content;
 
-  text-align: center;
+  outline: 1px solid black;
+  background-color: aliceblue;
+
+  font-size: 15px;
   text-decoration: none;
+  font-weight: bold;
   color: inherit;
+  color: black;
+
+  transition: all 0.5s;
 }
+a.back-button::after {
+  content: ";";
+  color: cornflowerblue;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 15px;
+
+  transition: all 0.5s;
+}
+a.back-button:hover {
+  color: cornflowerblue;
+}
+a.back-button:hover::after {
+  text-shadow: 0 0 2px rgb(0, 247, 255);
+  font-weight: bolder;
+}
+
+.back-button-bottom-wrapper {
+  text-align: center;
+  float: right;
+  margin-right: 20%;
+}
+
 /* ================================================================= */
 /* ------------------------- Contack styling ----------------------- */
 /* ================================================================= */
@@ -706,19 +736,19 @@ ul.timeline li:last-child {
 }
 ul.share-links {
   display: grid;
-  float: left;
   list-style: none;
   width: fit-content;
   gap: 40px;
   grid-auto-flow: column;
 
-  height: 100px;
-  margin: 0;
-  padding: 25px;
+  padding: 0 25px;
 }
 ul.share-links li {
   width: fit-content;
   display: block;
+}
+ul.share-links li a {
+  height: 0;
 }
 ul.share-links::before {
   content: "[";
@@ -759,6 +789,37 @@ ul.share-links li a:hover img {
   margin-right: 20px;
   padding-top: 40px;
 }
+
+/* Smaller share icons*/
+.share-wrapper.small {
+  height: 70px;
+}
+.scroll-wrapper.small ul.share-links {
+  gap: 15px;
+  padding: 10px;
+}
+.share-wrapper.small ul.share-links li img {
+  height: 32px;
+}
+.share-wrapper.small ul.share-links li a:hover img {
+  height: 40px;
+}
+.share-wrapper.small ul.share-links::before {
+  font-size: 28px;
+}
+.share-wrapper.small ul.share-links::after {
+  font-size: 28px;
+}
+.share-wrapper.small .contact-grid {
+  padding: 0;
+}
+.footer-icons.small {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px;
+}
+
 /* ================================================================= */
 /* ------------------------- footer formting ----------------------- */
 /* ================================================================= */

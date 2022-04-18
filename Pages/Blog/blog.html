@@ -82,17 +82,13 @@
               >
             </li>
           </ul>
-          <article class="back-wrapper">
-            <a
-              href="/Pages/Index/index.html/#blogs"
-              rel="home"
-              class="u-home back-button"
-              >return</a
-            >
-          </article>
         </article>
-        <!-- Related articels =================================================== hidden from area becuase it only makes sens  -->
-        <article class="blogpage-index" id="related_index" aria-hidden="true">
+        <!-- Related articels ======================== hidden from screen reader becuase they will probably want to get to the article first and there are more related blogs later on  -->
+        <article
+          class="blogpage-index left"
+          id="related_index"
+          aria-hidden="true"
+        >
           <h2 class="sub-h center">Realted articles</h2>
           <ul class="index-list history-list">
             <li>
@@ -105,17 +101,27 @@
             </li>
           </ul>
         </article>
+        <!-- Back button =======================================-->
+        <article class="back-wrapper">
+          <a
+            href="/Pages/Index/index.html/#blogs"
+            rel="home"
+            class="u-home back-button"
+            >return</a
+          >
+        </article>
       </nav>
       <!-- Main artcle =================================================== -->
       <main class="blog-main">
         <article class="h-entry blogpage-article" id="blog_post">
           <article class="hedding-area">
-            <nav class="article-nav"></nav>
+            <article class="sub-h comment p-author noDisplay">
+              By <span class="p-author">Joshua Jandrell</span>
+              <!-- Oviously I wrote it: just telling web crawlers-->
+            </article>
             <h1 class="main-h p-name">Blog template</h1>
             <h2 class="sub-h comment">
-              //
               <time datetime="2022-04-15" class="">15 April 2022</time>
-              <span class="p-author">Joshua Jandrell</span>
             </h2>
           </article>
           <section class="blogpage-summary p-summary">
@@ -159,57 +165,92 @@
               ducimus hic!
             </section>
           </article>
+          <!-- Article footer icons =======================================================================-->
         </article>
       </main>
     </article>
     <!-- Footer =================================================================-->
-    <footer class="blogpage-footer">
-      <nav class="bottom-nav">
-        <!-- Back button ===================================================================-->
-        <article class="back-grid-wrapper">
-          <article>
-            <a
-              href="/Pages/Index/index.html/#blogs"
-              rel="home"
-              class="u-home back-button"
-              >Return</a
-            >
+    <footer class="blogpage-footer foot">
+      <artilce class="footer-icons small">
+        <section class="index-section contact-section">
+          <article class="contact-grid">
+            <h2 class="comment">Share this post:</h2>
+            <article class="share-wrapper contact-icons small">
+              <ul class="share-links">
+                <li>
+                  <a href="https://www.sharelinkgenerator.com/" rel="nofollow"
+                    ><img
+                      src="/Generic_Images/Company logos/Generic_emial_byJJ_round.png"
+                      alt="Email"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://www.sharelinkgenerator.com/" rel="nofollow"
+                    ><img
+                      src="/Generic_Images/Company logos/f_logo_RGB-Blue_100.png"
+                      alt="Face Book"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://www.sharelinkgenerator.com/" rel="nofollow"
+                    ><img
+                      src="/Generic_Images/Company logos/LI-In-Bug.png"
+                      alt="Linked in"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://www.sharelinkgenerator.com/" rel="nofollow"
+                    ><img
+                      src="/Generic_Images/Company logos/2021 Twitter logo - blue.png"
+                      alt="Twitter"
+                  /></a>
+                </li>
+              </ul>
+            </article>
           </article>
-        </article>
-        <!-- Blog share icons ===============================================================-->
-        <article class="blog-share-wrapper share-wrapper">
-          <h2 class="main-h share-h"><span class="blk">Share</span>:</h2>
-          <ul class="share-links">
-            <li>
-              <a href="https://www.sharelinkgenerator.com/" rel="nofollow"
-                ><img
-                  src="/Generic_Images/Company logos/Generic_emial_byJJ.png"
-                  alt="Email"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.sharelinkgenerator.com/" rel="nofollow"
-                ><img
-                  src="/Generic_Images/Company logos/f_logo_RGB-Blue_100.png"
-                  alt="Face Book"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.sharelinkgenerator.com/" rel="nofollow"
-                ><img
-                  src="/Generic_Images/Company logos/LI-In-Bug.png"
-                  alt="Linked in"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.sharelinkgenerator.com/" rel="nofollow"
-                ><img
-                  src="/Generic_Images/Company logos/2021 Twitter logo - blue.png"
-                  alt="Twitter"
-              /></a>
-            </li>
-          </ul>
-        </article>
+        </section>
+        <section class="index-section contact-section">
+          <article class="contact-grid">
+            <h2 class="comment">Written by J. Jandrell</h2>
+            <article class="share-wrapper contact-icons small">
+              <ul class="share-links">
+                <li>
+                  <a
+                    a
+                    href="mailto:2333213@students.wits.ac.za"
+                    class="u-email"
+                    target="_blank"
+                    ><img
+                      src="/Generic_Images/Company logos/Generic_emial_byJJ_round.png"
+                      alt="Send me and e-mail"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=+270738348251"
+                    rel="nofollow"
+                    target="_blank"
+                    ><img
+                      src="/Generic_Images/Company logos/WhatsApp_Logo_1_bg_removed_cropped.png"
+                      alt="Message me on WhatsApp"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://t.me/+380509144504"
+                    rel="nofollow"
+                    target="_blank"
+                    ><img
+                      src="/Generic_Images/Company logos/telegram_logo_cocompressed.png"
+                      alt="Message me on Telegram"
+                  /></a>
+                </li>
+              </ul>
+            </article>
+          </article>
+        </section>
+      </artilce>
+      <nav class="bottom-nav">
         <!-- Samples of other blogs =========================================================-->
         <article class="blog-read-more">
           <h2 class="sub-h center">Check out some more blogs</h2>
@@ -307,6 +348,13 @@
           </ul>
         </article>
       </nav>
+      <article class="credits wide">
+        This website was designed and programmed by
+        <span class="p-author">Joshua Jandrell</span>.
+      </article>
+      <article class="acknoledge">
+        All company logos used are the property of the companies they represent.
+      </article>
     </footer>
   </body>
 </html>

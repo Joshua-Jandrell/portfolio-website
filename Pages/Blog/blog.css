@@ -99,3 +99,12 @@
   grid-column-start: 1;
   grid-column: span 2;
 }
+
+.blogpage-article .footer-icons {
+  width: 100%;
+  padding-top: 50px;
+}
+.blogpage-article .footer-icons .contact-grid {
+  padding: 0;
+  margin: 0;
+}
