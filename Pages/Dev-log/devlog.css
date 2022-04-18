@@ -82,10 +82,10 @@ details.devlog-feed-deets summary h2.dev-h::after {
   padding: 10px;
 }
 
-details.devlog-feed-deets summary:hover {
+details.devlog-feed-deets summary h2.dev-h:hover {
   cursor: pointer;
 }
-details.devlog-feed-deets summary:hover h2.dev-h::before {
+details.devlog-feed-deets summary h2.dev-h:hover::before {
   color: orange;
   text-shadow: 0 0 2px;
   font-weight: bolder;
@@ -93,7 +93,7 @@ details.devlog-feed-deets summary:hover h2.dev-h::before {
   margin-right: 30px;
   transition: all 1s;
 }
-details.devlog-feed-deets summary:hover h2.dev-h::after {
+details.devlog-feed-deets summary h2.dev-h:hover::after {
   color: orange;
   text-shadow: 0 0 2px;
   font-weight: bolder;

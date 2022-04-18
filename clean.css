@@ -883,3 +883,22 @@ ol.ref-list li::before {
   position: absolute;
   left: -30px;
 }
+/* ================================================================= */
+/* ------------------------- log images ---------------------------- */
+/* ================================================================= */
+img.log-img {
+  width: 60%;
+  outline: 1px solid black;
+  box-shadow: 0 0 2px black;
+}
+.log-label {
+  color: rgb(0, 64, 255);
+  font-weight: bold;
+  font-family: monospace;
+  margin-left: 20px;
+}
+.log-label::before{
+  content: "//";
+  font-weight: bold;
+  font-family: monospace;
+}
