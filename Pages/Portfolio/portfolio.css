@@ -41,6 +41,9 @@
 
   text-align: center;
 }
+.gamepage-wrapper .game-download-wrapper.single ul {
+  display: block;
+}
 
 .gamepage-wrapper .game-credits-wrapper {
   display: block;
@@ -93,13 +96,6 @@ ul.credits-grid li:last-child {
 /* ================================================================= */
 /* ---------- Download section  ------------------------------------ */
 /* ================================================================= */
-ul.downloads {
-  display: block;
-  list-style: none;
-
-  padding: 0 20px;
-  margin-top: 0;
-}
 
 ul.downloads li {
   display: table;
