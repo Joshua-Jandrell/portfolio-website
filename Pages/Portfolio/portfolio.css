@@ -6,8 +6,9 @@
 }
 .gamepage-wrapper {
   display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 3%;
+  grid-template-columns: 4fr 3fr;
+  column-gap: 3%;
+  row-gap: 0;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -31,11 +32,14 @@
 }
 .gamepage-wrapper .game-download-wrapper ul {
   display: grid;
+  grid-auto-flow: column;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   border-left: 7px solid orange;
   box-shadow: 0 0 2px orange;
   background-color: rgb(247, 226, 208);
+
+  text-align: center;
 }
 
 .gamepage-wrapper .game-credits-wrapper {
@@ -48,11 +52,11 @@
 }
 .gamepage-wrapper .game-images-wrapper {
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 4;
   grid-column: 2;
 }
-.gamepage-wrapper .game-images-wrapper img.game-image {
-  width: 80%;
+.gamepage-wrapper .game-images-wrapper img {
+  width: 100%;
   display: block;
   margin: 20px auto;
 
@@ -67,7 +71,6 @@ ul.credits-grid {
   list-style: none;
   max-width: 400px;
   padding: 0;
-  margin-left: 50px;
 }
 
 ul.credits-grid li {
