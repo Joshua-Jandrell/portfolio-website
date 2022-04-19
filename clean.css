@@ -277,12 +277,12 @@ h1.main-h {
 }
 h1.main-h::before {
   font-size: 60px;
-  color: blue;
+  color: orange;
   margin-right: 20px;
 }
 h1.main-h::after {
   font-size: 60px;
-  color: blue;
+  color: orange;
   margin-left: 20px;
 }
 h2.main-h {
@@ -891,46 +891,59 @@ img.log-img {
   outline: 1px solid black;
   box-shadow: 0 0 2px black;
 }
+img.log-img.big {
+  width: 100%;
+}
 .log-label {
   color: rgb(0, 64, 255);
   font-weight: bold;
   font-family: monospace;
   margin-left: 20px;
 }
-.log-label::before{
+.log-label::before {
   content: "//";
   font-weight: bold;
   font-family: monospace;
 }
+.log-img-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-auto-flow: row;
+  padding: 20px 0;
+}
+.log-img-wrapper img.log-img {
+  width: 100%;
+}
 /* ================================================================= */
 /* ------------------------- inline styling ------------------------ */
 /* ================================================================= */
-a.inline-link{
+a.inline-link {
   color: inherit;
   font-weight: bolder;
   text-decoration: orange underline;
   transition: all 0.5s;
 }
-a.inline-link:visited{
+a.inline-link:visited {
   font-weight: normal;
   color: rgb(82, 81, 78);
 }
-a.inline-link:hover{
+a.inline-link:hover {
   color: orange;
   font-weight: bold;
   text-shadow: 0 0 1px;
   text-decoration: orange underline;
 }
-.retoric{
+.retoric {
   font-weight: bold;
   color: rgb(0, 20, 58);
   text-decoration: solid;
 }
-.retoric::before{
+.retoric::before {
   content: "/*";
   color: cornflowerblue;
 }
-.retoric::after{
- content:  "*/";
- color: cornflowerblue;
-} 
+.retoric::after {
+  content: "*/";
+  color: cornflowerblue;
+}
