@@ -303,7 +303,7 @@ h2.main-h .blk {
 /* ------------------------- //Sub-heddings ------------------------ */
 /* ================================================================= */
 .sub-h {
-  color: cornflowerblue;
+  color: rgb(47, 177, 203);
   font-weight: bold;
   font-family: monospace;
 }
@@ -662,7 +662,7 @@ a.back-button {
 }
 a.back-button::after {
   content: ";";
-  color: cornflowerblue;
+  color: rgb(47, 177, 203);
   font-weight: bold;
   font-family: monospace;
   font-size: 15px;
@@ -670,7 +670,7 @@ a.back-button::after {
   transition: all 0.5s;
 }
 a.back-button:hover {
-  color: cornflowerblue;
+  color: rgb(47, 177, 203);
 }
 a.back-button:hover::after {
   text-shadow: 0 0 2px rgb(0, 247, 255);
@@ -941,9 +941,9 @@ a.inline-link:hover {
 }
 .retoric::before {
   content: "/*";
-  color: cornflowerblue;
+  color: rgb(47, 177, 203);
 }
 .retoric::after {
   content: "*/";
-  color: cornflowerblue;
+  color: rgb(47, 177, 203);
 }
