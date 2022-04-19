@@ -9,7 +9,7 @@
   grid-template-columns: 4fr 3fr;
   column-gap: 3%;
   row-gap: 0;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -103,7 +103,7 @@ ul.downloads li {
 }
 
 ul.downloads li a {
-  text-decoration: inherit;
+  text-decoration: orange underline 2px;
   color: inherit;
   font-family: monospace;
   font-weight: bold;
@@ -116,19 +116,30 @@ ul.downloads li a {
   margin: 0;
 }
 
+ul.downloads li a::after {
+  content: "]";
+  font-size: 150%;
+  margin-left: 10px;
+  transition: all 0.5s;
+}
 ul.downloads li a::before {
   content: "[";
   font-size: 150%;
   margin-right: 10px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 ul.downloads li a::after {
   content: "]";
   font-size: 150%;
   margin-left: 10px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
-
+ul.downloads li a:hover {
+  color: orange;
+  text-shadow: 0 0 1px;
+  font-weight: bold;
+  text-decoration: none;
+}
 ul.downloads li a:hover:before {
   margin-right: 20px;
   font-weight: 200%;
