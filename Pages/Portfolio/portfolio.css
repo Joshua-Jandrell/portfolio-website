@@ -121,12 +121,14 @@ ul.downloads li a::after {
   font-size: 150%;
   margin-left: 10px;
   transition: all 0.5s;
+  text-decoration: none;
 }
 ul.downloads li a::before {
   content: "[";
   font-size: 150%;
   margin-right: 10px;
   transition: all 0.5s;
+  text-decoration: none;
 }
 ul.downloads li a::after {
   content: "]";
