@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Pages/Index/index.css" />
+    <link rel="stylesheet" href="/clean.css" />
+    <script src="/Pages/Index/index.js"></script>
+    <title>Joshua Jandrell</title>
+  </head>
+  <body class="max">
+    <!-- Itro section is shown before nav so that screan reader useres are appropratley greeted before we show them around (just like montior users)-->
+    <article class="introGrad" rol="introduction">
+      <section class="stickBlock" id="fib">
+        <div class="introTxt" id="hwt">Hello World.</div>
+        <div class="introTxt" id="imJJTxt z-2">I'm Joshua Jandrell</div>
+      </section>
+    </article>
+    <article class="intoNorm z-2" id="secondIntro">
+      <div class="introTxt" class="basic" id="welcomeTxt">
+        Welcome to my website.
+      </div>
+    </article>
+    <!--Note: intro section is before nav bar in html: this give screen reader users the same experance of the website reveal-->
+    <header class="topBar basic z-1" id="topDiv">
+      <nav class="nav-bar">
+        <label for="#main-bar" class="nav-lable"
+          ><a href="/Pages/Index/index.html" rel="home" class="title-link"
+            ><h1>Joshua Jandrell</h1></a
+          ></label
+        >
+        <ul class="nav-bar" id="main-bar">
+          <li>
+            <a href="#home" class="homeLink home"
+              ><div class="link-block">Home</div></a
+            >
+          </li>
+          <li>
+            <a href="#about" class="aboutLink"
+              ><div class="link-block">About</div></a
+            >
+          </li>
+          <li>
+            <a href="#games" claas="gamesLink"
+              ><div class="link-block">Games</div></a
+            >
+          </li>
+          <li>
+            <a href="#blog" class="blogLink"
+              ><div class="link-block">Blog</div></a
+            >
+          </li>
+          <li>
+            <a href="#devlog" class="devlogLink"
+              ><div class="link-block">Dev-log</div></a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="devlogLink"
+              ><div class="link-block">Contact</div></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="e-content main-body basic">
+      <section>
+        <article id="home-contenet">
+          <h1 class="main-h center" id="home">Explore.</h1>
+        </article>
+      </section>
+      <!-- About =======================================================================================-->
+      <div class="section-divider" id="about" aria-hidden="true"></div>
+      <section class="index-section about-section">
+        <h1 class="main-h center">About</h1>
+        <article class="about-content e-content">
+          <section class="profile-pic-wrapper h-card">
+            <img
+              src="/Pages/About/aboutImg/placeHolderImg.png"
+              alt="Photogragh of Joshua Jandrell"
+              class="profil-picture u-photo"
+            />
+            <ul class="details-list" aria-roledescription="Personal Details">
+              <li>
+                Name: <span class="p-name info"></span
+                ><span class="p-given-name">Joshua</span>
+                <span class="p-family-name">Jandrell</span>
+              </li>
+              <li>
+                Email:
+                <a
+                  href="mailto:2333213@students.wits.ac.za"
+                  class="u-emial inline-link"
+                  >2333213@students.wits.ac.za</a
+                >
+              </li>
+              <!--<li>
+                Location: <span class="p-locality info">Johannesberg</span>
+                <span class="p-region info">South Africa</span>
+              </li>-->
+              <li>Position: <span class="p-job-tile info">Student</span></li>
+              <li>
+                Organistation:
+                <span class="info p-org">Wits University</span>
+              </li>
+            </ul>
+          </section>
+          <article class="about-text e-content">
+            <section>
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary>Joshau Jandrell</summary>
+                <span class="popout-comment">
+                  Currently reffering to himlself in 3rd person
+                </span>
+              </details>
+              is an engineering student,
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary>progamer</summary>
+                <span class="popout-comment">mostly c++ and c#</span>
+              </details>
+              , game
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary>designer</summary>
+                <span class="popout-comment2"
+                  >Currently focusing on systems, stratergies and
+                  iteraction</span
+                >
+              </details>
+              , web
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary>devloper</summary>
+                <span class="popout-comment"> for this site anyway </span>}
+              </details>
+              and critical thinker.
+            </section>
+            <section>
+              <h2 class="sub-h">Education</h2>
+              Josh is currently studying towards a Batchelor of Engineering
+              Sciecne in
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="more details"
+              >
+                <summary>Digital Arts</summary>
+                <span class="popout-comment"
+                  ><a
+                    href="https://www.wits.ac.za/course-finder/undergraduate/ebe/digital-arts/"
+                    target="_blank"
+                    class="inline-link"
+                    rel="external"
+                    >BEngSc (Digital Arts)</a
+                  >
+                  (Electrical Eng + Game Desing)</span
+                >
+              </details>
+              at
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="more details"
+              >
+                <summary>Wits</summary>
+                <span class="popout-comment"
+                  ><a
+                    href="https://www.wits.ac.za/"
+                    target="_blank"
+                    class="inline-link"
+                    rel="external"
+                    >the University of the Witwatersrand.</a
+                  ></span
+                >
+              </details>
+              . He plans to gradute in 2022 and will then work towards to
+              attaing a BSc(Eng)(Information Engineering) in 2024. Josh's
+              Highest current qulification is an
+              <a
+                href="https://www.ieb.co.za/pages/nscrequirements"
+                target="_blank"
+                rel="nofollow"
+                class="inline-link"
+                rel="external"
+                >IEB NSC</a
+              >
+              which he completed in 2019.
+            </section>
+            <section>
+              <h2 class="sub-h">Positions and Experance</h2>
+
+              <ul class="bullet-list">
+                <li>
+                  Student at
+                  <a
+                    href="https://www.wits.ac.za/"
+                    target="_blank"
+                    class="u-url u-org basic inline-link"
+                    rel="external"
+                    >Wits Univeristy</a
+                  >
+                  <span class="comment">- 2020-current</span>
+                </li>
+                <li>
+                  Tutor at Easy as Pi
+                  <span class="comment">- 2021-current</span>
+                </li>
+                <li>
+                  Vacation Student at
+                  <a
+                    href="https://sam.co.za/"
+                    target="_blank"
+                    rel="external"
+                    class="inline-link"
+                    >Systems Automation & Managment</a
+                  ><span class="comment">- 2022</span>
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="sub-h">Hobbies</h2>
+              When not
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary>'busy'</summary>
+                <span class="popout-comment">
+                  doing the stuff in the pervious stentance
+                </span>
+              </details>
+              or
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary class>sleeping</summary>
+                <span class="popout-comment">
+                  Do a really need to explain this one?
+                </span>
+              </details>
+              , Josh loves making
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary class>music</summary>
+                <span class="popout-comment">
+                  Sometimes he composese but mostly he's just messing arounds
+                </span>
+              </details>
+              , following
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary class>tangets</summary>
+                <span class="popout-comment">
+                  Reserching random ideas. Jumping down rabit holds. Thinking
+                  about thinking. Finding new and intresting things.
+                </span>
+              </details>
+              ,counting
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary class>stars</summary>
+                <span class="popout-comment">
+                  Day dreaming and imagening.
+                </span>
+              </details>
+              , playing
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary class>games</summary>
+                <span class="popout-comment">
+                  <details
+                    class="inline-deets e-details"
+                    aria-roledescription="side note"
+                  >
+                    <summary class>Analogue</summary>
+                    <span class="popout-comment">
+                      Especially cards, abstract stratergy and puzzles.
+                      (Anything but Monopoly)</span
+                    >
+                  </details>
+                  and
+                  <details
+                    class="inline-deets e-details"
+                    aria-roledescription="side note"
+                  >
+                    <summary class>Digital</summary>
+                    <span class="popout-comment">
+                      Genrally startergy, puzzle or rougue-like.</span
+                    >
+                  </details>
+                  Very casully - he find that mor fun :)</span
+                >
+              </details>
+              , aimlessly exploring, watching (and anlysing)
+              <details
+                class="inline-deets e-details"
+                aria-roledescription="side note"
+              >
+                <summary class>sport</summary>
+                <span class="popout-comment">
+                  rugby, chess (it counts) and Formula 1</span
+                >
+              </details>
+              cuddling his dog and chilling.
+            </section>
+          </article>
+        </article>
+      </section>
+      <!-- Games section =====================================================================================-->
+      <div class="section-divider" id="games" aria-hidden="true"></div>
+      <section class="index-section games-section">
+        <h1 class="main-h center">Games.</h1>
+        <article class="games-contenet">
+          <nav class="games-grid e-nav">
+            <ul class="grid-list grid">
+              <li class>
+                <a href=""
+                  ><img
+                    src="/Pages/About/aboutImg/placeHolderImg.png"
+                    alt="icon for game"
+                    class="game-image"
+                    id="gi_0"
+                  />
+                  <div class="label-wrapper">
+                    <label for=".help-meout-link" class="game-label"
+                      >[<span class="blk">test</span>]</label
+                    >
+                  </div></a
+                >
+              </li>
+              <li class>
+                <a href=""
+                  ><img
+                    src="/Pages/About/aboutImg/placeHolderImg.png"
+                    alt="icon for game"
+                    class="game-image"
+                    id="gi_0"
+                  />
+                  <div class="label-wrapper">
+                    <label for=".help-meout-link" class="game-label"
+                      >[<span class="blk">test</span>]</label
+                    >
+                  </div></a
+                >
+              </li>
+              <li class>
+                <a href=""
+                  ><img
+                    src="/Pages/About/aboutImg/placeHolderImg.png"
+                    alt="icon for game"
+                    class="game-image"
+                    id="gi_0"
+                  />
+                  <div class="label-wrapper">
+                    <label for=".help-meout-link" class="game-label"
+                      >[<span class="blk">test</span>]</label
+                    >
+                  </div></a
+                >
+              </li>
+              <li class>
+                <a href=""
+                  ><img
+                    src="/Pages/About/aboutImg/placeHolderImg.png"
+                    alt="icon for game"
+                    class="game-image"
+                    id="gi_0"
+                  />
+                  <div class="label-wrapper">
+                    <label for=".help-meout-link" class="game-label"
+                      >[<span class="blk">test</span>]</label
+                    >
+                  </div></a
+                >
+              </li>
+              <li class>
+                <a href=""
+                  ><img
+                    src="/Pages/About/aboutImg/placeHolderImg.png"
+                    alt="icon for game"
+                    class="game-image"
+                    id="gi_0"
+                  />
+                  <div class="label-wrapper">
+                    <label for=".help-meout-link" class="game-label"
+                      >[<span class="blk">test</span>]</label
+                    >
+                  </div></a
+                >
+              </li>
+              <li class>
+                <a href=""
+                  ><img
+                    src="/Pages/About/aboutImg/placeHolderImg.png"
+                    alt="icon for game"
+                    class="game-image"
+                    id="gi_0"
+                  />
+                  <div class="label-wrapper">
+                    <label for=".help-meout-link" class="game-label"
+                      >[<span class="blk">test</span>]</label
+                    >
+                  </div></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </article>
+      </section>
+      <!-- Blog section =====================================================================================-->
+      <div class="section-divider" id="blog" aria-hidden="true"></div>
+      <section class="index-section blog-section">
+        <h1 class="main-h center">Blog.</h1>
+        <h2 class="com-h center">Talking to myself while the world listens</h2>
+        <article class="blog-contenet">
+          <nav class="blog-grid e-nav">
+            <article class="recent-posts">
+              <h2 class="sub-h center">Recent Posts</h2>
+              <ul>
+                <li>
+                  <a
+                    href=""
+                    role="navigation"
+                    class="blog-sample"
+                    aria-roledescription="link to full blog artile"
+                  >
+                    <img
+                      img
+                      src="/Pages/About/aboutImg/placeHolderImg.png"
+                      alt="icon for game"
+                      class="blog-image"
+                      id="bi_0"
+                    />
+                    <section
+                      class="blog-summary"
+                      aria-roledescription="short preview extract from blog"
+                    >
+                      <h3 class="main-h">Blog title</h3>
+                      Details to blog introduction go here :) Lorem ipsum dolor
+                      sit amet consectetur adipisicing elit. Reprehenderit
+                      cupiditate officia tempora praesentium officiis? Facilis
+                      modi in deserunt, consequatur vitae maxime quam molestias
+                      doloremque beatae aut officia dolore sunt nisi.
+                    </section>
+                    <section class="read-more-wrapper" aria-hidden="true">
+                      <div class="read-more-txt">Click to read more</div>
+                    </section>
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article class="blog-history">
+              <h2 class="sub-h">Blog history</h2>
+              <ul class="history-list">
+                <li>
+                  <a href="http://" class="u-nav blog-nav"
+                    ><h4 class="blog-h">blog name here</h4></a
+                  >
+                </li>
+              </ul>
+            </article>
+          </nav>
+        </article>
+      </section>
+      <!-- Devlog section =====================================================================================-->
+      <div class="section-divider" id="devlog" aria-hidden="true"></div>
+      <section class="index-section devlog-section">
+        <h1 class="main-h center">Dev-log</h1>
+        <h2 class="com-h center">Making this website</h2>
+        <article class="devlog-content">
+          <nav class="devlog-grid e-nav">
+            <article class="recent-posts recent-devlog">
+              <h2 class="sub-h center">Recent Posts</h2>
+              <ul>
+                <li>
+                  <a
+                    href=""
+                    role="navigation"
+                    class="blog-sample"
+                    aria-roledescription="link to full blog artile"
+                    ><!--
+                    <img
+                      img
+                      src="/Pages/About/aboutImg/placeHolderImg.png"
+                      alt="icon for game"
+                      class="blog-image"
+                      id="bi_0"
+                    />-->
+                    <section
+                      class="blog-summary"
+                      aria-roledescription="short preview extract from blog"
+                    >
+                      <h3 class="main-h">Blog titl</h3>
+                      Details to blog introduction go here :) Lorem ipsum dolor
+                      sit amet consectetur adipisicing elit. Reprehenderit
+                      cupiditate officia tempora praesentium officiis? Facilis
+                      modi in deserunt, consequatur vitae maxime quam molestias
+                      doloremque beatae aut officia dolore sunt nisi.
+                    </section>
+                    <section class="read-more-wrapper" aria-hidden="true">
+                      <div class="read-more-txt">Click to read more</div>
+                    </section>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    role="navigation"
+                    class="blog-sample"
+                    aria-roledescription="link to full blog artile"
+                  >
+                    <img
+                      img
+                      src="/Pages/About/aboutImg/placeHolderImg.png"
+                      alt="icon for game"
+                      class="blog-image"
+                      id="bi_0"
+                    />
+                    <section
+                      class="blog-summary"
+                      aria-roledescription="short preview extract from blog"
+                    >
+                      <h3 class="main-h">
+                        [<span class="blk">Blog title</span>]
+                      </h3>
+                      Details to blog introduction go here :) Lorem ipsum dolor
+                      sit amet consectetur adipisicing elit. Reprehenderit
+                      cupiditate officia tempora praesentium officiis? Facilis
+                      modi in deserunt, consequatur vitae maxime quam molestias
+                      doloremque beatae aut officia dolore sunt nisi.
+                    </section>
+                    <section class="read-more-wrapper" aria-hidden="true">
+                      <div class="read-more-txt">Click to read more</div>
+                    </section>
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article class="devlog-history">
+              <h2 class="sub-h center">Dev-History</h2>
+              <article class="scroll-wrapper">
+                <ul class="history-list timeline">
+                  <li>
+                    <a href="http://" class="u-nav blog-nav"
+                      ><h4 class="blog-h">dev title</h4></a
+                    >
+                  </li>
+                </ul>
+              </article>
+            </article>
+          </nav>
+        </article>
+      </section>
+      <!-- Contantact section =====================================================================================-->
+      <div class="section-divider" id="contact" aria-hidden="true"></div>
+      <section class="index-section contact-section">
+        <h1 class="main-h center">Contact</h1>
+        <article class="contact-grid">
+          <h2 class="sub-h center">Fine me:</h2>
+          <article class="share-wrapper contact-icons">
+            <ul class="share-links">
+              <li>
+                <a
+                  a
+                  href="mailto:2333213@students.wits.ac.za"
+                  class="u-email"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/Generic_emial_byJJ_round.png"
+                    alt="Send me and e-mail"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=+270738348251"
+                  rel="nofollow"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/WhatsApp_Logo_1_bg_removed_cropped.png"
+                    alt="Message me on WhatsApp"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://t.me/+380509144504"
+                  rel="nofollow"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/telegram_logo_cocompressed.png"
+                    alt="Message me on Telegram"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Joshua-Jandrell"
+                  rel="nofollow"
+                  target="_blank"
+                  ><img
+                    src="/Generic_Images/Company logos/GitHub-Mark-64px.png"
+                    alt="Check my Git-hub"
+                /></a>
+              </li>
+            </ul>
+          </article>
+        </article>
+      </section>
+      <div class="section-divider" id="main" aria-hidden="true"></div>
+    </main>
+    <footer>
+      <section class="foot">
+        <article class="credits">
+          This website was designed and programmed by
+          <span class="p-author">Joshua Jandrell</span>.
+        </article>
+        <article class="acknoledge">
+          All company logos used are the property of the companies they
+          represent.
+        </article>
+      </section>
+      <!--<article class="contact-card h-card">
+        <h2 class="p-name name">
+          <article class="p-given-name">Joshua</article>
+          <article class="p-additonal-name">Robert</article>
+          <span class="p-familiy-name">Jandrel</span>
+        </h2>
+        <span class="feild">e-mail: </span
+        ><a href="mailto:2333213@students.wits.ac.za" class="u-email"
+          >2333213@students.wits.ac.za</a
+        >
+      </article>-->
+    </footer>
+  </body>
+</html>
