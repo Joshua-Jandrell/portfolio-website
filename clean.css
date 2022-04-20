@@ -421,7 +421,7 @@ ul.details-list li {
 .games-section ul.grid-list {
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2%;
   text-align: center;
   margin: 0 auto;
@@ -433,11 +433,9 @@ ul.details-list li {
 
   outline: 1px solid black;
   box-shadow: inset 0 0 5px black;
-  border-radius: 5px;
 }
 .game-image {
   width: 100%;
-  border-radius: 5px;
   z-index: inherit;
 }
 
@@ -446,6 +444,10 @@ ul.details-list li {
   height: 100%;
   display: block;
   position: relative;
+}
+.games-section ul.grid-list li a:hover img {
+  cursor: pointer;
+  box-shadow: 0 0 10px orange;
 }
 
 .label-wrapper {
@@ -465,8 +467,6 @@ ul.details-list li {
   left: 0px;
   width: 100%;
   height: 40px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 
   background: linear-gradient(
     180deg,
@@ -479,6 +479,32 @@ ul.details-list li {
 
   color: white;
   z-index: 1;
+}
+.game-label::before {
+  content: "[";
+  color: rgba(0, 0, 0, 0);
+  transition: all 0.5s;
+}
+.game-label::after {
+  content: "]";
+  color: rgba(0, 0, 0, 0);
+  transition: all 0.5s;
+}
+.games-section ul.grid-list li a:hover .game-label {
+  font-weight: bold;
+  transform: all 0.3s;
+}
+.games-section ul.grid-list li a:hover .game-label::before {
+  color: orange;
+  margin-right: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 1px;
+}
+.games-section ul.grid-list li a:hover .game-label::after {
+  color: orange;
+  margin-left: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 1px;
 }
 
 /* ================================================================= */
