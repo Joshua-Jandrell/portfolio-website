@@ -507,7 +507,6 @@ ul.details-list li {
   position: relative;
   overflow-y: hidden;
   outline: 1px solid black;
-  border-radius: 10px;
   height: 150px;
 
   margin: 10px 0;
@@ -515,10 +514,6 @@ ul.details-list li {
 .blog-image {
   height: 100%;
   float: left;
-  margin-right: 20px;
-
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
 }
 a.blog-sample {
   text-decoration: none;
@@ -527,8 +522,7 @@ a.blog-sample {
 
 .blog-summary {
   display: block;
-  margin-left: 0;
-  margin-right: 0;
+  padding: 0 20px;
   overflow-y: hidden;
 }
 .read-more-wrapper {
@@ -547,12 +541,9 @@ a.blog-sample {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(80, 80, 80, 0.711) 50%,
-    rgb(72, 72, 72) 100%
+    rgba(255, 255, 255, 0.711) 50%,
+    rgb(255, 255, 255) 100%
   );
-
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 .read-more-txt {
   position: absolute;
