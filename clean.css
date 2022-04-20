@@ -97,11 +97,31 @@ details.inline-deets {
 .inline-deets summary {
   display: inline;
   white-space: nowrap;
+  font-weight: bold;
 }
 .inline-deets:hover summary {
   cursor: pointer;
-  color: lighter;
+  color: rgb(47, 177, 203);
   text-shadow: 0 0 1px;
+  transition: all 0.5s;
+}
+.inline-deets summary::after {
+  content: "...";
+  color: rgb(47, 177, 203);
+  transition: all 0.5s;
+}
+.inline-deets summary:hover:after {
+  content: ". . .";
+  font-weight: bold;
+}
+.popout-comment {
+  color: rgb(47, 177, 203);
+}
+.popout-comment::before {
+  content: " /*";
+}
+.popout-comment::after {
+  content: "*/ ";
 }
 
 /* ================================================================= */
@@ -164,7 +184,7 @@ nav.nav-bar {
   box-shadow: inset 0 0 1px;
 }
 .nav-bar a.select {
-  border-bottom: 5px solid orange;
+  border-bottom: 5px solid rgb(47, 177, 203);
 }
 .nav-bar a .link-block {
   padding-top: 15px;
@@ -176,13 +196,21 @@ nav.nav-bar {
   color: rgba(0, 0, 0, 0);
   transition: all 0.5s;
 }
+.nav-bar a.select .link-block::before {
+  color: rgb(47, 177, 203);
+  margin-right: 5px;
+}
+.nav-bar a.select .link-block::after {
+  color: rgb(47, 177, 203);
+  margin-left: 10px;
+}
 .nav-bar a .link-block::after {
   content: "]";
   color: rgba(0, 0, 0, 0);
   transition: all 0.5s;
 }
 .nav-bar a:hover .link-block {
-  color: orange;
+  color: rgb(47, 177, 203);
   font-weight: bold;
   text-shadow: 0 0 1px inset black;
   transition: all 0.5s;
@@ -332,16 +360,12 @@ h2.sub-h {
 .about-section {
   height: max-content;
 }
-/* headding styles */
-.about-section h1.main-h {
-  color: orange;
-}
 .about-content h2.main-h {
   color: orange;
 }
 /* details styles */
 .about-section .inline-deets summary {
-  color: orange;
+  font-weight: bold;
 }
 
 details.about-section {
@@ -349,25 +373,24 @@ details.about-section {
 }
 
 .about-content {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
   text-align: left;
   margin: 20px auto;
-  width: 80%;
+  max-width: 900px;
   height: max-content;
 }
 
 .profile-pic-wrapper {
   display: block;
-  width: 200px;
+  width: 100%;
   float: left;
   padding: 0;
-  margin: 0 20px;
-  border-right: 5px solid orange;
 }
 img.profil-picture {
   width: 75%;
   border: 10px solid orange;
-  border-radius: 10px;
 }
 
 .about-content .details-list {
@@ -379,6 +402,7 @@ img.profil-picture {
 ul.details-list li {
   padding: 5px 0;
 }
+
 /* ================================================================= */
 /* ------------------------- Games ----------------------------------*/
 /* ================================================================= */
@@ -538,15 +562,6 @@ a.blog-sample {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-}
-
-.blog-history h2 {
-  display: block;
-  background-color: aquamarine;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 0;
-  text-align: center;
 }
 
 .blog-h {
