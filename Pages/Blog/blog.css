@@ -49,28 +49,7 @@
   padding: 0 auto;
   list-style: none;
 }
-/* Blog grid styling ============================================================ */
-.blog-grid-wrapper {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2%;
-  text-align: center;
-  max-width: 800px;
 
-  margin: 0 auto;
-}
-
-.blog-grid-wrapper li {
-  display: block;
-  position: relative;
-  overflow-y: hidden;
-  outline: 1px solid black;
-  border-radius: 10px;
-  height: 150px;
-
-  margin: 10px 0;
-}
 /* footer layout ============================================================ */
 .blogpage-footer .bottom-nav {
   display: grid;
