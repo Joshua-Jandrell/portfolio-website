@@ -41,7 +41,18 @@ document.onscroll += function CheckScrollUp() {
   scrollUp = yPos < prevScroll;
   prevScroll = yPos;
 };
-
+// ===================================================
+// --- Check if an element is onscreen ---------------
+// ===================================================
+function isVIsisble(element) {
+  let rect = el.getBoundingClientRect();
+  pos = rect.top;
+  return pos <= offset;
+}
+// ===================================================
+// --- Show and collapse element ---------------------
+// ===================================================
+const vertCollapseClass = "vert-collapsed";
 // ===================================================
 // --- Update nav bar based on scroll postion --------
 // ===================================================
@@ -77,14 +88,40 @@ function CheckPointerMarkers() {
     navId = currId + navSuffex;
     navlink = document.getElementById(navId);
     navlink.classList.add(selectedClass);
-    console.log(currId);
+    //console.log(currId);
   }
+}
+// ===================================================
+// -------------- Animate headding on appeare --------
+// ===================================================
+const mainh_name = "main-h";
+let mainhs;
+function FindMainH1s() {
+  mainhs = document.getElementsByClassName(mainh_name);
+  CheckHs();
+}
+
+function CheckHs() {
+  for (i = 0; i < mainhs.length; i++) {
+    let h = mainhs[i];
+    if(isVIsisble(h))
+    {
+      CollapseElement(h)
+    }
+  }
+}
+
+function CollapseElement(el)
+{
+  el.innerHTML = "";
 }
 
 // ===================================================
 // --- Funtions to run ater load ---------------------
 // ===================================================
-window.onload = function () {};
+window.onload = function () {
+  FindMainH1s();
+};
 
 // ===================================================
 // --- Funtions to be called on scroll ----------------
