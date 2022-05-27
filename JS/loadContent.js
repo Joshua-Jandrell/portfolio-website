@@ -1,7 +1,9 @@
 // constants
 const elementName = "import-html";
-const attributeName = "path";
-
+const className = "import-root";
+const attributeName = "href";
+const nestedClass = "importTarget";
+const nestedImportId = "elem-id";
 // ===============================================================
 // Script run
 customElements.define(
@@ -10,13 +12,13 @@ customElements.define(
     constructor() {
       super();
       let path = this.getAttribute(attributeName);
-      LoadContent(path, this);
+      LoadSingleContent(path, this);
     }
   }
 );
 // ===============================================================
 // Async funtions
-async function LoadContent(path, element) {
+async function LoadSingleContent(path, element) {
   fetch(path)
     .then((response) => {
       // When the page is loaded convert it to text

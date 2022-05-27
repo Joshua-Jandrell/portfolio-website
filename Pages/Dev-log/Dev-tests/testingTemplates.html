@@ -11,22 +11,12 @@
     <title>Testing Templates</title>
   </head>
   <body>
+    <import-html href="./injection.html"></import-html>
     <h1 class="main-h">hmmm</h1>
-    <log-entry-temp> genkies </log-entry-temp>
-    <log-entry-temp>
-      <ul slot="jeff">
-        <li>bing</li>
-        <li>go</li>
-      </ul>
-    </log-entry-temp>
     <template id="log-entry-temp">
       <link rel="stylesheet" href="../../../clean.css" />
       <h1 class="main-h">Template boi</h1>
       <h2 class="main-h"><slot name="jeff"></slot></h2>
-      <details>
-        <summary>cool boi</summary>
-        <import-html path="./injection.html"></import-html>
-      </details>
     </template>
   </body>
 </html>
