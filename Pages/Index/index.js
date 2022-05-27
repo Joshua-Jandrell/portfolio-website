@@ -44,7 +44,7 @@ document.onscroll += function CheckScrollUp() {
 // ===================================================
 // --- Check if an element is onscreen ---------------
 // ===================================================
-function isVIsisble(element) {
+function isVIsisble(el) {
   let rect = el.getBoundingClientRect();
   pos = rect.top;
   return pos <= offset;
@@ -104,15 +104,13 @@ function FindMainH1s() {
 function CheckHs() {
   for (i = 0; i < mainhs.length; i++) {
     let h = mainhs[i];
-    if(isVIsisble(h))
-    {
-      CollapseElement(h)
+    if (h && isVIsisble(h)) {
+      CollapseElement(h);
     }
   }
 }
 
-function CollapseElement(el)
-{
+function CollapseElement(el) {
   el.innerHTML = "";
 }
 
