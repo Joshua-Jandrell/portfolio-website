@@ -92,7 +92,7 @@
           class="devlog-feed-content e-content"
           aria-roledescription="devlog entries"
         >
-          <li class="devlog-entry h-entry" id="what_is_this_0">
+          <li class="devlog-entry h-entry" id="re-re-reboot_0">
             <import-html
               href="./Articles/re-re-reboot_0.html"
               id="testBoi"
@@ -161,7 +161,6 @@
     <template id="log-template">
       <link rel="stylesheet" href="../../clean.css" />
       <link rel="stylesheet" href="devlog.css" />
-      <script src="../../JS/toggleDetails.js"></script>
       <slot name="date" class="entry-date"></slot>
       <details class="devlog-feed-deets" id="log-details">
         <summary>
@@ -174,7 +173,7 @@
         <article class="entry-content">
           <slot name="content"></slot>
         </article>
-        <button onClick="closeDetails()">Close</button>
+        <button class="close-button next-button">Close</button>
       </details>
     </template>
 

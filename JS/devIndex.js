@@ -8,18 +8,19 @@ const templateLinkClass = "blog-nav";
 const docIndexId = "log-index";
 const templateId = "index-entry-template";
 
-const closeButtonClass = "closeButton";
-
+const closeButtonClass = "close-button";
+const openNextClass = "next-button";
+const openPreButtonClass = "prev-button";
+const indexElemIds = [];
 AddOnLoad("devlog-entry");
 
-var indexElemIds = [];
 // ===============================================================
 // Setup events
 function AddOnLoad(className) {
   let elemArray = Array.from(document.getElementsByClassName(className));
   elemArray.forEach((element) => {
     let elemId = element.id;
-    //indexElemIds.push(elemId);
+    indexElemIds.push(elemId);
     let importer = element.getElementsByTagName("import-html")[0];
     importer.addEventListener("html-imported", (e) =>
       AddToIndex(e.detail.elem, elemId, docIndexId)
@@ -57,7 +58,7 @@ function SetIndexLink(newEntry, linkClass, targetId) {
   Array.from(links).forEach((a) => {
     if (a.classList.contains(linkClass)) {
       SetHref(a, targetId);
-      //AddOpenDetailsOnCLick(a, targetId);
+      AddOpenDetailsOnCLick(a, targetId);
       return;
     }
   });
@@ -73,31 +74,51 @@ function SetHref(a, targetId) {
 // ===============================================================
 // Open/close details on click
 function AddOpenDetailsOnCLick(a, targetId) {
-  let target = document.getElementById(targetId);
-  let logEntry = target.getElementsByTagName("log-template")[0];
-  let shadow = logEntry.shadowRoot;
-  if (shadow != null) {
-    let details = shadow.querySelectorAll("details")[0];
-    a.addEventListener("click", (e) => OpenDetails(details));
-
-    let closeButtons = shadow.querySelectorAll(closeButtonClass);
-    let newId = getPreviousIndex(id);
-    Array.from(closeButtons).forEach((button) => {});
-  }
+  let shadow = GetLogArticleShadow(targetId);
+  let details = shadow.querySelectorAll("details")[0];
+  a.addEventListener("click", (e) => OpenDetails(details));
+  let closeButtons = shadow.querySelectorAll("button");
+  SubscribeToCloseButtons(closeButtons, details, targetId);
+}
+function SubscribeToCloseButtons(closeButtons, details, targetId) {
+  Array.from(closeButtons).forEach((button) => {
+    if (button.classList.contains(closeButtonClass)) {
+      button.addEventListener("click", (e) => {
+        CloseDetails(details);
+        let newId = GetIndexAbove(targetId);
+        if (newId != null) {
+          if (button.classList.contains(openNextClass)) {
+            if (newId != null) {
+              window.location = MakeIdHrefTxt(newId);
+              let newShadow = GetLogArticleShadow(newId);
+              OpenDetails(newShadow.querySelectorAll("details")[0]);
+            }
+          }
+        }
+      });
+    }
+  });
 }
 function OpenDetails(details) {
   details.setAttribute("open", "true");
 }
+function CloseDetails(details) {
+  details.removeAttribute("open");
+}
+function GetLogArticleShadow(id) {
+  let target = document.getElementById(id);
+  let logEntry = target.getElementsByTagName("log-template")[0];
+  return logEntry.shadowRoot;
+}
 
-function getPreviousIndex(id) {
-  let inds = indexElemIds;
+function GetIndexAbove(id) {
   let prevId = null;
-  inds.forEach((indexId) => {
-    if (indexId == id) {
-      return prevId;
-    } else {
+  let set = false;
+  indexElemIds.forEach((indexId) => {
+    set = indexId == id || set;
+    if (!set) {
       prevId = indexId;
     }
   });
-  return null;
+  return prevId;
 }
