@@ -18,23 +18,7 @@ function MakeAllTemplates() {
     }
   });
 }
-/* Depreciated 
-function MakeTemplate(templateName) {
-  customElements.define(
-    templateName,
-    class extends HTMLElement {
-      constructor() {
-        super();
-        let template = document.getElementById(templateName);
-        let templateContent = template.content;
 
-        const root = template.content.firstElementChild.cloneNode(true);
-        //this.innerHTML = "";
-        this.appendChild(templateContent.cloneNode(true));
-      }
-    }
-  );
-}*/
 
 function MakeShaddowTemplate(templateName) {
   customElements.define(

@@ -4,6 +4,8 @@ const className = "import-root";
 const attributeName = "href";
 const nestedClass = "importTarget";
 const nestedImportId = "elem-id";
+const loadEventName = "html-imported";
+
 // ===============================================================
 // Script run
 customElements.define(
@@ -31,5 +33,17 @@ async function LoadSingleContent(path, element) {
     .then((doc) => {
       let html = doc.body.innerHTML;
       element.innerHTML = html;
+      return element;
+    })
+    .then((elem) => {
+      let loadEvent = MakeLoadEvent(elem);
+      element.dispatchEvent(loadEvent);
     });
+}
+// ===============================================================
+// Events
+function MakeLoadEvent(elemHTML) {
+  return new CustomEvent(loadEventName, {
+    detail: { elem: elemHTML },
+  });
 }
