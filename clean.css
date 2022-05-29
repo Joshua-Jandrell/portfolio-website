@@ -545,6 +545,15 @@ ul.details-list li {
 
   margin: 10px 0;
 }
+.blog-socket {
+  display: block;
+  position: relative;
+  overflow-y: hidden;
+  outline: 1px solid black;
+  height: 150px;
+
+  margin: 10px 0;
+}
 .blog-image {
   height: 100%;
   float: left;
@@ -1063,6 +1072,3 @@ a.inline-link:hover {
 /* ================================================================= */
 /* ------------------------- JS dynamil clases---------------------- */
 /* ================================================================= */
-.currDevSection {
-  background-color: greenyellow;
-}

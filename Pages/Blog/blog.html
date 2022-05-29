@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="../../clean.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../Dev-log/devlog.css" />
+
+    <script src="../../JS/updateBySection.js" type="text/javascript"></script>
+    <script src="../../JS/templates.js" type="text/javascript" defer></script>
+    <script src="../../JS/loadContent.js" type="text/javascript" defer></script>
+    <title>JJ/Blog</title>
   </head>
-  <body class ="max basic">
+  <body class="max basic">
     <!-- #region nav bar-->
     <header class="topBar basic z10" id="topDiv">
       <nav class="nav-bar">
@@ -57,12 +61,77 @@
         </ul>
       </nav>
     </header>
-    <main>
-        <h1 class = "main-h">Blogs</h1>
-        <article class="main-blog-wrapper">
-
-        </article>
-    </main>
     <!-- #endregion -->
+    <!-- Articel section ==============================================================================-->
+    <article class="devlog-super-wrapper">
+      <!-- #region -->
+      <header class="feed-headder">
+        <nav class="devlogpage-index left" aria-hidden="ture">
+          <!--Hide entries list from screen reader users - they can use main feel list for this-->
+          <h2 class="main-h">All blogs</h2>
+          <ul class="index-list history-list" id="log-index"></ul>
+        </nav>
+      </header>
+      <!-- #endregion -->
+      <!-- Feed ==============================================================================-->
+      <main class="blog-feed h-feed">
+        <div class="featured-blogs" aria-hidden="true"></div>
+        <h1 class="main-h">Recent Blogs</h1>
+        <span class="p-author noDisplay">Joshau Jandrell</span>
+        <!--Give authot for microformat but no need to display this on the site-->
+        <!-- Devlog articles start ---------------------------------->
+        <ul
+          class="devlog-feed-content e-content recent-posts"
+          aria-roledescription="devlog entries"
+        >
+          <li>
+            <import-html href="./Articles/reflection-data.html"></import-html>
+          </li>
+        </ul>
+      </main>
+    </article>
+
+    <!-- #region templates -->
+    <!--===========================================================-->
+    <!--------------------------- Templates ------------------------->
+    <!--===========================================================-->
+    <template id="log-template">
+      <link rel="stylesheet" href="../../clean.css" />
+      <article class="blog-socket">
+        <a
+          href="Pages/Blog/refection/refelction.html"
+          role="navigation"
+          class="blog-sample"
+          aria-roledescription="link to full blog artile"
+        >
+          <slot name="display-img" class="blog-image"></slot>
+          <section
+            class="blog-summary"
+            aria-roledescription="short preview extract from blog"
+          >
+            <h3 class="main-h"><slot name="title">Article title</slot></h3>
+            <p>
+              <slot name="summary">Summary of blog article</slot>
+            </p>
+          </section>
+          <section class="read-more-wrapper" aria-hidden="true">
+            <article class="read-more-txt">Click to read more</article>
+          </section>
+        </a>
+      </article>
+    </template>
+
+    <template id="index-entry-template" class="not-automated">
+      <li>
+        <a href="" class="u-nav blog-nav" id="entry-link"
+          ><h4 class="blog-h p-name">What is this?</h4></a
+        >
+      </li>
+    </template>
+    <!-- #endregion -->
+    <script defer>
+      // initalise doc spesfic features
+      SetScrollPointMarkers("devlog-entry", "currDevSection", false);
+    </script>
   </body>
 </html>

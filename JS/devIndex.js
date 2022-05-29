@@ -37,14 +37,10 @@ function AddOnLoad(className) {
 // ===============================================================
 // Setup funtions
 function SetUpIndexEntry(loadedElem, targetId, newEntry) {
-  if ("content" in document.createElement("template")) {
-    SetClassContent(newEntry, loadedElem, templateNameClass);
-    SetIndexLink(newEntry, templateLinkClass, targetId);
-    // NB Id's can only be set after an element is appended
-    SetLinkedId(newEntry, targetId);
-  } else {
-    indexElem.innerHTML += "Template not supported :/";
-  }
+  SetClassContent(newEntry, loadedElem, templateNameClass);
+  SetIndexLink(newEntry, templateLinkClass, targetId);
+  SetLinkedId(newEntry, targetId);
+  CheckLinkLocation(targetId);
 }
 
 function MakeIndexEntry() {
@@ -150,6 +146,12 @@ function GetLogArticleShadow(id) {
   let target = document.getElementById(id);
   let logEntry = target.getElementsByTagName("log-template")[0];
   return logEntry.shadowRoot;
+}
+// opens the log item if there is a '#' in the hyperlink
+function CheckLinkLocation(id) {
+  if (window.location.hash === MakeIdHrefTxt(id)) {
+    OpenLogEntry(id);
+  }
 }
 
 function GetIndexAbove(id) {

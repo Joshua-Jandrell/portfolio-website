@@ -7,14 +7,14 @@
   grid-auto-flow: row;
   gap: 50px;
 }
-
-.devlog-feed {
+.devlog-super-wrapper .h-feed {
   display: block;
   float: left;
   height: 100%;
   max-width: 800px;
   padding-top: 100px;
-
+}
+.devlog-feed {
   border-left: 5px dashed black;
 }
 .time-line {
@@ -109,18 +109,25 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
   position: -webkit-sticky;
 
   top: 100px;
-  height: 80vh;
-
-  overflow-y: scroll;
 }
 .devlogpage-index .main-h {
   text-align: center;
+}
+.devlogpage-index ul {
+  overflow-y: scroll;
+  height: 75vh;
 }
 .devlogpage-index.left li {
   border-left: none;
   border-right: 5px solid rgb(47, 177, 203);
   text-align: left;
   padding-left: 20px;
+}
+/* dynamicalled added with js */
+.devlogpage-index.left li.currDevSection {
+  background-color: aliceblue;
+  border-right: 5px solid orange;
+  transition: all 0.1s;
 }
 /* ================================================================= */
 /* ------------ square bracket demo formating ---------------------- */
@@ -175,3 +182,7 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
   border-left: 5px solid orange;
   margin-left: 20px;
 }
+
+/* ================================================================= */
+/* ------------ Blog section formatingg ---------------------------- */
+/* ================================================================= */
