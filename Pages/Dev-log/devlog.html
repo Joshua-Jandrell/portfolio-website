@@ -11,10 +11,6 @@
     <script src="../../JS/devIndex.js" type="text/javascript" defer></script>
     <script src="../../JS/templates.js" type="text/javascript" defer></script>
     <script src="../../JS/loadContent.js" type="text/javascript" defer></script>
-    <script defer>
-      // initalise doc spesfic features
-      SetScrollPointMarkers("jeff");
-    </script>
     <title>JJ/Dev-log</title>
   </head>
   <body class="max basic">
@@ -189,7 +185,10 @@
         >
       </li>
     </template>
-
     <!-- #endregion -->
+    <script defer>
+      // initalise doc spesfic features
+      SetScrollPointMarkers("devlog-entry", "currDevSection", false);
+    </script>
   </body>
 </html>
