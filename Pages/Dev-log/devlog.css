@@ -109,6 +109,9 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
   position: -webkit-sticky;
 
   top: 100px;
+  height: 80vh;
+
+  overflow-y: scroll;
 }
 .devlogpage-index .main-h {
   text-align: center;

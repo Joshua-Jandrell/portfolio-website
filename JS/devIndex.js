@@ -24,7 +24,6 @@ AddOnLoad("devlog-entry");
 // Setup events
 function AddOnLoad(className) {
   let elemArray = Array.from(document.getElementsByClassName(className));
-  console.log(elemArray);
   elemArray.forEach((element) => {
     let elemId = element.id;
     indexElemIds.push(elemId);
