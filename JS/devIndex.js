@@ -24,22 +24,23 @@ AddOnLoad("devlog-entry");
 // Setup events
 function AddOnLoad(className) {
   let elemArray = Array.from(document.getElementsByClassName(className));
+  console.log(elemArray);
   elemArray.forEach((element) => {
     let elemId = element.id;
     indexElemIds.push(elemId);
+    let indexElem = MakeIndexEntry();
     let importer = element.getElementsByTagName("import-html")[0];
     importer.addEventListener("html-imported", (e) =>
-      AddToIndex(e.detail.elem, elemId, docIndexId)
+      SetUpIndexEntry(e.detail.elem, elemId, indexElem)
     );
   });
 }
 // ===============================================================
 // Setup funtions
-function AddToIndex(loadedElem, targetId, indexId) {
+function SetUpIndexEntry(loadedElem, targetId, newEntry) {
   if ("content" in document.createElement("template")) {
-    let newEntry = MakeIndexEntry(loadedElem, targetId, indexId);
-    let navContainer = document.getElementById(indexId);
-    navContainer.appendChild(newEntry);
+    SetClassContent(newEntry, loadedElem, templateNameClass);
+    SetIndexLink(newEntry, templateLinkClass, targetId);
     // NB Id's can only be set after an element is appended
     SetLinkedId(newEntry, targetId);
   } else {
@@ -47,11 +48,11 @@ function AddToIndex(loadedElem, targetId, indexId) {
   }
 }
 
-function MakeIndexEntry(loadedElem, targetId) {
+function MakeIndexEntry() {
   let template = document.getElementById(templateId);
   let newEntry = template.content.firstElementChild.cloneNode(true);
-  SetClassContent(newEntry, loadedElem, templateNameClass);
-  SetIndexLink(newEntry, templateLinkClass, targetId);
+  let navContainer = document.getElementById(docIndexId);
+  navContainer.appendChild(newEntry);
   return newEntry;
 }
 function SetClassContent(newEntry, loadedElem, className) {

@@ -10,7 +10,6 @@ let currentMarker = "none"; // the id of the marker the user has currently scrol
 
 // Setup ===========================
 function SetScrollPointMarkers(markerClass, addedClass, sameAsTarget = false) {
-  console.log(markerClass);
   let markerArray = Array.from(document.getElementsByClassName(markerClass));
   let markergroup = new MarkerGroup(markerArray, addedClass, sameAsTarget);
   scrollMarkerGroups.push(markergroup);
@@ -75,7 +74,6 @@ function GetCurrentMarker(markers) {
 function IsVIsisble(el) {
   let rect = el.getBoundingClientRect();
   pos = rect.top;
-  console.log(pos + "vs " + GetOffset());
   return pos <= GetOffset();
 }
 // Get offset dynamically to accounted for window re-sizing
