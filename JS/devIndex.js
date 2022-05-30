@@ -22,47 +22,57 @@ const devIndexType = "dev";
 const blogIndexType = "blog";
 const devIndexHiddenClass = "noDisplay";
 
+const importedTemplateName = "log-template";
+
+let customIdCounter = 0;
+const customIdPrefex = "auto-index";
+
 // ===============================================================
 // Setup events
-function AddOnLoad(className, indexType) {
+function AddOnLoad(className, indexType, templateName = importedTemplateName) {
   let elemArray = Array.from(document.getElementsByClassName(className));
   elemArray.forEach((element) => {
-    let elemId = element.id;
+    let elemId = FindElemId(element);
     indexElemIds.push(elemId);
     let indexElem = MakeIndexEntry();
     let importer = element.getElementsByTagName("import-html")[0];
     importer.addEventListener("html-imported", (e) =>
-      DoIndexSetup(e.detail.elem, elemId, indexElem, indexType)
+      DoIndexSetup(e.detail.elem, elemId, indexElem, indexType, templateName)
     );
   });
 }
 // ===============================================================
 // Setup funtions
-function DoIndexSetup(loadedElem, targetId, indexElem, indexType) {
+function DoIndexSetup(loadedElem, targetId, indexElem, indexType, tempName) {
   if (indexType == devIndexType) {
-    SetupDevIndex(loadedElem, targetId, indexElem);
+    SetupDevIndex(indexElem, loadedElem, targetId, tempName);
   } else if (indexType == blogIndexType) {
-    SetUpBlogIndex(loadedElem, targetId, indexElem);
+    SetUpBlogIndex(indexElem, loadedElem, targetId, tempName);
   } else {
     console.log("Unknow index type: " + indexType);
   }
 }
-function SetupDevIndex(loadedElem, targetId, newEntry) {
+function SetupDevIndex(newEntry, loadedElem, targetId, tempName) {
   // set up and index where all items are in the same doc containe d by detail/summaery elements
   SetClassContent(newEntry, loadedElem, templateNameClass);
-  SetIndexLink(newEntry, templateLinkClass, targetId);
+  SetIndexLink(newEntry, templateLinkClass, targetId, tempName);
   SetLinkedId(newEntry, targetId);
-  CheckLinkLocation(targetId);
+  CheckLinkLocation(targetId, tempName);
 }
-function SetUpBlogIndex(loadedElem, target, indexElem) {
-  let a = indexElem.getElementsByTagName("a")[0];
-  let hreftTxt = loadedElem.querySelectorAll(articleHrefTag)[0];
-  console.log(hreftTxt.innerHTML);
-  a.href = hreftTxt.innerHTML;
-  //indexElem.innerHTML = "yeet";
+function SetUpBlogIndex(indexElem, loadedElem, loadTargetId, tempName) {
+  let hrefTxt = GetHrefTextFromLoadData(loadedElem);
+  SetExternalHref(indexElem, hrefTxt);
+  SetExternalHref(GetImportedTemplateShadow(loadTargetId, tempName), hrefTxt);
+  SetClassContent(indexElem, loadedElem, templateNameClass);
 }
 // ===============================================================
 // General Setup
+function SetExternalHref(indexElem, href) {
+  let a;
+  a = indexElem.querySelectorAll("a")[0];
+
+  a.href = href;
+}
 function MakeIndexEntry() {
   let template = document.getElementById(templateId);
   let newEntry = template.content.firstElementChild.cloneNode(true);
@@ -77,12 +87,12 @@ function SetClassContent(newEntry, loadedElem, className) {
     newElem.innerHTML = loadElem.innerHTML;
   }
 }
-function SetIndexLink(newEntry, linkClass, targetId) {
+function SetIndexLink(newEntry, linkClass, targetId, tempName) {
   links = newEntry.getElementsByTagName("a");
   Array.from(links).forEach((a) => {
     if (a.classList.contains(linkClass)) {
       SetHref(a, targetId);
-      AddOpenDetailsOnCLick(a, targetId);
+      AddOpenDetailsOnCLick(a, targetId, tempName);
       return;
     }
   });
@@ -104,53 +114,68 @@ function SetLinkedId(navElem, targetId) {
   }
   // if not, there is no point in setting a linked ID
 }
+function GetHrefTextFromLoadData(loadData) {
+  return loadData.querySelectorAll(articleHrefTag)[0].innerHTML;
+}
+
+function FindElemId(elem) {
+  if (elem.id == "") {
+    elem.id = MakeCustomIndex();
+  }
+  return elem.id;
+}
+function MakeCustomIndex() {
+  let custom = customIdPrefex + String(customIdCounter);
+  customIdCounter++;
+  return custom;
+}
 // ===============================================================
 // Open/close details on click
-function AddOpenDetailsOnCLick(a, targetId) {
-  let shadow = GetLogArticleShadow(targetId);
+function AddOpenDetailsOnCLick(a, targetId, tempName) {
+  let shadow = GetImportedTemplateShadow(targetId, tempName);
   let details = shadow.querySelectorAll("details")[0];
   a.addEventListener("click", (e) => OpenDetails(details));
   let closeButtons = shadow.querySelectorAll("button");
-  SubscribeToCloseButtons(closeButtons, details, targetId);
+  SubscribeToCloseButtons(closeButtons, details, targetId, tempName);
 }
-function SubscribeToCloseButtons(closeButtons, details, targetId) {
+function SubscribeToCloseButtons(closeButtons, details, targetId, tempName) {
   Array.from(closeButtons).forEach((button) => {
     if (button.classList.contains(closeButtonClass)) {
       button.addEventListener("click", (e) => {
         CloseDetails(details);
-        DoAttionalButtonActions(button, targetId);
+        DoAttionalButtonActions(button, targetId, tempName);
       });
     }
   });
 }
-function DoAttionalButtonActions(button, targetId) {
+function DoAttionalButtonActions(button, targetId, tempName) {
   if (button.classList.contains(openNextClass)) {
-    SetNextButton(targetId);
+    SetNextButton(targetId, tempName);
   } else if (button.classList.contains(openPreButtonClass)) {
-    SetPrevButton(targetId);
+    SetPrevButton(targetId, tempName);
   } else {
     GotoElemId(targetId);
   }
 }
-function SetNextButton(targetId) {
+function SetNextButton(targetId, tempName) {
   let newId = GetIndexAbove(targetId);
   if (newId != null) {
-    OpenLogEntry(newId);
+    OpenLogEntry(newId, tempName);
   } else {
     GotoElemId(targetId);
   }
 }
-function SetPrevButton(targetId) {
+function SetPrevButton(targetId, tempName) {
   let newId = GetIndexBelow(targetId);
   if (newId != null) {
-    OpenLogEntry(newId);
+    OpenLogEntry(newId, tempName);
   } else {
     GotoElemId(targetId);
   }
 }
-function OpenLogEntry(id) {
+function OpenLogEntry(id, tempName) {
   GotoElemId(id);
-  let newShadow = GetLogArticleShadow(id);
+  let newShadow = GetImportedTemplateShadow(id, tempName);
   OpenDetails(newShadow.querySelectorAll("details")[0]);
 }
 function GotoElemId(id) {
@@ -162,15 +187,15 @@ function OpenDetails(details) {
 function CloseDetails(details) {
   details.removeAttribute("open");
 }
-function GetLogArticleShadow(id) {
+function GetImportedTemplateShadow(id, tempName) {
   let target = document.getElementById(id);
-  let logEntry = target.getElementsByTagName("log-template")[0];
+  let logEntry = target.getElementsByTagName(tempName)[0];
   return logEntry.shadowRoot;
 }
 // opens the log item if there is a '#' in the hyperlink
-function CheckLinkLocation(id) {
+function CheckLinkLocation(id, tempName) {
   if (window.location.hash === MakeIdHrefTxt(id)) {
-    OpenLogEntry(id);
+    OpenLogEntry(id, tempName);
   }
 }
 
