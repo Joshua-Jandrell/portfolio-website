@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Dev-log/devlog.css" />
 
     <script src="../../JS/updateBySection.js" type="text/javascript"></script>
+    <script src="../../JS/devIndex.js" type="text/javascript"></script>
     <script src="../../JS/templates.js" type="text/javascript" defer></script>
     <script src="../../JS/loadContent.js" type="text/javascript" defer></script>
     <title>JJ/Blog</title>
@@ -84,8 +85,9 @@
           class="devlog-feed-content e-content recent-posts"
           aria-roledescription="devlog entries"
         >
-          <li>
+          <li class="blog-entry">
             <import-html href="./Articles/reflection-data.html"></import-html>
+            <a href="refection/refelction.html">refle</a>
           </li>
         </ul>
       </main>
@@ -131,6 +133,7 @@
     <!-- #endregion -->
     <script defer>
       // initalise doc spesfic features
+      AddOnLoad("blog-entry", "blog");
       SetScrollPointMarkers("devlog-entry", "currDevSection", false);
     </script>
   </body>

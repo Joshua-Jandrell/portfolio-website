@@ -11,18 +11,20 @@ const templateLinkClass = "blog-nav";
 
 const docIndexId = "log-index";
 const templateId = "index-entry-template";
+const articleHrefTag = "article-href";
 
 const closeButtonClass = "close-button";
 const openNextClass = "next-button";
 const openPreButtonClass = "prev-button";
 const indexElemIds = [];
 
+const devIndexType = "dev";
+const blogIndexType = "blog";
 const devIndexHiddenClass = "noDisplay";
-AddOnLoad("devlog-entry");
 
 // ===============================================================
 // Setup events
-function AddOnLoad(className) {
+function AddOnLoad(className, indexType) {
   let elemArray = Array.from(document.getElementsByClassName(className));
   elemArray.forEach((element) => {
     let elemId = element.id;
@@ -30,19 +32,37 @@ function AddOnLoad(className) {
     let indexElem = MakeIndexEntry();
     let importer = element.getElementsByTagName("import-html")[0];
     importer.addEventListener("html-imported", (e) =>
-      SetUpIndexEntry(e.detail.elem, elemId, indexElem)
+      DoIndexSetup(e.detail.elem, elemId, indexElem, indexType)
     );
   });
 }
 // ===============================================================
 // Setup funtions
-function SetUpIndexEntry(loadedElem, targetId, newEntry) {
+function DoIndexSetup(loadedElem, targetId, indexElem, indexType) {
+  if (indexType == devIndexType) {
+    SetupDevIndex(loadedElem, targetId, indexElem);
+  } else if (indexType == blogIndexType) {
+    SetUpBlogIndex(loadedElem, targetId, indexElem);
+  } else {
+    console.log("Unknow index type: " + indexType);
+  }
+}
+function SetupDevIndex(loadedElem, targetId, newEntry) {
+  // set up and index where all items are in the same doc containe d by detail/summaery elements
   SetClassContent(newEntry, loadedElem, templateNameClass);
   SetIndexLink(newEntry, templateLinkClass, targetId);
   SetLinkedId(newEntry, targetId);
   CheckLinkLocation(targetId);
 }
-
+function SetUpBlogIndex(loadedElem, target, indexElem) {
+  let a = indexElem.getElementsByTagName("a")[0];
+  let hreftTxt = loadedElem.querySelectorAll(articleHrefTag)[0];
+  console.log(hreftTxt.innerHTML);
+  a.href = hreftTxt.innerHTML;
+  //indexElem.innerHTML = "yeet";
+}
+// ===============================================================
+// General Setup
 function MakeIndexEntry() {
   let template = document.getElementById(templateId);
   let newEntry = template.content.firstElementChild.cloneNode(true);
