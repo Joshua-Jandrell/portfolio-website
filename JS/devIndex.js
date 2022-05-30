@@ -1,5 +1,6 @@
 // NB - this script only works if other required scripts are loaded into the dcument
 // These include:
+// => and varable pathToRoot containing a part to the root of the site (and wierd work aroud required to use JS pages)
 // => loadContent.js
 // => template.js + a desingated 'log-entry' template
 // => udpatedBySection.js *not required for running but imporves funtionality
@@ -60,7 +61,7 @@ function SetupDevIndex(newEntry, loadedElem, targetId, tempName) {
   CheckLinkLocation(targetId, tempName);
 }
 function SetUpBlogIndex(indexElem, loadedElem, loadTargetId, tempName) {
-  let hrefTxt = GetHrefTextFromLoadData(loadedElem);
+  let hrefTxt = GetPathToRoot() + GetHrefTextFromLoadData(loadedElem);
   SetExternalHref(indexElem, hrefTxt);
   SetExternalHref(GetImportedTemplateShadow(loadTargetId, tempName), hrefTxt);
   SetClassContent(indexElem, loadedElem, templateNameClass);
@@ -116,6 +117,12 @@ function SetLinkedId(navElem, targetId) {
 }
 function GetHrefTextFromLoadData(loadData) {
   return loadData.querySelectorAll(articleHrefTag)[0].innerHTML;
+}
+function GetPathToRoot() {
+  if (typeof pathToRoot === "undefined") {
+    throw "pathToRoot undefined. This must be specifically declared in-inpage script";
+  }
+  return pathToRoot;
 }
 
 function FindElemId(elem) {

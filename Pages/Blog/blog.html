@@ -87,7 +87,6 @@
         >
           <li class="blog-entry">
             <import-html href="./Articles/reflection-data.html"></import-html>
-            <a href="refection/refelction.html">refle</a>
           </li>
         </ul>
       </main>
@@ -131,8 +130,9 @@
       </li>
     </template>
     <!-- #endregion -->
-    <script defer>
+    <script>
       // initalise doc spesfic features
+      const pathToRoot = "../../";
       AddOnLoad("blog-entry", "blog", "log-template");
       SetScrollPointMarkers("devlog-entry", "currDevSection", false);
     </script>
