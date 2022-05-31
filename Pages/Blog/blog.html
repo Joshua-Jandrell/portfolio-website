@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="../../clean.css" />
     <link rel="stylesheet" href="../Dev-log/devlog.css" />
 
+    <script src="../../JS/basic.js"></script>
     <script src="../../JS/updateBySection.js" type="text/javascript"></script>
     <script src="../../JS/devIndex.js" type="text/javascript"></script>
-    <script src="../../JS/templates.js" type="text/javascript" defer></script>
+    <script src="../../JS/templates.js" type="text/javascript"></script>
     <script src="../../JS/loadContent.js" type="text/javascript" defer></script>
     <title>JJ/Blog</title>
   </head>
@@ -42,7 +43,9 @@
           aria-roledescription="devlog entries"
         >
           <li class="blog-entry">
-            <import-html href="./Articles/reflection-data.html"></import-html>
+            <content-preview>
+              <import-html href="./Articles/reflection-data.html"></import-html
+            ></content-preview>
           </li>
         </ul>
       </main>
@@ -52,7 +55,7 @@
     <!--===========================================================-->
     <!--------------------------- Templates ------------------------->
     <!--===========================================================-->
-    <template id="log-template">
+    <template id="content-preview">
       <link rel="stylesheet" href="../../clean.css" />
       <article class="blog-socket">
         <a
@@ -86,11 +89,12 @@
       </li>
     </template>
     <!-- #endregion -->
-    <script>
-      // initalise doc spesfic features
-      const pathToRoot = "../../";
-      AddOnLoad("blog-entry", "blog", "log-template");
-      SetScrollPointMarkers("devlog-entry", "currDevSection", false);
-    </script>
   </body>
+  <script defer>
+    // initalise doc spesfic features
+    const pathToRoot = "../../";
+    AddOnLoad("blog-entry", "blog", "content-preview");
+    MakeAllTemplates();
+    LoadCustomTemplates("Pages/HTML-templates/navBar.html");
+  </script>
 </html>

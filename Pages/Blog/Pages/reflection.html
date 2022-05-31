@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../clean.css" />
+    <link rel="stylesheet" href="../blog.css" />
+    <meta
+      name="description"
+      content="Reflecting on my porfolio site and my desing porcess after about a month of development"
+    />
+    <meta name="keywords" content="Joshua Jandrell, Web devlopment" />
+    <title>JJ/Blogs/Reflecting on this site so far</title>
+    <script src="../../../JS/basic.js"></script>
+    <script src="../../../JS/updateBySection.js"></script>
+    <script src="../../../JS/devIndex.js"></script>
+    <script src="../../../JS/templates.js"></script>
+    <script src="../../../JS/loadContent.js" defer></script>
+    <script>
+      const pathToRoot = "../../../";
+    </script>
+    <script defer>
+      LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
+      LoadCustomTemplates("./Pages/HTML-templates/blogWrapper.html");
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body class="basic max">
+    <header class="basic" id="top-div">
+      <nav-bar> </nav-bar>
+    </header>
+    <main>
+      <blog-wrapper>
+        <import-html href="../Articles/reflection-data.html"></import-html>
+      </blog-wrapper>
+    </main>
+  </body>
+</html>

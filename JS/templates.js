@@ -33,41 +33,54 @@ function MakeShadowTemplate(templateName) {
   );
 }
 
-function LoadCustomTemplates(href) {
-  fetch(href)
+// Less powerful than shadow template - no automatic updatatng, slots or dark magic
+// Read by web crawlers
+// Main doccument css applied
+function MakeLightTemplate(templateName) {
+  customElements.define(
+    templateName,
+    class extends HTMLElement {
+      constructor() {
+        super();
+        let template = document.getElementById(templateName);
+        let templateContent = template.content;
+        this.appendChild(templateContent.cloneNode(true));
+      }
+    }
+  );
+}
+
+async function LoadCustomTemplates(href) {
+  let rootHref = GetRootPath(href);
+  fetch(rootHref)
     .then((response) => {
       return response.text();
     })
     .then((text) => {
-      let parser = new DOMParser();
-      return parser.parseFromString(text, "text/html");
+      return ParseToHTML(text);
     })
     .then((doc) => {
-      return doc.body;
-    })
-    .then((body) => {
-      let temps = body.querySelectorAll("template");
-      Array.from(temps).forEach((template) => {
-        document.body.appendChild(template);
-        MakeShadowTemplate(template.id);
-        FixHref(template);
-      });
+      return MakeLoadedTemplates(doc.body);
     });
 }
-// accounts for links not being at the route directory
-function FixLinks(template) {
-  let links = template.querySelectorAll("link");
-  Array.from(links).forEach((link) => {
-    link.rel = GetRootPath(link.rel);
-  });
-}
 
-function FixHref(template) {
-  let test = template.content;
-  console.log("looking in " + test);
-  let as = test.querySelectorAll("a");
-  console.log(as);
-  Array.from(as).forEach((a) => {
-    console.log("a");
+function ParseToHTML(text) {
+  let parser = new DOMParser();
+  return parser.parseFromString(text, "text/html");
+}
+function MakeLoadedTemplates(body) {
+  let temps = body.querySelectorAll("template");
+  Array.from(temps).forEach((template) => {
+    document.body.appendChild(template);
+    FixHrefs(template);
+    MakeShadowTemplate(template.id);
   });
+
+  function FixHrefs(template) {
+    let hrefElems = template.content.querySelectorAll("[load-href]");
+    Array.from(hrefElems).forEach((hrefElem) => {
+      hrefElem.href = GetRootPath(hrefElem.getAttribute("load-href"));
+      console.log(hrefElem.href);
+    });
+  }
 }

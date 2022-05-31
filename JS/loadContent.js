@@ -32,8 +32,9 @@ async function LoadSingleContent(path, element) {
     })
     .then((doc) => {
       let html = doc.body.innerHTML;
-      element.innerHTML = html;
-      return element;
+      let parent = element.parentElement;
+      parent.innerHTML = html;
+      return parent;
     })
     .then((elem) => {
       let loadEvent = MakeLoadEvent(elem);

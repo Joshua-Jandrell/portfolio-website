@@ -43,62 +43,88 @@
           aria-roledescription="devlog entries"
         >
           <li class="devlog-entry h-entry" id="re-re-reboot_0">
-            <import-html
-              href="./Articles/re-re-reboot_0.html"
-              id="testBoi"
-            ></import-html>
+            <log-template>
+              <import-html
+                href="./Articles/re-re-reboot_0.html"
+                id="testBoi"
+              ></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="back_button_0">
-            <import-html href="./Articles/back_button_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/back_button_0.html"></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="pseudo-square-bracket_0">
-            <import-html
-              href="./Articles/pseudo-square-bracket_0.html"
-            ></import-html>
+            <log-template>
+              <import-html
+                href="./Articles/pseudo-square-bracket_0.html"
+              ></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="style_0">
-            <import-html href="./Articles/style_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/style_0.html"></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="contact_wire_0">
-            <import-html href="./Articles/contact_wire_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/contact_wire_0.html"></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="dev_wire_0">
-            <import-html href="./Articles/dev_wire_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/dev_wire_0.html"></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="blog_wire_0">
-            <import-html href="./Articles/blog_wire_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/blog_wire_0.html"></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="game_page_0">
-            <import-html href="./Articles/game_page_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/game_page_0.html"></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="games_wire_0">
-            <import-html href="./Articles/games_wire_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/games_wire_0.html"></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="about_wire_0">
-            <import-html href="./Articles/about_wire_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/about_wire_0.html"></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="home_nav_0">
-            <import-html href="./Articles/home_nav_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/home_nav_0.html"></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="land_on_homepage_0">
-            <import-html
-              href="./Articles/land_on_homepage_0.html"
-            ></import-html>
+            <log-template>
+              <import-html
+                href="./Articles/land_on_homepage_0.html"
+              ></import-html>
+            </log-template>
           </li>
 
           <li class="devlog-entry h-entry" id="what_is_this_0">
-            <import-html href="./Articles/what_is_this_0.html"></import-html>
+            <log-template>
+              <import-html href="./Articles/what_is_this_0.html"></import-html>
+            </log-template>
           </li>
         </ul>
       </main>
@@ -116,7 +142,7 @@
         <summary>
           <h2 class="main-h dev-h"><slot name="title"></slot></h2>
           <section>
-            <slot name="summary"></slot>
+            <slot name="summary"> </slot>
           </section>
         </summary>
         <!-- Devlog article content --------------------------------------->
@@ -140,7 +166,7 @@
       const pathToRoot = "../../";
       AddOnLoad("devlog-entry", "dev", "log-template");
       MakeAllTemplates();
-      LoadCustomTemplates("../HTML-templates/navBar.html");
+      LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
       SetScrollPointMarkers("devlog-entry", "currDevSection", false);
     </script>
   </body>

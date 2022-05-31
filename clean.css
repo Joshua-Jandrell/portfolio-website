@@ -22,6 +22,11 @@ body.max {
   background-color: rgb(255, 255, 255);
 }
 
+header.basic {
+  margin: 0;
+  padding: 0;
+}
+
 .main-body {
   margin: 10px 50px;
 }
