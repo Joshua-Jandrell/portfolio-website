@@ -118,12 +118,6 @@ function SetLinkedId(navElem, targetId) {
 function GetHrefTextFromLoadData(loadData) {
   return loadData.querySelectorAll(articleHrefTag)[0].innerHTML;
 }
-function GetPathToRoot() {
-  if (typeof pathToRoot === "undefined") {
-    throw "pathToRoot undefined. This must be specifically declared in-inpage script";
-  }
-  return pathToRoot;
-}
 
 function FindElemId(elem) {
   if (elem.id == "") {
