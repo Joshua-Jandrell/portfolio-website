@@ -33,7 +33,7 @@
             id="index-toggle"
             class="noDisplay"
           />
-          <label for="index-toggle">
+          <label for="index-toggle" class="toggle-lable">
             <h2 class="main-h">
               <span id="title">Dev-History</span><span id="icon">+</span>
             </h2></label
@@ -59,10 +59,7 @@
         >
           <li class="devlog-entry h-entry" id="re-re-reboot_0">
             <log-template>
-              <import-html
-                href="./Articles/re-re-reboot_0.html"
-                id="testBoi"
-              ></import-html>
+              <import-html href="./Articles/re-re-reboot_0.html"></import-html>
             </log-template>
           </li>
 
@@ -145,7 +142,6 @@
       </main>
     </article>
 
-    <!-- #region templates -->
     <!--===========================================================-->
     <!--------------------------- Templates ------------------------->
     <!--===========================================================-->
@@ -174,19 +170,18 @@
           href=""
           class="u-nav blog-nav"
           id="entry-link"
-          onclick="CloseElem('index-toggle')"
+          onclick="CloseCheckbox('index-toggle')"
           ><h4 class="blog-h p-name">What is this?</h4></a
         >
       </li>
     </template>
-    <!-- #endregion -->
-    <script defer>
-      // initalise doc spesfic features
-      const pathToRoot = "../../";
-      AddOnLoad("devlog-entry", "dev", "log-template");
-      MakeAllTemplates();
-      LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
-      SetScrollPointMarkers("devlog-entry", "currDevSection", false);
-    </script>
   </body>
+  <script defer>
+    // initalise doc spesfic features
+    const pathToRoot = "../../";
+    AddOnLoad("devlog-entry", "dev", "log-template");
+    MakeAllTemplates();
+    LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
+    SetScrollPointMarkers("devlog-entry", "currDevSection", false);
+  </script>
 </html>

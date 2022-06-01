@@ -504,7 +504,7 @@ ul.details-list li {
   grid-template-columns: repeat(3, 1fr);
   gap: 2%;
   text-align: center;
-  margin: 0 auto;
+  margin: 60px auto 0;
 
   padding: 2%;
 

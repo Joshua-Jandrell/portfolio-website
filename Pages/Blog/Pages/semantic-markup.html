@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" Sematic markup is one of the first buzz words to be thrown around
+      when it comes to well-written html. It is the idea of giving
+      elements useful tags which appropriately describe their function
+      and meaning. Simplistically, it is the difference between storing
+      this article in an article element as opposed
+      to a div. This may have not impact on the
+      visual styling of this page when viewed on your computer screen
+      but it has a profound impact on how things are viewed by your
+      computer. Good semantics allow computers, web crawlers and screen
+      readers to get a better understanding of the intended function of
+      each line of text."
+    />
+    <meta
+      name="keywords"
+      content="Semantic mark-up, html, accessibility, world wide web"
+    />
+    <meta name="author" content="Joshua Jandrell" />
+    <link rel="stylesheet" href="../../../clean.css" />
+    <link rel="stylesheet" href="../blog.css" />
+    <title>JJ/Blogs/What is Semantic Markup</title>
+    <script src="../../../JS/basic.js"></script>
+    <script src="../../../JS/updateBySection.js"></script>
+    <script src="../../../JS/devIndex.js"></script>
+    <script src="../../../JS/templates.js"></script>
+    <script src="../../../JS/loadContent.js" defer></script>
+    <script>
+      const pathToRoot = "../../../";
+    </script>
+    <script defer>
+      LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
+      LoadCustomTemplates("./Pages/HTML-templates/blogWrapper.html");
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body class="basic max">
+    <header class="basic" id="top-div">
+      <nav-bar> </nav-bar>
+    </header>
+    <main class="max">
+      <blog-wrapper>
+        <import-html href="../Articles/semantic-markup.html"></import-html>
+      </blog-wrapper>
+    </main>
+  </body>
+</html>

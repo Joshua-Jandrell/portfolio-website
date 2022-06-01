@@ -1,6 +1,5 @@
 // constants
 const elementName = "import-html";
-const className = "import-root";
 const attributeName = "href";
 const nestedClass = "importTarget";
 const nestedImportId = "elem-id";

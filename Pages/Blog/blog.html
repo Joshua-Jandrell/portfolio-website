@@ -17,7 +17,9 @@
   <body class="max basic">
     <!-- #region nav bar-->
     <header class="topBar basic z10" id="topDiv">
-      <nav-bar></nav-bar>
+      <nav-bar>
+        <span slot="page-name">JJ/Blog</span>
+      </nav-bar>
     </header>
     <!-- #endregion -->
     <!-- Articel section ==============================================================================-->
@@ -26,7 +28,7 @@
       <header class="feed-headder">
         <nav class="devlogpage-index left" aria-hidden="ture">
           <!--Hide entries list from screen reader users - they can use main feel list for this-->
-          <h2 class="main-h">All blogs</h2>
+          <h2 class="main-h hide-h">All blogs</h2>
           <ul class="index-list history-list" id="log-index"></ul>
         </nav>
       </header>
@@ -45,6 +47,23 @@
           <li class="blog-entry">
             <content-preview>
               <import-html href="./Articles/reflection-data.html"></import-html
+            ></content-preview>
+          </li>
+          <li class="blog-entry">
+            <content-preview>
+              <import-html href="./Articles/metaphore-data.html"></import-html
+            ></content-preview>
+          </li>
+          <li class="blog-entry">
+            <content-preview>
+              <import-html href="./Articles/semantic-markup.html"></import-html
+            ></content-preview>
+          </li>
+          <li class="blog-entry">
+            <content-preview>
+              <import-html
+                href="./Articles/as-we-may-think-data.html"
+              ></import-html
             ></content-preview>
           </li>
         </ul>

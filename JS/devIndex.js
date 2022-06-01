@@ -224,7 +224,7 @@ function GetIndexBelow(id) {
   return lowerId;
 }
 
-function CloseElem(id) {
+function CloseCheckbox(id) {
   let indexToggle = document.getElementById(id);
   if (indexToggle != null) {
     indexToggle.checked = false;

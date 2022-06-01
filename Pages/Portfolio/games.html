@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../clean.css" />
+    <link rel="stylesheet" href="../../Pages/Index/index.css" />
+
+    <script src="../../JS/basic.js"></script>
+    <script src="../../JS/updateBySection.js" type="text/javascript"></script>
+    <script src="../../JS/devIndex.js" type="text/javascript"></script>
+    <script src="../../JS/templates.js" type="text/javascript"></script>
+    <script src="../../JS/loadContent.js" type="text/javascript" defer></script>
+    <title>JJ / Games</title>
+  </head>
+  <body class="basic max">
+    <head>
+      <nav-bar>
+        <span slot="page-name">JJ / Games</span>
+      </nav-bar>
+    </head>
+    <main>
+      <section class="index-section games-section">
+        <h1 class="main-h center">Games.</h1>
+        <h2 class="sub-h center">Play some fun games</h2>
+        <article class="games-contenet">
+          <nav class="games-grid e-nav">
+            <ul class="grid-list grid">
+              <li>
+                <a href="Pages/Portfolio/Pages/HelpMeOut/help-me-out.html"
+                  ><img
+                    src="../../Pages/Portfolio/Pages/HelpMeOut/Screen-shots/icon.png"
+                    alt="icon for Melp me Out"
+                    class="game-image"
+                    id="help-me-out-link"
+                  />
+                  <div class="label-wrapper">
+                    <label for="#help-me-out-link" class="game-label"
+                      >Help Me Out</label
+                    >
+                  </div></a
+                >
+              </li>
+              <li>
+                <a href="Pages/Portfolio/Pages/PinDrop/pindrop.html"
+                  ><img
+                    src="../../Pages/Portfolio/Pages/PinDrop/Screen-Shots/icon.png"
+                    alt="icon for Pin Drop"
+                    class="game-image"
+                    id="pin-drop-link"
+                  />
+                  <div class="label-wrapper">
+                    <label for="#pin-drop-link" class="game-label"
+                      >Pin Drop</label
+                    >
+                  </div></a
+                >
+              </li>
+              <li>
+                <a href="Pages/Portfolio/Pages/IdolClicker/idolclicker.html"
+                  ><img
+                    src="../../Pages/Portfolio/Pages/IdolClicker/ScreenShots/icon.png"
+                    alt="icon for Idol Clicker"
+                    class="game-image"
+                    id="idol-click-link"
+                  />
+                  <div class="label-wrapper">
+                    <label for="#idol-click-link" class="game-label"
+                      >Idol Clicker</label
+                    >
+                  </div></a
+                >
+              </li>
+              <li>
+                <a href="../../Pages/Portfolio/Pages/Catapult/cat-a-pult.html"
+                  ><img
+                    src="Pages/Catapult/ScreenShots/icon.png"
+                    alt="icon for Cat-a-pult"
+                    class="game-image"
+                    id="cat-a-pult-link"
+                  />
+                  <div class="label-wrapper">
+                    <label for="#cat-a-pult-link" class="game-label"
+                      >Cat-a-pult</label
+                    >
+                  </div></a
+                >
+              </li>
+              <li>
+                <a href="../../Pages/Portfolio/Pages/Life/lifetime.html"
+                  ><img
+                    src="Pages/Life/ScreenShots/icon.png"
+                    alt="icon for Life-time"
+                    class="game-image"
+                    id="life-link"
+                  />
+                  <div class="label-wrapper">
+                    <label for="#life-link" class="game-label">Life-time</label>
+                  </div></a
+                >
+              </li>
+              <li>
+                <a href="../../Pages/Portfolio/Pages/ProjectSim/project.html"
+                  ><img
+                    src="./Pages/ProjectSim/Screenshots/icon.png"
+                    alt="icon for project "
+                    class="game-image"
+                    id="project-link"
+                  />
+                  <div class="label-wrapper">
+                    <label for="#project-link" class="game-label"
+                      >project</label
+                    >
+                  </div></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </article>
+      </section>
+    </main>
+  </body>
+  <script defer>
+    // initalise doc spesfic features
+    const pathToRoot = "../../";
+    AddOnLoad("blog-entry", "blog", "content-preview");
+    MakeAllTemplates();
+    LoadCustomTemplates("Pages/HTML-templates/navBar.html");
+  </script>
+</html>

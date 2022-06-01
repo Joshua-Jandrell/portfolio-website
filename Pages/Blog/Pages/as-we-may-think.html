@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../clean.css" />
+    <link rel="stylesheet" href="../blog.css" />
+    <meta
+      name="description"
+      content="A reletivly personal reflection on what we have done and where we
+      have come as a society. How has exposure to technology changed the
+      way in which we view technology? How should I while moving forward
+      in a technical space."
+    />
+    <meta
+      name="keywords"
+      content="as we may think,Hypertext, world wide web, Vannevar Bush"
+    />
+    <meta name="author" content="Joshua Jandrell" />
+    <link rel="stylesheet" href="../../../clean.css" />
+    <link rel="stylesheet" href="../blog.css" />
+    <title>JJ/Blog/As We May Think at 65 at 12</title>
+    <script src="../../../JS/basic.js"></script>
+    <script src="../../../JS/updateBySection.js"></script>
+    <script src="../../../JS/devIndex.js"></script>
+    <script src="../../../JS/templates.js"></script>
+    <script src="../../../JS/loadContent.js" defer></script>
+    <script>
+      const pathToRoot = "../../../";
+    </script>
+    <script defer>
+      LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
+      LoadCustomTemplates("./Pages/HTML-templates/blogWrapper.html");
+    </script>
+  </head>
+  <body class="basic max">
+    <header class="basic" id="top-div">
+      <nav-bar>
+        <span slot="page-name">JJ/Blog</span>
+      </nav-bar>
+    </header>
+    <main class="max">
+      <blog-wrapper>
+        <import-html href="../Articles/as-we-may-think-data.html"></import-html>
+      </blog-wrapper>
+    </main>
+  </body>
+</html>

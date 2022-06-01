@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="Pages/Index/index.css" />
     <link rel="stylesheet" href="clean.css" />
     <script src="Pages/Index/index.js"></script>
+    <script src="../../../JS/basic.js"></script>
+    <script src="../../../JS/updateBySection.js"></script>
+    <script src="../../../JS/devIndex.js"></script>
+    <script src="../../../JS/templates.js"></script>
+    <script src="../../../JS/loadContent.js" defer></script>
     <title>JJ/Joshua Jandrell</title>
   </head>
   <body class="max">
@@ -33,49 +38,11 @@
     <!-- #region Nav-->
     <!--Note: intro section is before nav bar in html: this give screen reader users the same experance of the website reveal-->
     <header class="topBar basic z-1" id="topDiv">
-      <nav class="nav-bar">
-        <label for="#main-bar" class="nav-lable"
-          ><a href="." rel="home" class="title-link"
-            ><h1>Joshua Jandrell</h1></a
-          ></label
-        >
-        <ul class="nav-bar" id="main-bar">
-          <li>
-            <a href="#home" class="homeLink home" id="home-nav"
-              ><div class="link-block">Home</div></a
-            >
-          </li>
-          <li>
-            <a href="index.html#about" class="aboutLink" id="about-nav"
-              ><div class="link-block">About</div></a
-            >
-          </li>
-          <li>
-            <a href="#games" claas="gamesLink" id="games-nav"
-              ><div class="link-block">Games</div></a
-            >
-          </li>
-          <li>
-            <a href="#blog" class="blogLink" id="blog-nav"
-              ><div class="link-block">Blog</div></a
-            >
-          </li>
-          <li>
-            <a href="#devlog" class="devlogLink" id="devlog-nav"
-              ><div class="link-block">Dev-log</div></a
-            >
-          </li>
-          <li>
-            <a href="#contact" class="devlogLink" id="contact-nav"
-              ><div class="link-block">Contact</div></a
-            >
-          </li>
-        </ul>
-      </nav>
+      <nav-bar></nav-bar>
     </header>
     <!-- #endregion -->
     <main class="e-content main-body basic">
-      <!-- Explore =======================================================================================-->
+      <!-- Explore =======================================================================================-
       <div class="section-divider" id="home" aria-hidden="true"></div>
       <section>
         <article id="home-contenet">
@@ -117,13 +84,13 @@
                 class="blog-sample"
                 aria-roledescription="link to full blog artile"
               >
-                <!--<img
+                <img
                   img
                   src="/Pages/About/aboutImg/placeHolderImg.png"
                   alt="icon for game"
                   class="blog-image"
                   id="bi_0"
-                />-->
+                />
                 <section
                   class="blog-summary"
                   aria-roledescription="short preview extract from blog"
@@ -148,13 +115,13 @@
                 class="blog-sample"
                 aria-roledescription="link to full blog artile"
               >
-                <!--<img
+                <img
                   img
                   src="/Pages/About/aboutImg/placeHolderImg.png"
                   alt="icon for game"
                   class="blog-image"
                   id="bi_0"
-                />-->
+                />
                 <section
                   class="blog-summary"
                   aria-roledescription="short preview extract from blog"
@@ -214,7 +181,7 @@
             </li>
           </ul>
         </article>
-      </section>
+      </section>-->
       <!-- About =======================================================================================-->
       <div class="section-divider" id="about" aria-hidden="true"></div>
       <section class="index-section about-section">
@@ -936,4 +903,11 @@
       </article>-->
     </footer>
   </body>
+  <script defer>
+    // initalise doc spesfic features
+    const pathToRoot = "../../";
+    AddOnLoad("devlog-entry", "dev", "log-template");
+    MakeAllTemplates();
+    LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
+  </script>
 </html>

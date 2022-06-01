@@ -137,6 +137,9 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
   font-weight: normal;
 }
 @media (max-width: 875px) {
+  .hide-h {
+    display: none;
+  }
   .devlog-super-wrapper {
     display: block;
   }
@@ -156,7 +159,7 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
     left: -60vw;
     transition: all 1s;
   }
-  .devlogpage-index .main-h {
+  .devlogpage-index .toggle-lable .main-h {
     background-color: aliceblue;
     border-right: 5px solid rgb(47, 177, 203);
     border-top: 1px solid rgb(47, 177, 203);
@@ -189,16 +192,16 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
     color: orange;
     transition: all 0.5s;
   }
-  .devlogpage-index .main-h:hover {
+  .devlogpage-index .toggle-lable .main-h:hover {
     color: orange;
     cursor: pointer;
   }
-  .devlogpage-index .main-h:hover::before {
+  .devlogpage-index .toggle-lable .main-h:hover::before {
     display: inline-block;
     margin-right: -5px;
     color: black;
   }
-  .devlogpage-index .main-h:hover:after {
+  .devlogpage-index .toggle-lable .main-h:hover:after {
     display: inline-block;
     margin-left: -5px;
     color: black;
@@ -207,14 +210,14 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
   #index-toggle:checked ~ ul {
     left: 0;
   }
-  #index-toggle:checked + label #icon {
+  #index-toggle:checked + label.toggle-lable #icon {
     display: none;
   }
-  #index-toggle:checked + label #title {
+  #index-toggle:checked + label.toggle-lable #title {
     display: inline-block;
     width: fit-content;
   }
-  #index-toggle:checked + label .main-h {
+  #index-toggle:checked + label.toggle-lable .main-h {
     white-space: nowrap;
     transition: 0.75s;
   }

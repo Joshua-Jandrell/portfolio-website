@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="It's been a while since I did any high level design work on my website.
+      It's time to dive back I and take a critical look the user interface (UI)
+      and the user experience (UX) of the website. What is good, what is bad and
+      what can I do to fix it? Delivering a good UX is critical to making a good
+      site. Well sort of. The user experience is a confluence between the
+      experiential and emotional affects of interacting with an artifact as well
+      the context where in this interaction takes place [1]. The experience that
+      a user has while using an artifact has a clear impact on their engagement
+      engage with it and how they evaluate it's quality after using it [1][2].
+      Delivering the desired experience will result in the website evoking the
+      intended response. UX is especially important for a portfolio website like
+      mine because, let's face it, you have no real reason to be here. There is
+      not task you need to accomplish."
+    />
+    <meta
+      name="keywords"
+      content="User-intergace User-experance UX UI User-centered-desing"
+    />
+    <meta name="author" content="Joshua Jandrell" />
+    <title>JJ/Blogs/This Site so Far</title>
+    <link rel="stylesheet" href="../../../clean.css" />
+    <link rel="stylesheet" href="../blog.css" />
+    <script src="../../../JS/basic.js"></script>
+    <script src="../../../JS/updateBySection.js"></script>
+    <script src="../../../JS/devIndex.js"></script>
+    <script src="../../../JS/templates.js"></script>
+    <script src="../../../JS/loadContent.js" defer></script>
+    <script>
+      const pathToRoot = "../../../";
+    </script>
+    <script defer>
+      LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
+      LoadCustomTemplates("./Pages/HTML-templates/blogWrapper.html");
+    </script>
+  </head>
+  <body class="basic max">
+    <header class="basic" id="top-div">
+      <nav-bar> </nav-bar>
+    </header>
+    <main class="max">
+      <blog-wrapper>
+        <import-html href="../Articles/ux-ui.html"></import-html>
+      </blog-wrapper>
+    </main>
+  </body>
+</html>
