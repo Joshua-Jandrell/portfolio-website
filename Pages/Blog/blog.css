@@ -3,7 +3,7 @@
 /* ------------------------- Layout strucutre ---------------------- */
 /* ================================================================= */
 .blogpost-wrapper {
-  margin-top: 50px;
+  margin-top: 60px;
   width: 100%;
 
   display: grid;
@@ -52,7 +52,7 @@
     display: block;
     width: 80%;
     min-width: 400px;
-    margin: auto;
+    margin: 60px auto 10px;
   }
 
   .sticky-nav .blogpage-index.left {

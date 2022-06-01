@@ -109,9 +109,16 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
   position: -webkit-sticky;
 
   top: 100px;
+  z-index: 5;
 }
 .devlogpage-index .main-h {
   text-align: center;
+}
+.devlogpage-index .main-h::before {
+  display: none;
+}
+.devlogpage-index .main-h::after {
+  display: none;
 }
 .devlogpage-index ul {
   overflow-y: scroll;
@@ -120,8 +127,104 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
 .devlogpage-index.left li {
   border-left: none;
   border-right: 5px solid rgb(47, 177, 203);
+  background-color: white;
   text-align: left;
   padding-left: 20px;
+}
+
+.devlogpage-index .main-h #icon {
+  display: none;
+  font-weight: normal;
+}
+@media (max-width: 875px) {
+  .devlog-super-wrapper {
+    display: block;
+  }
+  .devlog-feed {
+    display: block;
+    margin: 0 10%;
+  }
+
+  .devlogpage-index {
+    position: fixed;
+    top: 60px;
+  }
+
+  .devlogpage-index.left ul {
+    position: fixed;
+    width: 50vw;
+    left: -60vw;
+    transition: all 1s;
+  }
+  .devlogpage-index .main-h {
+    background-color: aliceblue;
+    border-right: 5px solid rgb(47, 177, 203);
+    border-top: 1px solid rgb(47, 177, 203);
+    border-bottom: solid rgb(47, 177, 203);
+    min-width: 50px;
+    padding: 10px;
+    transition: width 0.75s;
+  }
+  .devlogpage-index .main-h #title {
+    display: none;
+    width: 0;
+    transition: width 1s;
+  }
+  .devlogpage-index .main-h #icon {
+    display: inline-block;
+  }
+  .devlogpage-index .main-h::before {
+    display: inline-block;
+    margin-right: -10px;
+    width: fit-content;
+    padding: 0;
+    color: orange;
+    transition: all 0.5s;
+  }
+  .devlogpage-index .main-h::after {
+    display: inline-block;
+    margin-left: -10px;
+    width: fit-content;
+    padding: 0;
+    color: orange;
+    transition: all 0.5s;
+  }
+  .devlogpage-index .main-h:hover {
+    color: orange;
+    cursor: pointer;
+  }
+  .devlogpage-index .main-h:hover::before {
+    display: inline-block;
+    margin-right: -5px;
+    color: black;
+  }
+  .devlogpage-index .main-h:hover:after {
+    display: inline-block;
+    margin-left: -5px;
+    color: black;
+  }
+
+  #index-toggle:checked ~ ul {
+    left: 0;
+  }
+  #index-toggle:checked + label #icon {
+    display: none;
+  }
+  #index-toggle:checked + label #title {
+    display: inline-block;
+    width: fit-content;
+  }
+  #index-toggle:checked + label .main-h {
+    white-space: nowrap;
+    transition: 0.75s;
+  }
+}
+@media (max-width: 400px) {
+  .devlog-feed {
+    margin-right: 10px;
+    margin-left: 20px;
+    padding: 0;
+  }
 }
 /* dynamicalled added with js */
 .devlogpage-index.left li.currDevSection {

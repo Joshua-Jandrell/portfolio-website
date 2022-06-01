@@ -223,3 +223,10 @@ function GetIndexBelow(id) {
   });
   return lowerId;
 }
+
+function CloseElem(id) {
+  let indexToggle = document.getElementById(id);
+  if (indexToggle != null) {
+    indexToggle.checked = false;
+  }
+}

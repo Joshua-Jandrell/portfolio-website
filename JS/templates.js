@@ -80,7 +80,6 @@ function MakeLoadedTemplates(body) {
     let hrefElems = template.content.querySelectorAll("[load-href]");
     Array.from(hrefElems).forEach((hrefElem) => {
       hrefElem.href = GetRootPath(hrefElem.getAttribute("load-href"));
-      console.log(hrefElem.href);
     });
   }
 }
