@@ -12,39 +12,51 @@
       <article class="topBar basic z10">
         <nav class="nav-bar">
           <label for="#main-bar" class="nav-lable"
-            ><a load-href="./index.html" rel="home" class="title-link"
-              ><h1>Joshua Jandrell</h1></a
+            ><a load-href="./index.html" rel="home" class="title-link link"
+              ><h1><slot name="page-name">Joshua Jandrell</slot></h1></a
             ></label
           >
+
+          <input
+            type="checkbox"
+            name="burger-menu"
+            id="burger-menu"
+            class="noDisplay"
+          />
+          <label for="burger-menu" class="burger-lable" id="burger-lable"
+            >&equiv;</label
+          >
+
           <ul class="nav-bar" id="main-bar">
             <li>
-              <a load-href="./index.html" class="homeLink home" id="home-nav"
+              <a
+                load-href="./index.html"
+                class="homeLink home link"
+                id="home-nav"
                 ><div class="link-block">Home</div></a
               >
             </li>
             <li>
-              <a load-href="./index.html" class="aboutLink" id="about-nav"
+              <a load-href="./index.html" class="aboutLink link" id="about-nav"
                 ><div class="link-block">About</div></a
               >
             </li>
             <li>
-              <a load-href="./index.html" claas="gamesLink" id="games-nav"
+              <a load-href="./index.html" class="gamesLink link" id="games-nav"
                 ><div class="link-block">Games</div></a
               >
             </li>
             <li>
-              <a load-href="./index.html" class="blogLink" id="blog-nav"
+              <a load-href="./index.html" class="blogLink link" id="blog-nav"
                 ><div class="link-block">Blog</div></a
               >
             </li>
             <li>
-              <a load-href="./index.html" class="devlogLink" id="devlog-nav"
+              <a
+                load-href="./index.html"
+                class="devlogLink link"
+                id="devlog-nav"
                 ><div class="link-block">Dev-log</div></a
-              >
-            </li>
-            <li>
-              <a load-href="./index.html" class="devlogLink" id="contact-nav"
-                ><div class="link-block">Contact</div></a
               >
             </li>
           </ul>
