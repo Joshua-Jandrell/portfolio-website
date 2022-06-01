@@ -12,15 +12,12 @@
   grid-auto-flow: column;
   position: relative;
 }
-.blogpage-index {
+.sticky-nav .blogpage-index {
   display: block;
   height: fit-content;
   z-index: -1;
-}
-.sticky-nav {
   position: sticky;
   top: 100px;
-  height: fit-content;
 }
 
 .blogpage-index.left li {
@@ -48,6 +45,22 @@
   width: 100%;
   padding: 0 auto;
   list-style: none;
+}
+
+@media (max-width: 950px) {
+  .blogpost-wrapper {
+    display: block;
+    width: 80%;
+    min-width: 400px;
+    margin: auto;
+  }
+
+  .sticky-nav .blogpage-index.left {
+    position: absolute;
+    left: -100%;
+
+    transition: all 1s;
+  }
 }
 
 /* footer layout ============================================================ */
