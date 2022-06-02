@@ -27,7 +27,6 @@
   font-size: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 100%;
 }
 
 .introGrad {
@@ -36,6 +35,7 @@
   z-index: 10;
 
   height: 200vh;
+  width: 100vw;
 
   background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -47,7 +47,4 @@
   );
 
   display: block;
-}
-.index-content {
-  height: 5000px;
 }

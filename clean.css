@@ -19,7 +19,7 @@
 body.max {
   padding: 0;
   margin: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
 header.basic {
@@ -406,7 +406,128 @@ h2.main-h .blk {
   font-weight: bolder;
   padding: 0;
 }
+/* ================================================================= */
+/* ------------------------- [ Dynamic Headdings]------------------- */
+/* ================================================================= */
+.button-h {
+  position: relative;
+  font-size: 60px;
+  text-align: center;
+  max-width: max-content;
+  margin: auto;
+  font-family: monospace;
+}
+a.button-ha {
+  display: block;
+  max-width: max-content;
+  margin: 5px auto 20px;
+  text-decoration: none;
+  color: black;
+  pointer-events: none;
+}
+a.button-ha.open {
+  pointer-events: initial;
+}
+a.button-ha .button-h::before {
+  content: "[";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80px;
+  color: orange;
+  background-color: white;
+  padding: 0;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  text-align: right;
+  width: 50%;
+  transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+a.button-ha .button-h::after {
+  content: "]";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80px;
+  color: orange;
+  background-color: white;
+  padding: 0;
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  text-align: left;
+  width: 50%;
+  transition: right 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
+a.button-ha.open .button-h::after {
+  right: -60%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: width 0.2s, color 0.2s, right 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+a.button-ha.open .button-h::before {
+  left: -60%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: width 0.2s, color 0.2s, left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.button-h a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: color 0.25s;
+  display: inline-block;
+  padding: auto;
+}
+/* hover styling */
+a.button-ha:hover {
+  color: orange;
+}
+a.button-ha.open:hover .button-h::before,
+a.button-ha.open:hover .button-h::after {
+  color: black;
+  width: 30%;
+  transition: width 0.5s, color 0.25s;
+}
+/* index nav structure */
+ul.index-nav {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 10vh;
+}
+ul.index-nav li {
+  height: 40vh;
+}
+ul.index-nav .index-panel {
+  position: sticky;
+  position: -webkit-sticky;
+
+  top: 40vh;
+}
+
+/* Slide out */
+
+.slide-out {
+  display: inline-block;
+  padding: 0;
+  max-width: 0;
+  width: fit-content;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.slide-out.open {
+  max-width: 100%;
+  transition: all 3s;
+}
+.slide-out::before {
+  content: "//";
+  display: inline-block;
+  color: rgba(0, 0, 0, 0);
+  padding: 0 10px 0 0;
+  transition: all 0.25s;
+  transition-delay: 0.1s;
+}
+.slide-out.open::before {
+  color: rgb(47, 177, 203);
+  transition: all 0.2s;
+}
 /* ================================================================= */
 /* ------------------------- //Sub-heddings ------------------------ */
 /* ================================================================= */
@@ -441,18 +562,7 @@ h2.sub-h,
 /* ================================================================= */
 /* ------------------------- about --------------------------------- */
 /* ================================================================= */
-.about-color1 {
-  color: orange;
-}
-.about-color2 {
-  color: rgb(151, 98, 0);
-}
-.about-section {
-  height: max-content;
-}
-.about-content h2.main-h {
-  color: orange;
-}
+
 /* details styles */
 .about-section .inline-deets summary {
   font-weight: bold;
@@ -488,6 +598,7 @@ img.profil-picture {
   padding-left: 0;
   margin-left: 0;
   list-style: none;
+  border-left: solid 5px rgb(47, 177, 203);
 }
 ul.details-list li {
   padding: 5px 0;

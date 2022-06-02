@@ -2,29 +2,40 @@
 // currently not compatable with idex.js due to similar html manamaplation features which may cause strange behaviour when wroking together
 
 // costants
-const offsetMult = 0.5; // how far down the window must a dive be for the scroll offset to trigger
+const offsetMultDefault = 0.5; // how far down the window must a dive be for the scroll offset to trigger
 const scrollMarkerGroups = [];
 const markerIdNavSuffex = "-nav-elem";
 // glabal scope varables
 let currentMarker = "none"; // the id of the marker the user has currently scrolled to.
 
 // Setup ===========================
-function SetScrollPointMarkers(markerClass, addedClass, sameAsTarget = false) {
+function SetScrollPointMarkers(
+  markerClass,
+  addedClass,
+  sameAsTarget = false,
+  offsetMult = offsetMultDefault
+) {
   let markerArray = Array.from(document.getElementsByClassName(markerClass));
-  let markergroup = new MarkerGroup(markerArray, addedClass, sameAsTarget);
+  let markergroup = new MarkerGroup(
+    markerArray,
+    addedClass,
+    sameAsTarget,
+    offsetMult
+  );
   scrollMarkerGroups.push(markergroup);
   window.addEventListener("scroll", (e) => markergroup.UpdateMarker());
 }
 // Useful Calsses =================
 class MarkerGroup {
-  constructor(markers, addedClass, sameAsTarget) {
+  constructor(markers, addedClass, sameAsTarget, offsetMult) {
     this.markers = markers;
     this.addedClass = addedClass;
     this.sameAsTarget = sameAsTarget;
     this.currentMarker = "none";
+    this.offsetMult = offsetMult;
   }
   UpdateMarker() {
-    let newCurrent = GetCurrentMarker(this.markers);
+    let newCurrent = GetCurrentMarker(this.markers, this.offsetMult);
     if (newCurrent != this.currentMarker) {
       if (this.sameAsTarget) {
         ToggleClasses(newCurrent, this.currentMarker, this.addedClass);
@@ -62,22 +73,22 @@ function RemoveClass(elem, classToRemove) {
   }
 }
 // Scroll position checking =================
-function GetCurrentMarker(markers) {
+function GetCurrentMarker(markers, offsetMult) {
   let currMarker = "none";
   markers.forEach((marker) => {
-    if (IsVIsisble(marker)) {
+    if (IsVIsisble(marker, offsetMult)) {
       currMarker = marker;
     }
   });
   return currMarker;
 }
-function IsVIsisble(el) {
+function IsVIsisble(el, offsetMult) {
   let rect = el.getBoundingClientRect();
   pos = rect.top;
-  return pos <= GetOffset();
+  return pos <= GetOffset(offsetMult);
 }
 // Get offset dynamically to accounted for window re-sizing
-function GetOffset() {
+function GetOffset(offsetMult) {
   return window.innerHeight * offsetMult;
 }
 // id finding ==============================
