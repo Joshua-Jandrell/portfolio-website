@@ -9,6 +9,22 @@ const markerIdNavSuffex = "-nav-elem";
 let currentMarker = "none"; // the id of the marker the user has currently scrolled to.
 
 // Setup ===========================
+function SetIndependantMarkers(
+  markerClass,
+  addedClass,
+  sameAsTarget,
+  offsetMult = offsetMultDefault
+) {
+  let markerArray = Array.from(document.getElementsByClassName(markerClass));
+  let newMarker = new SingleMarker(
+    markerArray,
+    addedClass,
+    sameAsTarget,
+    offsetMult
+  );
+  scrollMarkerGroups.push(newMarker);
+  window.addEventListener("scroll", () => newMarker.UpdateMarker());
+}
 function SetScrollPointMarkers(
   markerClass,
   addedClass,
@@ -23,7 +39,7 @@ function SetScrollPointMarkers(
     offsetMult
   );
   scrollMarkerGroups.push(markergroup);
-  window.addEventListener("scroll", (e) => markergroup.UpdateMarker());
+  window.addEventListener("scroll", () => markergroup.UpdateMarker());
 }
 // Useful Calsses =================
 class MarkerGroup {
@@ -44,6 +60,30 @@ class MarkerGroup {
       }
       this.currentMarker = newCurrent;
     }
+  }
+}
+
+// The single marker does not share its class with a group
+class SingleMarker {
+  constructor(markers, addedClass, sameAsTarget, offsetMult) {
+    this.markers = markers;
+    this.addedClass = addedClass;
+    this.sameAsTarget = sameAsTarget;
+    this.currentMarker = "none";
+    this.offsetMult = offsetMult;
+  }
+  UpdateMarker() {
+    this.markers.forEach((marker) => {
+      let target = marker;
+      if (!this.sameAsTarget) {
+        target = document.getElementById(GetMarkerNavId(marker.id));
+      }
+      if (IsVIsisble(marker, this.offsetMult)) {
+        AddClass(target, this.addedClass);
+      } else {
+        RemoveClass(target, this.addedClass);
+      }
+    });
   }
 }
 // CSS Class updating =================

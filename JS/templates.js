@@ -44,12 +44,13 @@ function MakeLightTemplate(templateName) {
         super();
         let template = document.getElementById(templateName);
         let templateContent = template.content;
-        this.appendChild(templateContent.cloneNode(true));
+        this.appendChild(templateContent.firstElementChild.cloneNode(true));
       }
     }
   );
 }
 
+// Requires loadContent.js
 async function LoadCustomTemplates(href) {
   let rootHref = GetRootPath(href);
   fetch(rootHref)
@@ -72,14 +73,7 @@ function MakeLoadedTemplates(body) {
   let temps = body.querySelectorAll("template");
   Array.from(temps).forEach((template) => {
     document.body.appendChild(template);
-    FixHrefs(template);
+    FixHrefs(template.content);
     MakeShadowTemplate(template.id);
   });
-
-  function FixHrefs(template) {
-    let hrefElems = template.content.querySelectorAll("[load-href]");
-    Array.from(hrefElems).forEach((hrefElem) => {
-      hrefElem.href = GetRootPath(hrefElem.getAttribute("load-href"));
-    });
-  }
 }

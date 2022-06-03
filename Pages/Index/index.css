@@ -4,6 +4,14 @@
 /* ------------------------- Hello world into ---------------------- */
 /* ================================================================= */
 
+.top-behind {
+  z-index: -1;
+}
+
+.top-behind.forward {
+  z-index: 10;
+}
+
 #hwt {
   color: white;
   font-family: monospace;
@@ -47,4 +55,14 @@
   );
 
   display: block;
+}
+@media (max-width: 300px) {
+  .introGrad {
+    height: 300vh;
+  }
+
+  .introTxt {
+    font-size: 30px;
+    color: red;
+  }
 }

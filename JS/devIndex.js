@@ -30,16 +30,22 @@ const customIdPrefex = "auto-index";
 
 // ===============================================================
 // Setup events
-function AddOnLoad(className, indexType, templateName = importedTemplateName) {
+function AddOnLoad(
+  className,
+  indexType,
+  templateName = importedTemplateName,
+  loadElement = "import-html"
+) {
   let elemArray = Array.from(document.getElementsByClassName(className));
   elemArray.forEach((element) => {
     let elemId = FindElemId(element);
     indexElemIds.push(elemId);
     let indexElem = MakeIndexEntry();
-    let importer = element.getElementsByTagName("import-html")[0];
-    importer.addEventListener("html-imported", (e) =>
-      DoIndexSetup(e.detail.elem, elemId, indexElem, indexType, templateName)
-    );
+    let importer = element.getElementsByTagName(loadElement)[0];
+    importer.addEventListener("html-imported", (e) => {
+      console.log("do setup");
+      DoIndexSetup(e.detail.elem, elemId, indexElem, indexType, templateName);
+    });
   });
 }
 // ===============================================================

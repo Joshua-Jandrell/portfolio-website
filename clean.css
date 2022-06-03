@@ -447,7 +447,7 @@ a.button-ha .button-h::before {
   top: -20px;
   left: 0;
   text-align: right;
-  width: 50%;
+  width: 51%;
   transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 a.button-ha .button-h::after {
@@ -461,17 +461,20 @@ a.button-ha .button-h::after {
   top: -20px;
   right: 0;
   text-align: left;
-  width: 50%;
+  width: 51%;
   transition: right 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 a.button-ha.open .button-h::after {
-  right: -60%;
+  right: -30%;
+  width: 20%;
+
   background-color: rgba(0, 0, 0, 0);
   transition: width 0.2s, color 0.2s, right 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 a.button-ha.open .button-h::before {
-  left: -60%;
+  left: -30%;
+  width: 20%;
   background-color: rgba(0, 0, 0, 0);
   transition: width 0.2s, color 0.2s, left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -486,11 +489,15 @@ a.button-ha.open .button-h::before {
 a.button-ha:hover {
   color: orange;
 }
-a.button-ha.open:hover .button-h::before,
+a.button-ha.open:hover .button-h::before {
+  color: black;
+  left: -40%;
+  transition: left 0.5s, color 0.25s;
+}
 a.button-ha.open:hover .button-h::after {
   color: black;
-  width: 30%;
-  transition: width 0.5s, color 0.25s;
+  right: -40%;
+  transition: right 0.5s, color 0.25s;
 }
 /* index nav structure */
 ul.index-nav {
@@ -499,7 +506,6 @@ ul.index-nav {
   display: grid;
   grid-auto-flow: row;
   row-gap: 10vh;
-  overflow-x: hidden;
 }
 ul.index-nav li {
   height: 40vh;
@@ -510,20 +516,36 @@ ul.index-nav .index-panel {
 
   top: 40vh;
 }
+@media (max-width: 300px) {
+  .button-h {
+    font-size: 40px;
+  }
+  a.button-ha.open:hover .button-h::before {
+    left: -30%;
+  }
+  a.button-ha.open:hover .button-h::after {
+    right: -30%;
+  }
+}
 
 /* Slide out */
 
 .slide-out {
+  position: relative;
   display: inline-block;
   padding: 0;
-  max-width: 0;
-  width: fit-content;
-  overflow: hidden;
-  white-space: nowrap;
 }
-.slide-out.open {
-  max-width: 100%;
-  transition: all 3s;
+.slide-out .cover {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+.slide-out.open .cover {
+  width: 0%;
+  transition: all 1s;
 }
 .slide-out::before {
   content: "//";
