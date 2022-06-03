@@ -15,6 +15,15 @@ const devlogPaths = [
   "./Articles/what_is_this_0.html",
 ];
 
+const blogPaths = [
+  "./Articles/ux-ui.html",
+  "./Articles/information-geograhies-data.html",
+  "./Articles/reflection-data.html",
+  "./Articles/metaphore-data.html",
+  "./Articles/semantic-markup.html",
+  "./Articles/as-we-may-think-data.html",
+];
+
 // This file contains basic funtion used by ther js scripts
 function GetPathToRoot() {
   if (typeof pathToRoot === "undefined") {

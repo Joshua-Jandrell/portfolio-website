@@ -43,7 +43,6 @@ function AddOnLoad(
     let indexElem = MakeIndexEntry();
     let importer = element.getElementsByTagName(loadElement)[0];
     importer.addEventListener("html-imported", (e) => {
-      console.log("do setup");
       DoIndexSetup(e.detail.elem, elemId, indexElem, indexType, templateName);
     });
   });

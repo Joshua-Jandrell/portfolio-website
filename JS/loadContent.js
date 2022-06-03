@@ -8,8 +8,8 @@ const loadEventName = "html-imported";
 const loadSockectName = "load-socket";
 
 // ===============================================================
-// Script run
-customElements.define(
+// Script run on load
+document.onload += customElements.define(
   elementName,
   class extends HTMLElement {
     constructor() {
@@ -32,16 +32,19 @@ async function LoadContent(path, element) {
       return parser.parseFromString(text, "text/html");
     })
     .then((doc) => {
-      FixHrefs(doc.body);
-      FixSrcs(doc.body);
-      let html = doc.body.innerHTML;
+      let body = doc.body;
+      FixHrefs(body);
+      FixSrcs(body);
+      let html = body.innerHTML;
       let parent = element.parentElement;
+
       parent.innerHTML = html;
+      FixSrcs(parent);
+
       return parent;
     })
     .then((elem) => {
       let loadEvent = MakeLoadEvent(elem);
-      console.log("send event");
       element.dispatchEvent(loadEvent);
     });
 }
@@ -64,7 +67,7 @@ function FixHrefs(loadedContent) {
 function FixSrcs(loadedContent) {
   let srcElems = loadedContent.querySelectorAll("[load-src]");
   Array.from(srcElems).forEach((srcElem) => {
-    srcElem.scr = GetRootPath(srcElem.getAttribute("load-src"));
+    srcElem.src = GetRootPath(srcElem.getAttribute("load-src"));
   });
 }
 // ===============================================================
@@ -80,9 +83,5 @@ function MakeFromTemplate(href, temaplate, parent) {
   let clone = temaplate.content.firstElementChild.cloneNode(true);
   let loadSocket = clone.querySelectorAll(loadSockectName)[0];
   parent.appendChild(clone);
-  console.log('gg');
   LoadContent(href, loadSocket);
-  loadSocket.addEventListener("html-imported", (e) => {
-    console.log("wtf");
-  });
 }
