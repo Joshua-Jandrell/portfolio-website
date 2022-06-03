@@ -20,6 +20,8 @@ body.max {
   padding: 0;
   margin: 0;
   background-color: white;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 header.basic {
@@ -29,6 +31,11 @@ header.basic {
 
 .main-body {
   margin: 10px 50px;
+}
+@media (max-width: 425) {
+  .main-body {
+    margin: 10px 0;
+  }
 }
 /* ================================================================= */
 /* ------------------------- z indexes------------------------------ */
@@ -413,7 +420,7 @@ h2.main-h .blk {
   position: relative;
   font-size: 60px;
   text-align: center;
-  max-width: max-content;
+  max-width: fit-content;
   margin: auto;
   font-family: monospace;
 }
@@ -424,6 +431,7 @@ a.button-ha {
   text-decoration: none;
   color: black;
   pointer-events: none;
+  max-width: 90vh;
 }
 a.button-ha.open {
   pointer-events: initial;
@@ -436,7 +444,7 @@ a.button-ha .button-h::before {
   background-color: white;
   padding: 0;
   position: absolute;
-  top: -1rem;
+  top: -20px;
   left: 0;
   text-align: right;
   width: 50%;
@@ -450,7 +458,7 @@ a.button-ha .button-h::after {
   background-color: white;
   padding: 0;
   position: absolute;
-  top: -1rem;
+  top: -20px;
   right: 0;
   text-align: left;
   width: 50%;
@@ -491,6 +499,7 @@ ul.index-nav {
   display: grid;
   grid-auto-flow: row;
   row-gap: 10vh;
+  overflow-x: hidden;
 }
 ul.index-nav li {
   height: 40vh;
