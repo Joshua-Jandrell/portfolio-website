@@ -17,7 +17,9 @@
   <body class="max basic">
     <!-- #region nav bar-->
     <header class="topBar basic z10" id="topDiv">
-      <nav-bar></nav-bar>
+      <nav-bar>
+        <span slot="page-name">JJ / Dev-Log</span>
+      </nav-bar>
     </header>
     <!-- #endregion -->
     <!-- Articel section ==============================================================================-->
@@ -75,7 +77,16 @@
         <article class="entry-content">
           <slot name="content"></slot>
         </article>
-        <button class="close-button next-button">Close</button>
+        <article class="close-buttons">
+          <button class="close-button next-button">
+            <div class="icon">&#x25B2;</div>
+            next
+          </button>
+          <button class="close-button prev-button">
+            <div class="icon">&#x25BC;</div>
+            previous
+          </button>
+        </article>
       </details>
     </template>
     <template id="log-item-template">
@@ -101,6 +112,7 @@
   <script defer>
     // initalise doc spesfic features
     const pathToRoot = "../../";
+    const selectId = "devlog-nav";
     LoadImports(devlogPaths, "log-item-template", "main-log");
     AddOnLoad("devlog-entry", "dev", "log-template", "load-socket");
     MakeAllTemplates();

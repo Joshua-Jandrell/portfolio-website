@@ -97,7 +97,7 @@ function SetIndexLink(newEntry, linkClass, targetId, tempName) {
   links = newEntry.getElementsByTagName("a");
   Array.from(links).forEach((a) => {
     if (a.classList.contains(linkClass)) {
-      SetHref(a, targetId);
+      SetAnchorRef(a, targetId);
       AddOpenDetailsOnCLick(a, targetId, tempName);
       return;
     }
@@ -108,7 +108,7 @@ function SetIndexLink(newEntry, linkClass, targetId, tempName) {
 function MakeIdHrefTxt(targetId) {
   return "#" + targetId;
 }
-function SetHref(a, targetId) {
+function SetAnchorRef(a, targetId) {
   let hrefTxt = MakeIdHrefTxt(targetId);
   a.href = hrefTxt;
 }
@@ -234,4 +234,48 @@ function CloseCheckbox(id) {
   if (indexToggle != null) {
     indexToggle.checked = false;
   }
+}
+
+// ==================================== Load extern blog index
+function LoadExternalBlogIndex(
+  hrefList,
+  nameList,
+  templateId,
+  parentId,
+  isShadow = false,
+  hostTag = ""
+) {
+  let parent;
+  if (isShadow) {
+    parent = GetShadowElem(parentId, hostTag);
+  } else {
+    parent = document.getElementById(parentId);
+  }
+  let template = document.getElementById(templateId);
+  console.log(template);
+  MakeExternalLinks(hrefList, nameList, template, parent);
+}
+
+function MakeExternalLinks(hrefList, nameList, template, parent) {
+  let i = 0;
+  hrefList.forEach((href) => {
+    if (i != GetArticleNumber()) {
+      MakeIndexLink(GetRootPath(href), nameList[i], template, parent);
+    }
+    i++;
+  });
+}
+
+function MakeIndexLink(href, name, template, parent) {
+  let clone = template.content.firstElementChild.cloneNode(true);
+
+  SetElemClassContent(name, "p-name", clone);
+  SetElemAnchorRef(href, clone);
+  parent.appendChild(clone);
+}
+
+function GetShadowElem(id, hostTag) {
+  let host = document.getElementsByTagName(hostTag)[0];
+  let shadow = host.shadowRoot;
+  return shadow.getElementById(id);
 }

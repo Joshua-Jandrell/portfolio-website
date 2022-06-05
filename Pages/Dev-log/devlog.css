@@ -101,9 +101,133 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
   margin-left: 30px;
   transition: all 1s;
 }
+
+/* Nav buttons */
+.close-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: black;
+  font-size: inherit;
+  font-weight: bold;
+}
+.close-button::after {
+  color: rgba(0, 0, 0, 0);
+  content: "]";
+  margin-left: 0px;
+  transition: all 1s;
+}
+.close-button::before {
+  color: rgba(0, 0, 0, 0);
+  content: "[";
+  margin-right: 0px;
+  transition: all 1s;
+}
+.close-button:hover {
+  cursor: pointer;
+  color: orange;
+}
+.close-button:hover::after {
+  color: black;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.close-button:hover::before {
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.close-buttons {
+  width: 150px;
+  display: grid;
+  grid-auto-flow: row;
+  float: left;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.close-button .icon {
+  display: block;
+  float: left;
+  width: fit-content;
+  color: rgb(47, 177, 203);
+}
+.close-button:hover .icon {
+  color: orange;
+}
+
 /* ================================================================= */
 /* ------------ Side nave fomratting ------------------------------- */
 /* ================================================================= */
+ul.history-list {
+  display: block;
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 0;
+}
+ul.history-list li:first-child {
+  border-top: 1px solid black;
+}
+ul.history-list li {
+  display: block;
+  border-bottom: 1px solid black;
+  border-left: 5px solid orange;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+ul.history-list a.blog-nav {
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+  text-decoration: none;
+}
+ul.history-list a.blog-nav h4.blog-h {
+  padding-left: 10px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  color: black;
+  display: block;
+  position: relative;
+  transition: all 1s;
+}
+ul.history-list a.blog-nav:hover h4.blog-h {
+  color: orange;
+}
+ul.history-list a.blog-nav h4.blog-h::before {
+  color: rgba(0, 0, 0, 0);
+  left: 30px;
+  top: 0;
+  content: "[";
+  display: block;
+  width: fit-content;
+  position: absolute;
+  transition: all 1s;
+  font-weight: bold;
+}
+ul.history-list a.blog-nav h4.blog-h::after {
+  color: rgba(0, 0, 0, 0);
+  top: 0;
+  right: 40px;
+  content: "]";
+  display: block;
+  width: fit-content;
+  position: absolute;
+  transition: all 1s;
+  font-weight: bold;
+}
+ul.history-list a.blog-nav:hover h4.blog-h::before {
+  left: 0;
+  color: black;
+}
+ul.history-list a.blog-nav:hover h4.blog-h::after {
+  color: black;
+  right: 10px;
+}
 .devlogpage-index {
   position: sticky;
   position: -webkit-sticky;
@@ -128,7 +252,6 @@ details.devlog-feed-deets summary h2.dev-h:hover::after {
   border-left: none;
   border-right: 5px solid rgb(47, 177, 203);
   background-color: white;
-  text-align: left;
   padding-left: 20px;
 }
 

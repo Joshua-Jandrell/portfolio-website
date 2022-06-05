@@ -28,9 +28,20 @@
     <title>Blogpage blogWrapper</title>
   </head>
   <body class="max basic">
+    <template id="index-entry-template" class="not-automated">
+      <li>
+        <a href="" class="u-nav blog-nav" id="entry-link"
+          ><h4 class="blog-h p-name"></h4
+        ></a>
+      </li>
+    </template>
+    <template id="entry-wrapper">
+      <slot name="title"></slot>
+    </template>
     <template id="blog-wrapper">
       <link rel="stylesheet" load-href="clean.css" />
       <link rel="stylesheet" load-href="Pages/Blog/blog.css" />
+      <link rel="stylesheet" load-href="./Pages/Dev-log/devlog.css" />
       <!-- Article section ===================================================================================================== -->
       <article class="blogpost-wrapper">
         <!-- Nav index =================================================== -->
@@ -44,8 +55,9 @@
           <article class="blogpage-index left" id="page_index">
             <h2 class="sub-h center">Blog index</h2>
             <ul
+              id="index-list"
               class="index-list history-list"
-              aria-roledescription="Index for [blog name]"
+              aria-roledescription="Other blogs"
             ></ul>
           </article>
         </nav>
@@ -182,6 +194,16 @@
           represent.
         </article>
       </footer> -->
+      <script>
+        LoadExternalBlogIndex(
+          blogPagePaths,
+          blogNames,
+          "index-entry-template",
+          "index-list",
+          true,
+          "blog-wrapper"
+        );
+      </script>
     </template>
   </body>
 </html>

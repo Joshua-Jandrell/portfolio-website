@@ -8,7 +8,8 @@
   </head>
   <body>
     <template id="nav-bar">
-      <link rel="stylesheet" load-href="clean.css" />
+      <link rel="stylesheet" load-href="./clean.css" />
+      <script load-src="./Pages/HTML-templates/Nav-bar/navBar.js"></script>
       <article class="topBar basic z10">
         <nav class="nav-bar">
           <label for="#main-bar" class="nav-lable"
@@ -32,15 +33,12 @@
               <a
                 load-href="./index.html"
                 class="homeLink home link"
-                id="home-nav"
+                id="back-nav"
                 ><div class="link-block">Home</div></a
               >
             </li>
             <li>
-              <a
-                load-href="./index.html#About"
-                class="aboutLink link"
-                id="about-nav"
+              <a load-href="./index.html" class="aboutLink link" id="about-nav"
                 ><div class="link-block">About</div></a
               >
             </li>
@@ -69,9 +67,9 @@
               >
             </li>
           </ul>
+          <button id="u-back" class="u-back" onclick="GoBack()">Back</button>
         </nav>
       </article>
-      <script load-src="Pages/HTML-templates/navBar.js"></script>
     </template>
   </body>
 </html>

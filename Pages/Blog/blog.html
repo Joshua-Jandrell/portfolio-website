@@ -18,7 +18,7 @@
     <!-- #region nav bar-->
     <header class="topBar basic z10" id="topDiv">
       <nav-bar>
-        <span slot="page-name">JJ/Blog</span>
+        <span slot="page-name">JJ / Blog</span>
       </nav-bar>
     </header>
     <!-- #endregion -->
@@ -97,6 +97,7 @@
   <script defer>
     // initalise doc spesfic features
     const pathToRoot = "../../";
+    const selectId = "blog-nav";
     LoadImports(blogPaths, "blog-preview-template", "blog-previews");
     AddOnLoad("blog-entry", "blog", "content-preview", "load-socket");
     MakeAllTemplates();

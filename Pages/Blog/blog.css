@@ -15,7 +15,6 @@
 .sticky-nav .blogpage-index {
   display: block;
   height: fit-content;
-  z-index: -1;
   position: sticky;
   top: 100px;
 }

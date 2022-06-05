@@ -74,6 +74,7 @@ function MakeLoadedTemplates(body) {
   Array.from(temps).forEach((template) => {
     document.body.appendChild(template);
     FixHrefs(template.content);
+    FixSrcs(template.content);
     MakeShadowTemplate(template.id);
   });
 }

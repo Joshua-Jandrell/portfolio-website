@@ -35,11 +35,10 @@ async function LoadContent(path, element) {
       let body = doc.body;
       FixHrefs(body);
       FixSrcs(body);
-      let html = body.innerHTML;
+      console.log(element.innerHTML);
       let parent = element.parentElement;
 
-      parent.innerHTML = html;
-      FixSrcs(parent);
+      parent.innerHTML = body.innerHTML;
 
       return parent;
     })
@@ -75,8 +74,16 @@ function FixSrcs(loadedContent) {
 function LoadImports(hrefList, templateId, parentId) {
   let parent = document.getElementById(parentId);
   let template = document.getElementById(templateId);
+  MakeTemplates(hrefList, template, parent);
+}
+function MakeTemplates(hrefList, template, parent) {
+  let i = 0;
   hrefList.forEach((href) => {
-    MakeFromTemplate(href, template, parent);
+    // check so as not to make a link to current article in current article
+    if (i != GetArticleNumber()) {
+      MakeFromTemplate(GetRootPath(href), template, parent);
+    }
+    i++;
   });
 }
 function MakeFromTemplate(href, temaplate, parent) {
@@ -85,3 +92,4 @@ function MakeFromTemplate(href, temaplate, parent) {
   parent.appendChild(clone);
   LoadContent(href, loadSocket);
 }
+

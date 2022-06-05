@@ -1,3 +1,4 @@
+// Depreciated
 const className = "topDiv";
 const toggleClass = "z-1";
 const addClass = "z10";
