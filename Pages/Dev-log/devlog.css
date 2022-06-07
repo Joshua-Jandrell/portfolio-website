@@ -403,13 +403,33 @@ ul.history-list a.blog-nav:hover h4.blog-h::after {
   color: rgb(47, 177, 203);
   margin-left: 10px;
 }
-.devlog-feed code {
+.devlog-feed code.code-snip {
   display: block;
   background-color: rgb(31, 15, 0);
   color: aliceblue;
   border: 1px rgb(47, 177, 203);
   border-left: 5px solid orange;
   margin-left: 20px;
+  padding-left: 10px;
+}
+
+.devlog-feed code.inline {
+  display: inline-block;
+  background-color: aliceblue;
+  padding: 2px 5px;
+  border: 0.5px solid rgb(47, 177, 203);
+  border-radius: 2px;
+  color: inherit;
+}
+/* Template article styling */
+
+.template-block {
+  display: block;
+  width: fit-content;
+  background-color: aliceblue;
+  padding: 20px;
+  margin: 10px auto;
+  border: 1px solid rgb(47, 177, 203);
 }
 
 /* ================================================================= */

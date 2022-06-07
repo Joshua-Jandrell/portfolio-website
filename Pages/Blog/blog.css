@@ -33,6 +33,7 @@
 
   padding: 0 40px;
   position: relative;
+  grid-column: 2;
 }
 
 .blogpage-index .main-h {
@@ -55,10 +56,19 @@
   }
 
   .sticky-nav .blogpage-index.left {
-    position: absolute;
-    left: -100%;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .sticky-nav .blogpage-index.left ul {
+    border-left: 5px solid rgb(47, 177, 203);
+  }
+}
 
-    transition: all 1s;
+@media (max-width: 950px) {
+  .blogpost-wrapper {
+    width: 100%;
+    padding: 10px;
   }
 }
 

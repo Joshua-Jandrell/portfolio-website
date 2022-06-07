@@ -35,14 +35,15 @@ async function LoadContent(path, element) {
       let body = doc.body;
       FixHrefs(body);
       FixSrcs(body);
-      console.log(element.innerHTML);
       let parent = element.parentElement;
-
       parent.innerHTML = body.innerHTML;
-
       return parent;
     })
     .then((elem) => {
+      // Format any loaded code
+      if (typeof FormatCode === "function") FormatCode("code-snip", elem);
+
+      // dispatch load event
       let loadEvent = MakeLoadEvent(elem);
       element.dispatchEvent(loadEvent);
     });
@@ -92,4 +93,3 @@ function MakeFromTemplate(href, temaplate, parent) {
   parent.appendChild(clone);
   LoadContent(href, loadSocket);
 }
-

@@ -1,5 +1,9 @@
 const devlogPaths = [
   "./Pages/Dev-log/Articles/cssHeaddings.html", // put more
+  "./Pages/Dev-log/Articles/shadow.html",
+  "./Pages/Dev-log/Articles/template-time.html",
+  "./Pages/Dev-log/Articles/fixing-devlog.html",
+  "./Pages/Dev-log/Articles/another-reboot.html",
   "./Pages/Dev-log/Articles/re-re-reboot_0.html",
   "./Pages/Dev-log/Articles/back_button_0.html",
   "./Pages/Dev-log/Articles/pseudo-square-bracket_0.html",

@@ -24,10 +24,8 @@ function MakeShadowTemplate(templateName) {
       constructor() {
         super();
         let template = document.getElementById(templateName);
-        let templateContent = template.content;
-
-        const shadowRoot = this.attachShadow({ mode: "open" });
-        shadowRoot.appendChild(templateContent.cloneNode(true));
+        let shadowRoot = this.attachShadow({ mode: "open" });
+        shadowRoot.appendChild(template.content.cloneNode(true));
       }
     }
   );
