@@ -19,6 +19,14 @@
 
 #welcomeTxt {
   padding-bottom: 100px;
+  text-align: center;
+}
+#welcomeTxt.slide-out {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 auto 100px;
 }
 #scroll-down {
   color: white;
@@ -56,6 +64,14 @@
 
   display: block;
 }
+
+@media (max-width: 500px) {
+  .introTxt {
+    font-size: 35px;
+    margin: 40px;
+  }
+}
+
 @media (max-width: 300px) {
   .introGrad {
     height: 300vh;
@@ -63,6 +79,6 @@
 
   .introTxt {
     font-size: 30px;
-    color: red;
+    margin: 30px;
   }
 }

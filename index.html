@@ -33,6 +33,7 @@
     <article class="intoNorm z-2" id="secondIntro">
       <div class="introTxt basic slide-out" id="welcomeTxt">
         Welcome to my website.
+        <div class="cover"></div>
       </div>
     </article>
     <!-- #region Nav-->
@@ -88,7 +89,13 @@
       <!-- About =======================================================================================-->
       <div class="section-divider" id="about" aria-hidden="true"></div>
       <section class="index-section about-section">
-        <h1 class="main-h center">About</h1>
+        <h2 class="com-h center">
+          <span class="slide-out"
+            >Find out about
+            <div class="cover"></div
+          ></span>
+        </h2>
+        <h1 class="main-h center larger">Me</h1>
         <article class="about-content e-content">
           <section class="profile-pic-wrapper h-card">
             <img
@@ -341,6 +348,14 @@
               cuddling his dog and chilling.
             </section>
           </article>
+          <article class="contact">
+            <h2 class="sub-h">Find Me:</h2>
+            <div class="contact-icons">
+              <contact-icons>
+                <span slot="label"></span>
+              </contact-icons>
+            </div>
+          </article>
         </article>
       </section>
 
@@ -376,6 +391,7 @@
     AddOnLoad("devlog-entry", "dev", "log-template");
     MakeAllTemplates();
     LoadCustomTemplates("Pages/HTML-templates/navBar.html");
+    LoadCustomTemplates("Pages/HTML-templates/shareIcons.html");
     SetIndependantMarkers("button-ha", "open", true, 0.75);
     SetIndependantMarkers("slide-out", "open", true, 0.75);
     SetIndependantMarkers("go-behind", "forward", false, 0.1);

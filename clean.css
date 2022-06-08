@@ -399,13 +399,13 @@ a .link-block .nav-txt {
   grid-template-columns: 5% 80% 5%;
 }
 .main-h::before {
-  content: "[";
+  content: "<";
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-align: left;
 }
 .main-h::after {
-  content: "]";
+  content: ">";
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-align: right;
@@ -415,13 +415,14 @@ h1.main-h {
   padding: 0 1rem;
   margin: 20px 10px 30px;
 }
-h1.main-h::before {
+h1.main-h.larger {
   font-size: 60px;
+}
+h1.main-h::before {
   color: orange;
   margin-right: 20px;
 }
 h1.main-h::after {
-  font-size: 60px;
   color: orange;
   margin-left: 20px;
 }
@@ -433,11 +434,6 @@ summary h2.main-h {
   display: inline-block;
 }
 
-h2.main-h .blk {
-  color: pink;
-  font-weight: bolder;
-  padding: 0;
-}
 /* ================================================================= */
 /* ------------------------- [ Dynamic Headdings]------------------- */
 /* ================================================================= */
@@ -541,7 +537,7 @@ ul.index-nav .index-panel {
 
   top: 40vh;
 }
-@media (max-width: 300px) {
+@media (max-width: 375px) {
   .button-h {
     font-size: 40px;
   }
@@ -624,29 +620,39 @@ h2.sub-h,
   font-weight: bold;
 }
 
-details.about-section {
-  border-bottom: solid orange 1px;
+.about-section details {
+  background-color: aqua;
+  white-space: wrap;
+  display: inline;
 }
 
 .about-content {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 0;
   text-align: left;
   margin: 20px auto;
   max-width: 900px;
   height: max-content;
+  padding: 0;
 }
 
 .profile-pic-wrapper {
   display: block;
   width: 100%;
+  height: 0px;
   float: left;
   padding: 0;
+  margin: 0;
 }
 img.profil-picture {
   width: 75%;
   border: 10px solid orange;
+}
+
+.about-text {
+  grid-row: span 2;
 }
 
 .about-content .details-list {
@@ -656,8 +662,63 @@ img.profil-picture {
   list-style: none;
   border-left: solid 5px rgb(47, 177, 203);
 }
+
+.about-content .contact {
+  grid-row: 2;
+  grid-column: 1;
+}
+.about-content .contact-icons {
+  display: block;
+  width: 80%;
+  float: left;
+  margin-left: -30px;
+}
+.about-content .contact h2.sub-h {
+  margin: 10px auto 5px;
+}
 ul.details-list li {
   padding: 5px 0;
+}
+
+@media (max-width: 950px) {
+  .about-content {
+    display: block;
+  }
+  .profile-pic-wrapper {
+    width: 200px;
+    min-width: 100px;
+
+    height: fit-content;
+    float: left;
+  }
+  .about-content .contact-icons {
+    margin-left: 0;
+  }
+  img.profil-picture {
+    width: 80%;
+  }
+}
+@media (max-width: 775px) {
+  .profile-pic-wrapper {
+    width: 180px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img.profil-picture {
+    width: 100%;
+  }
+  .about-content .contact-icons {
+    margin-left: -30px;
+  }
+  ul.bullet-list {
+    padding: 0;
+  }
+}
+@media (max-width: 200x) {
+  .profile-pic-wrapper {
+    width: 80%;
+  }
 }
 
 /* ================================================================= */
@@ -829,12 +890,13 @@ a.blog-sample {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(0, 0, 0, 0.711) 50%,
-    rgb(0, 0, 0) 100%
+    rgba(47, 177, 203, 0.711) 40%,
+    rgb(23, 70, 80) 100%
   );
 }
 .read-more-txt {
   color: orange;
+  font-weight: bold;
   position: absolute;
   width: 100%;
   right: 0;

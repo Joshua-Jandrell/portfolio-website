@@ -435,3 +435,11 @@ ul.history-list a.blog-nav:hover h4.blog-h::after {
 /* ================================================================= */
 /* ------------ Blog section formatingg ---------------------------- */
 /* ================================================================= */
+.blog-feed {
+  margin-right: 50px;
+}
+@media (max-width: 875px) {
+  .blog-feed {
+    margin-left: 50px;
+  }
+}
