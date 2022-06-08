@@ -1,0 +1,49 @@
+.icon-block {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr, 6fr;
+  position: relative;
+  margin: 0;
+  padding: 5px;
+  width: max-content;
+}
+.icon-block ul {
+  display: grid;
+  height: 30px;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10%;
+
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  width: fit-content;
+}
+
+.icon-block ul li {
+  display: block;
+  height: 35px;
+  width: 45px;
+}
+
+.icon-block ul li img {
+  height: 80%;
+  padding: 10%;
+  margin: auto;
+  transition: all 0.25s;
+}
+.icon-block ul li img:hover {
+  height: 100%;
+  padding: 0%;
+  cursor: pointer;
+}
+
+.icon-label {
+  text-align: right;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-right: 15px;
+}
