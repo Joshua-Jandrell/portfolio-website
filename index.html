@@ -42,7 +42,7 @@
       <nav-bar></nav-bar>
     </header>
     <!-- #endregion -->
-    <main class="e-content main-body basic">
+    <main class="e-content main-body basic" id="home">
       <nav>
         <ul class="index-nav">
           <li>
@@ -352,7 +352,7 @@
             <h2 class="sub-h">Find Me:</h2>
             <div class="contact-icons">
               <contact-icons>
-                <span slot="label"></span>
+                <span slot="label" class="noDisplay"></span>
               </contact-icons>
             </div>
           </article>
@@ -361,37 +361,19 @@
 
       <div class="section-divider" id="main" aria-hidden="true"></div>
     </main>
-    <footer class="noDisplay">
-      <section class="foot">
-        <article class="credits">
-          This website was designed and programmed by
-          <span class="p-author">Joshua Jandrell</span>.
-        </article>
-        <article class="acknoledge">
-          All company logos used are the property of the companies they
-          represent.
-        </article>
-      </section>
-      <!--<article class="contact-card h-card">
-        <h2 class="p-name name">
-          <article class="p-given-name">Joshua</article>
-          <article class="p-additonal-name">Robert</article>
-          <span class="p-familiy-name">Jandrel</span>
-        </h2>
-        <span class="feild">e-mail: </span
-        ><a href="mailto:2333213@students.wits.ac.za" class="u-email"
-          >2333213@students.wits.ac.za</a
-        >
-      </article>-->
+    <footer class="foot">
+      <bottom-foot></bottom-foot>
     </footer>
   </body>
   <script defer>
     // initalise doc spesfic features
     const pathToRoot = "";
+    const selectId = "home-nav";
     AddOnLoad("devlog-entry", "dev", "log-template");
     MakeAllTemplates();
     LoadCustomTemplates("Pages/HTML-templates/navBar.html");
     LoadCustomTemplates("Pages/HTML-templates/shareIcons.html");
+    SetNavMarkers(["home", "about"], 0.1);
     SetIndependantMarkers("button-ha", "open", true, 0.75);
     SetIndependantMarkers("slide-out", "open", true, 0.75);
     SetIndependantMarkers("go-behind", "forward", false, 0.1);

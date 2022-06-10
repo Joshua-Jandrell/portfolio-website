@@ -72,10 +72,21 @@ details.devlog-feed-deets summary h2.dev-h {
   margin-bottom: 10px;
 }
 details.devlog-feed-deets summary h2.dev-h::before {
+  content: "[";
   transition: all 0.5s;
 }
 details.devlog-feed-deets summary h2.dev-h::after {
+  content: "]";
   transition: all 0.5s;
+}
+
+h3.dev-h {
+  color: rgb(47, 177, 203);
+  font-family: monospace;
+}
+h3.dev-h::before {
+  content: "// ";
+  color: black;
 }
 
 .entry-content {
@@ -300,6 +311,7 @@ ul.history-list a.blog-nav:hover h4.blog-h::after {
     display: inline-block;
   }
   .devlogpage-index .main-h::before {
+    content: "[";
     display: inline-block;
     margin-right: -10px;
     width: fit-content;
@@ -308,6 +320,7 @@ ul.history-list a.blog-nav:hover h4.blog-h::after {
     transition: all 0.5s;
   }
   .devlogpage-index .main-h::after {
+    content: "]";
     display: inline-block;
     margin-left: -10px;
     width: fit-content;
@@ -420,6 +433,10 @@ ul.history-list a.blog-nav:hover h4.blog-h::after {
   border: 0.5px solid rgb(47, 177, 203);
   border-radius: 2px;
   color: inherit;
+}
+/* if code is a line be sure to le the user know*/
+.devlog-feed a code.inline {
+  text-decoration: underline solid black;
 }
 /* Template article styling */
 

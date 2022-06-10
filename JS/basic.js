@@ -1,5 +1,9 @@
+// Unfornsatuanly this is the most effcient way to know what to load without needing to refferenrce links in mutiple palces.
 const devlogPaths = [
-  "./Pages/Dev-log/Articles/cssHeaddings.html", // put more
+  "./Pages/Dev-log/Articles/END_aMess.html",
+  //"./Pages/Dev-log/Articles/cssHeaddings.html", // put more entries in here => Update still needed
+  "./Pages/Dev-log/Articles/02_autoIndex.html",
+  "./Pages/Dev-log/Articles/01_loadContent.html",
   "./Pages/Dev-log/Articles/shadow.html",
   "./Pages/Dev-log/Articles/template-time.html",
   "./Pages/Dev-log/Articles/fixing-devlog.html",
@@ -39,6 +43,7 @@ const blogPagePaths = [
   "./Pages/Blog/Pages/as-we-may-think.html",
 ];
 
+// sometines i would fetch a file just for the name - loading the content too would be a waste of resorces in that case.
 const blogNames = [
   "The interent: a monster or a mirror?",
   "how's the UX been so far?",

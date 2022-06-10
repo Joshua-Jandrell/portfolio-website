@@ -41,6 +41,17 @@ function SetScrollPointMarkers(
   scrollMarkerGroups.push(markergroup);
   window.addEventListener("scroll", () => markergroup.UpdateMarker());
 }
+
+// requires a nav bar
+function SetNavMarkers(navIds, offsetMult) {
+  let markers = [];
+  navIds.forEach((id) => {
+    markers.push(document.getElementById(id));
+  });
+  let navMarkers = new NavMarkerGroup(markers, offsetMult);
+  scrollMarkerGroups.push(navMarkers);
+  window.addEventListener("scroll", () => navMarkers.UpdateMarker());
+}
 // Useful Calsses =================
 class MarkerGroup {
   constructor(markers, addedClass, sameAsTarget, offsetMult) {
@@ -58,6 +69,22 @@ class MarkerGroup {
       } else {
         ToggleNavClasses(newCurrent, this.currentMarker, this.addedClass);
       }
+      this.currentMarker = newCurrent;
+    }
+  }
+}
+
+class NavMarkerGroup {
+  constructor(markers, offsetMult) {
+    this.markers = markers;
+    this.currentMarker = "none";
+    this.offsetMult = offsetMult;
+  }
+  UpdateMarker() {
+    let newCurrent = GetCurrentMarker(this.markers, this.offsetMult);
+    if (newCurrent != this.currentMarker) {
+      if (typeof SelectNavSection !== "undefined")
+        SelectNavSection(newCurrent.id + "-nav");
       this.currentMarker = newCurrent;
     }
   }
@@ -86,6 +113,7 @@ class SingleMarker {
     });
   }
 }
+
 // CSS Class updating =================
 function ToggleNavClasses(newElem, oldElem, togglClass) {
   let newNavId = GetMarkerNavId(newElem.id);

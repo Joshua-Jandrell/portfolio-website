@@ -134,7 +134,7 @@ a .link-block .nav-txt {
 }
 
 /* Media quireries */
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   .burger-lable {
     display: block;
     margin-right: 20px;

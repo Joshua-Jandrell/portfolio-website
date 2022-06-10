@@ -81,7 +81,7 @@ function MakeTemplates(hrefList, template, parent) {
   let i = 0;
   hrefList.forEach((href) => {
     // check so as not to make a link to current article in current article
-    if (i != GetArticleNumber()) {
+    if (i != hrefList.length - (GetArticleNumber() + 1)) {
       MakeFromTemplate(GetRootPath(href), template, parent);
     }
     i++;

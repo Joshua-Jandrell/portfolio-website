@@ -18,11 +18,14 @@
     <script src="../../../JS/templates.js"></script>
     <script src="../../../JS/loadContent.js" defer></script>
     <script>
+      const selectId = "blog-nav";
       const pathToRoot = "../../../";
     </script>
     <script defer>
+      const articleNumer = 3;
       LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
       LoadCustomTemplates("./Pages/HTML-templates/blogWrapper.html");
+      LoadCustomTemplates("Pages/HTML-templates/shareIcons.html");
     </script>
 
     <title>Document</title>
@@ -36,5 +39,8 @@
         <import-html href="../Articles/reflection-data.html"></import-html>
       </blog-wrapper>
     </main>
+    <footer class="foot">
+      <bottom-foot></bottom-foot>
+    </footer>
   </body>
 </html>

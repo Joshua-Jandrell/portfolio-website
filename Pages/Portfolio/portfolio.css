@@ -13,6 +13,18 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1000px) {
+  .gamepage-wrapper {
+    margin: 0 50px;
+  }
+}
+@media (max-width: 500px) {
+  .gamepage-wrapper {
+    display: block;
+    width: 80%;
+  }
+}
+
 .gamepage-wrapper .game-info-wrapper {
   display: block;
   width: 100%;
@@ -40,6 +52,13 @@
   background-color: rgb(247, 226, 208);
 
   text-align: center;
+}
+
+@media (max-width: 840px) {
+  .gamepage-wrapper .game-download-wrapper ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
 }
 .gamepage-wrapper .game-download-wrapper.single ul {
   display: block;

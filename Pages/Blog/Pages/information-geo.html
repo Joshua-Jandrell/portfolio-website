@@ -41,11 +41,14 @@
     <script src="../../../JS/templates.js"></script>
     <script src="../../../JS/loadContent.js" defer></script>
     <script>
+      const selectId = "blog-nav";
       const pathToRoot = "../../../";
     </script>
     <script defer>
+      const articleNumer = 4;
       LoadCustomTemplates("./Pages/HTML-templates/navBar.html");
       LoadCustomTemplates("./Pages/HTML-templates/blogWrapper.html");
+      LoadCustomTemplates("Pages/HTML-templates/shareIcons.html");
     </script>
 
     <title>Document</title>
@@ -64,4 +67,7 @@
       </blog-wrapper>
     </main>
   </body>
+  <footer class="foot">
+    <bottom-foot></bottom-foot>
+  </footer>
 </html>

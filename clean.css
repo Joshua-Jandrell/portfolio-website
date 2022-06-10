@@ -177,6 +177,7 @@ button.u-back {
   font-size: inherit;
 }
 button.u-back::before {
+  text-decoration: none;
   content: "◀";
   color: rgba(0, 0, 0, 0);
   transition: all 0.5s;
@@ -306,6 +307,15 @@ a .link-block .nav-txt {
   margin-top: 12px;
   display: none;
 }
+.bottom-back {
+  float: left;
+
+  margin-left: 50px;
+}
+
+.bottom-back .u-back {
+  font-weight: bold;
+}
 
 /* Media quireries */
 @media (max-width: 1100px) {
@@ -363,6 +373,16 @@ a .link-block .nav-txt {
   #burger-menu:checked ~ #main-bar {
     height: 400px;
     padding: auto;
+  }
+  .nav-bar a.select {
+    border-top: 1px solid orange;
+    border-bottom: 1px solid orange;
+    background-color: rgb(243, 208, 143);
+    padding: 40px auto;
+  }
+  .nav-bar a.select .link-block {
+    margin: 0;
+    padding: 20px;
   }
 }
 
@@ -621,8 +641,8 @@ h2.sub-h,
 }
 
 .about-section details {
-  background-color: aqua;
   white-space: wrap;
+  text-overflow: clip;
   display: inline;
 }
 
@@ -894,9 +914,8 @@ a.blog-sample {
     rgb(23, 70, 80) 100%
   );
 }
-.read-more-txt {
-  color: orange;
-  font-weight: bold;
+.read-more-wrapper .read-more-txt {
+  color: white;
   position: absolute;
   width: 100%;
   right: 0;
@@ -915,14 +934,14 @@ a.blog-sample {
 
 .read-more-wrapper:hover .read-more-txt {
   font-weight: bold;
-  color: white;
+  color: orange;
 }
 .read-more-wrapper:hover .read-more-txt::before {
-  color: orange;
+  color: white;
   margin-right: 10px;
 }
 .read-more-wrapper:hover .read-more-txt::after {
-  color: orange;
+  color: white;
   margin-left: 10px;
 }
 
@@ -1224,7 +1243,7 @@ ul.share-links li a:hover img {
 /* ================================================================= */
 /* ------------------------- footer formting ----------------------- */
 /* ================================================================= */
-.foot {
+footer.foot {
   display: block;
   margin-left: 0;
   margin-right: 0;
@@ -1236,6 +1255,8 @@ ul.share-links li a:hover img {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   color: rgb(91, 91, 91);
+
+  width: auto;
 }
 .foot .contact-grid {
   width: 100%;
@@ -1291,7 +1312,7 @@ img.log-img.big {
   width: 100%;
 }
 .log-label {
-  color: rgb(0, 64, 255);
+  color: rgb(47, 177, 203);
   font-weight: bold;
   font-family: monospace;
   margin-left: 20px;
@@ -1331,17 +1352,10 @@ a.inline-link:hover {
   text-decoration: orange underline;
 }
 .retoric {
+  text-align: right;
+  color: rgb(161, 168, 174);
+  text-decoration: none;
   font-weight: bold;
-  color: rgb(0, 20, 58);
-  text-decoration: solid;
-}
-.retoric::before {
-  content: "/*";
-  color: rgb(47, 177, 203);
-}
-.retoric::after {
-  content: "*/";
-  color: rgb(47, 177, 203);
 }
 
 /* ================================================================= */
@@ -1351,5 +1365,5 @@ a.inline-link:hover {
   display: none;
 }
 /* ================================================================= */
-/* ------------------------- JS dynamil clases---------------------- */
+/* ------------------------- Back button alignment---------------------- */
 /* ================================================================= */

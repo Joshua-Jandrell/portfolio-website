@@ -1,15 +1,24 @@
 const selectedClass = "select";
 const backId = "u-back";
-selectSection();
-function selectSection() {
+let currNavSection = null;
+SelectSection();
+function SelectSection() {
+  SelectNavSection(GetSectId());
+}
+
+function SelectNavSection(sectionId) {
   let shadowRoot = GetNavBarShadow();
-  sectElem = shadowRoot.getElementById(getSectId());
+  sectElem = shadowRoot.getElementById(sectionId);
   if (sectElem != null) {
     sectElem.classList.add(selectedClass);
+    if (currNavSection != null) {
+      currNavSection.classList.remove(selectedClass);
+    }
+    currNavSection = sectElem;
   }
 }
 
-function getSectId() {
+function GetSectId() {
   if (typeof selectId !== "undefined") {
     return selectId;
   } else return "";

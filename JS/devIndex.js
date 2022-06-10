@@ -252,14 +252,13 @@ function LoadExternalBlogIndex(
     parent = document.getElementById(parentId);
   }
   let template = document.getElementById(templateId);
-  console.log(template);
   MakeExternalLinks(hrefList, nameList, template, parent);
 }
 
 function MakeExternalLinks(hrefList, nameList, template, parent) {
   let i = 0;
   hrefList.forEach((href) => {
-    if (i != GetArticleNumber()) {
+    if (i != hrefList.length - (GetArticleNumber() + 1)) {
       MakeIndexLink(GetRootPath(href), nameList[i], template, parent);
     }
     i++;

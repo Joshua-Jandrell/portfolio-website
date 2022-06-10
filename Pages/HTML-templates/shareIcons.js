@@ -1,11 +1,13 @@
-const mainShareLink =
-  "mailto:?subject=I%20found%20an%20interesting%20article%20I%20though%20you%20may%20enjoy.%20&body=";
-const facebookStart = "https://www.facebook.com/sharer/sharer.php?u=";
+if (typeof mainShareLink === "undefined") {
+  const mainShareLink =
+    "mailto:?subject=I%20found%20an%20interesting%20article%20I%20though%20you%20may%20enjoy.%20&body=";
+  const facebookStart = "https://www.facebook.com/sharer/sharer.php?u=";
 
-const linkednStart = "https://www.linkedin.com/shareArticle?mini=true&url=";
-const linkedinEnd =
-  "&title=I%20found%20and%20interesting%20article&summary=&source=";
-const twitterStart = "https://twitter.com/intent/tweet?text=";
+  const linkednStart = "https://www.linkedin.com/shareArticle?mini=true&url=";
+  const linkedinEnd =
+    "&title=I%20found%20and%20interesting%20article&summary=&source=";
+  const twitterStart = "https://twitter.com/intent/tweet?text=";
+}
 
 function DoTwitterShare() {
   GoToHref(twitterStart + GetDocHref());

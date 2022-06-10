@@ -15,65 +15,17 @@
     <meta name="author" content="Joshua Jandrell" />
     <link rel="stylesheet" href="../../portfolio.css" />
     <link rel="stylesheet" href="../../../../clean.css" />
+
+    <script src="../../../../JS/loadContent.js"></script>
+    <script src="../../../../JS/basic.js"></script>
+    <script src="../../../../JS/templates.js"></script>
     <title>Joshua Jandrell / Project</title>
   </head>
   <body class="basic max">
     <header class="topBar basic z10" id="topDiv">
-      <nav class="nav-bar">
-        <label for="#main-bar" class="nav-lable"
-          ><a href="../../../../index.html" rel="home" class="title-link"
-            ><h1>Joshua Jandrell</h1></a
-          ></label
-        >
-        <ul class="nav-bar" id="main-bar">
-          <li>
-            <a
-              href="../../../../index.html#home"
-              rel="home"
-              class="homeLink home"
-              ><div class="link-block">Home</div></a
-            >
-          </li>
-          <li>
-            <a
-              href="../../../../index.html#about"
-              rel="navigation"
-              class="aboutLink"
-              ><div class="link-block">About</div></a
-            >
-          </li>
-          <li>
-            <a href="../../../../index.html#games" class="gamesLink select"
-              ><div class="link-block">Games</div></a
-            >
-          </li>
-          <li>
-            <a
-              href="../../../../index.html#blog"
-              rel="navigation"
-              class="blogLink"
-              ><div class="link-block">Blog</div></a
-            >
-          </li>
-          <li>
-            <a
-              href="../../../../index.html#devlog"
-              rel="navigation"
-              class="devlogLink"
-              ><div class="link-block">Dev-log</div></a
-            >
-          </li>
-          <li>
-            <a
-              href="../../../../index.html/#contact"
-              rel="navigation"
-              class="devlogLink"
-              ><div class="link-block">Contact</div></a
-            >
-          </li>
-        </ul>
-      </nav>
-      <nav class="blog-index"></nav>
+      <nav-bar>
+        <span slot="page-name">JJ / Games</span>
+      </nav-bar>
     </header>
     <!-- Main artilce ========================================================================-->
     <main class="gamepage-main">
@@ -189,108 +141,17 @@
         </article>
       </article>
     </main>
+    <article class="bottom-back">
+      <button id="u-back" class="u-back" onclick="GoBack()">Back</button>
+    </article>
     <footer class="foot">
-      <!-- Contact section ===================================================================-->
-      <section class="index-section contact-section">
-        <article class="contact-grid">
-          <h2 class="comment">
-            //<span class="comment-inner">Share this game!</span>
-          </h2>
-          <article class="share-wrapper contact-icons">
-            <ul class="share-links">
-              <li>
-                <a
-                  href="mailto:?subject=I%20found%20a%20game%20that%20I%20though%20you%20might%20like&body=https%3A//joshua-jandrell.github.io/portfolio-website/Pages/Portfolio/Pages/ProjectSim/project.html"
-                  rel="nofollow"
-                  target="_blank"
-                  ><img
-                    src="../../../../Generic_Images/Company logos/Generic_emial_byJJ_round.png"
-                    alt="Email"
-                /></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A//joshua-jandrell.github.io/portfolio-website/Pages/Portfolio/Pages/ProjectSim/project.html"
-                  rel="nofollow"
-                  target="_blank"
-                  ><img
-                    src="../../../../Generic_Images/Company logos/f_logo_RGB-Blue_100.png"
-                    alt="Face Book"
-                /></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//joshua-jandrell.github.io/portfolio-website/Pages/Portfolio/Pages/ProjectSim/project.html&title=An%20enjoyable%20Twine%20game!&summary=&source="
-                  rel="nofollow"
-                  target="_blank"
-                  ><img
-                    src="../../../../Generic_Images/Company logos/LI-In-Bug.png"
-                    alt="Linked in"
-                /></a>
-              </li>
-              <li>
-                <a
-                  href="https://joshua-jandrell.github.io/portfolio-website/Pages/Portfolio/Pages/ProjectSim/project.html"
-                  rel="nofollow"
-                  target="_blank"
-                  ><img
-                    src="../../../../Generic_Images/Company logos/2021 Twitter logo - blue.png"
-                    alt="Twitter icon"
-                /></a>
-              </li>
-            </ul>
-          </article>
-        </article>
-      </section>
-      <section class="index-section contact-section">
-        <article class="contact-grid">
-          <h2 class="comment">
-            //<span class="comment-inner">I'd love your feedback!</span>
-          </h2>
-          <article class="share-wrapper contact-icons">
-            <ul class="share-links">
-              <li>
-                <a
-                  a
-                  href="mailto:2333213@students.wits.ac.za"
-                  class="u-email"
-                  target="_blank"
-                  ><img
-                    src=".././../../../Generic_Images/Company logos/Generic_emial_byJJ_round.png"
-                    alt="Send me and e-mail"
-                /></a>
-              </li>
-              <li>
-                <a
-                  href="https://api.whatsapp.com/send?phone=+270738348251"
-                  rel="nofollow"
-                  target="_blank"
-                  ><img
-                    src="../../../../Generic_Images/Company logos/WhatsApp_Logo_1_bg_removed_cropped.png"
-                    alt="Message me on WhatsApp"
-                /></a>
-              </li>
-              <li>
-                <a
-                  href="https://t.me/+380509144504"
-                  rel="nofollow"
-                  target="_blank"
-                  ><img
-                    src="../../../../Generic_Images/Company logos/telegram_logo_cocompressed.png"
-                    alt="Message me on Telegram"
-                /></a>
-              </li>
-            </ul>
-          </article>
-        </article>
-      </section>
-      <article class="credits wide">
-        This website was designed and programmed by
-        <span class="p-author">Joshua Jandrell</span>.
-      </article>
-      <article class="acknoledge">
-        All company logos used are the property of the companies they represent.
-      </article>
+      <bottom-foot></bottom-foot>
     </footer>
   </body>
+  <script>
+    const pathToRoot = "../../../../";
+    const selectId = "games-nav";
+    LoadCustomTemplates("Pages/HTML-templates/navBar.html");
+    LoadCustomTemplates("Pages/HTML-templates/shareIcons.html");
+  </script>
 </html>
